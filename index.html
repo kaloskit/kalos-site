@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALOS — Personal Training Studio · Richmond, BC</title>
+<meta name="description" content="Kalos is a private, appointment-only personal training studio in Richmond, BC. Expert-led physique transformation — measured, engineered, individual. Opening Fall 2026.">
+<meta name="og:title" content="KALOS — Personal Training Studio · Richmond, BC">
+<meta name="og:description" content="Private, appointment-only personal training. Expert-led physique transformation — measured, engineered, individual. Opening Fall 2026.">
+<meta name="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700..800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDkgNjQ0Ij48ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSwtMTQuMiw2NDQuMikiPjxwYXRoIGQ9Ik0xNC4yIDAgMzY4LjIgNjQ0LjJINTY1LjhMOTIzLjIgMEg3MjYuMkw0MTguMiA1NzlINTE2LjJMMjEwLjYgMFoiIGZpbGw9IiNDMDcwM0EiLz48L2c+PC9zdmc+">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --graphite: #232629;
+    --graphite-light: #2c2f33;
+    --bone: #E8E6E1;
+    --steel: #54606A;
+    --ash: #9AA0A0;
+    --copper: #C0703A;
+    --font-sans: 'Archivo', 'Helvetica Neue', sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+    --font-display: 'Syne', 'Archivo', sans-serif; /* logo/wordmark only */
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--graphite);
+    color: var(--bone);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* ── Scroll reveal ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+                transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ── Steel rule ── */
+  .steel-rule {
+    width: 100%;
+    height: 1px;
+    background: var(--steel);
+  }
+  .steel-rule--short {
+    width: 80px;
+  }
+  .steel-rule--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── Nav ── */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  }
+  .nav.scrolled {
+    background: rgba(35, 38, 41, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .nav-wordmark {
+    font-family: var(--font-display);
+    font-weight: 740;
+    font-size: 19px;
+    letter-spacing: 0.02em;
+    color: var(--bone);
+    text-decoration: none;
+  }
+  .nav-cta {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.10em;
+    color: var(--ash);
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 1px solid var(--steel);
+    transition: all 0.3s ease;
+  }
+  .nav-cta:hover {
+    color: var(--graphite);
+    background: var(--bone);
+    border-color: var(--bone);
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 32px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 40%, rgba(192, 112, 58, 0.04) 0%, transparent 70%),
+      radial-gradient(ellipse 80% 60% at 20% 80%, rgba(84, 96, 106, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-wordmark {
+    font-family: var(--font-display);
+    font-weight: 740;
+    font-size: clamp(56px, 12vw, 120px);
+    letter-spacing: 0.01em;
+    line-height: 1;
+    color: var(--bone);
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .hero .steel-rule {
+    margin-bottom: 24px;
+    max-width: 120px;
+  }
+  .hero-tagline {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: lowercase;
+    color: var(--ash);
+    margin-bottom: 48px;
+  }
+  .hero-statement {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.7;
+    color: var(--bone);
+    max-width: 560px;
+    margin-bottom: 56px;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-scroll-text {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--steel);
+  }
+  .hero-scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--steel), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  /* ── Section shared ── */
+  .section {
+    padding: 120px 40px;
+  }
+  .section--bone {
+    background: var(--bone);
+    color: var(--graphite);
+  }
+  .section--bone .steel-rule { background: #c8c5be; }
+  .section--bone .section-label { color: var(--steel); }
+  .section--bone .section-body { color: var(--steel); }
+  .section--bone .pillar-body { color: var(--steel); }
+
+  .section-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 24px;
+  }
+  .section-heading {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 44px);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .section-body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ash);
+    max-width: 600px;
+  }
+
+  /* ── Philosophy split ── */
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 64px;
+  }
+  .philosophy-left .section-heading {
+    max-width: 400px;
+  }
+  .philosophy-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 40px;
+  }
+  .philosophy-stat-number {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 48px;
+    letter-spacing: 0.02em;
+    color: var(--copper);
+    line-height: 1;
+  }
+  .philosophy-stat-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ash);
+  }
+
+  /* ── Pillars ── */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 64px;
+  }
+  .pillar {
+    padding-top: 32px;
+    border-top: 1px solid var(--steel);
+  }
+  .section--bone .pillar {
+    border-top-color: #c8c5be;
+  }
+  .pillar-number {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: var(--steel);
+    margin-bottom: 20px;
+  }
+  .pillar-heading {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  .pillar-body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ash);
+  }
+
+  /* ── Services ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin-top: 64px;
+    background: rgba(84, 96, 106, 0.2);
+  }
+  .service-card {
+    background: var(--graphite);
+    padding: 48px 40px;
+    transition: background 0.3s ease;
+  }
+  .service-card:hover {
+    background: var(--graphite-light);
+  }
+  .service-icon {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--copper);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .service-title {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  .service-desc {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ash);
+  }
+
+  /* ── Environment ── */
+  .env-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 64px;
+  }
+  .env-feature {
+    padding: 40px 32px;
+    border: 1px solid rgba(84, 96, 106, 0.3);
+    transition: border-color 0.3s ease;
+  }
+  .env-feature:hover {
+    border-color: var(--steel);
+  }
+  .env-feature-title {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+  .env-feature-desc {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ash);
+  }
+
+  /* ── Team ── */
+  .team-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 64px;
+  }
+  .team-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: var(--graphite-light);
+    border: 1px solid rgba(84, 96, 106, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .team-photo-placeholder {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--steel);
+  }
+  .team-name {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+  .team-role {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin-bottom: 24px;
+  }
+  .team-bio {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ash);
+  }
+  .team-credentials {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .team-credential {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--steel);
+    padding: 6px 12px;
+    border: 1px solid rgba(84, 96, 106, 0.4);
+  }
+
+  /* ── CTA banner ── */
+  .cta-section {
+    padding: 160px 40px;
+    text-align: center;
+    position: relative;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 50% 60% at 50% 50%, rgba(192, 112, 58, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-location {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ash);
+    margin-bottom: 20px;
+  }
+  .cta-date {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: clamp(36px, 6vw, 56px);
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--bone);
+    margin-bottom: 24px;
+  }
+  .cta-sub {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--ash);
+    margin-bottom: 48px;
+    line-height: 1.6;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-button {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.10em;
+    color: var(--graphite);
+    background: var(--bone);
+    text-decoration: none;
+    padding: 16px 48px;
+    border: 1px solid var(--bone);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .cta-button:hover {
+    background: transparent;
+    color: var(--bone);
+  }
+
+  /* ── Footer ── */
+  .footer {
+    padding: 48px 40px;
+  }
+  .footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .footer .steel-rule {
+    margin-bottom: 40px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  .footer-wordmark {
+    font-family: var(--font-display);
+    font-weight: 740;
+    font-size: 21px;
+    letter-spacing: 0.02em;
+    color: var(--bone);
+    margin-bottom: 12px;
+  }
+  .footer-desc {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ash);
+    max-width: 280px;
+  }
+  .footer-col-title {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 16px;
+  }
+  .footer-link {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--ash);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+  .footer-link:hover { color: var(--bone); }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(84, 96, 106, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-copy {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.10em;
+    color: var(--steel);
+  }
+  .footer-social {
+    display: flex;
+    gap: 24px;
+  }
+  .footer-social a {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--steel);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-social a:hover { color: var(--bone); }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .philosophy-grid { grid-template-columns: 1fr; gap: 48px; }
+    .pillars-grid { grid-template-columns: 1fr; gap: 32px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .env-features { grid-template-columns: 1fr; }
+    .team-card { grid-template-columns: 1fr; gap: 40px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+  @media (max-width: 600px) {
+    .section { padding: 80px 24px; }
+    .cta-section { padding: 120px 24px; }
+    .nav { padding: 20px 24px; }
+    .service-card { padding: 32px 24px; }
+    .env-feature { padding: 28px 24px; }
+    .footer { padding: 40px 24px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-wordmark" aria-label="KALOS">KΛLOS</a>
+    <a href="https://app.kalospt.ca/consultation" class="nav-cta">Book a consultation</a>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <h1 class="hero-wordmark" aria-label="KALOS">KΛLOS</h1>
+    <div class="steel-rule steel-rule--short steel-rule--center"></div>
+    <p class="hero-tagline">personal training studio</p>
+    <p class="hero-statement">
+      A private, appointment-only studio for physique transformation in Richmond, BC. Expert-led, technology-enabled, and built on a system that produces repeatable, documented results.
+    </p>
+    <div class="hero-scroll">
+      <span class="hero-scroll-text">Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── Philosophy ── -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="steel-rule reveal"></div>
+      <div class="philosophy-grid">
+        <div class="philosophy-left">
+          <p class="section-label reveal">01 — Philosophy</p>
+          <h2 class="section-heading reveal reveal-delay-1">The classical ideal of the body, pursued through modern measurement.</h2>
+          <p class="section-body reveal reveal-delay-2">
+            Kalos is built at the intersection of art and science — an IFBB professional coach's proven methodology, standardized across every trainer and made measurable by a proprietary technology platform. The result comes from the system, not the individual.
+          </p>
+        </div>
+        <div class="philosophy-right">
+          <div class="philosophy-stat reveal reveal-delay-2">
+            <span class="philosophy-stat-number">1:1</span>
+            <span class="philosophy-stat-label">Private sessions only</span>
+          </div>
+          <div class="philosophy-stat reveal reveal-delay-3">
+            <span class="philosophy-stat-number">100%</span>
+            <span class="philosophy-stat-label">Appointment-based</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Method (3 pillars) on bone ── -->
+  <section class="section section--bone">
+    <div class="section-inner">
+      <p class="section-label reveal">02 — The method</p>
+      <h2 class="section-heading reveal reveal-delay-1">One system. Every coach. Measured.</h2>
+      <p class="section-body reveal reveal-delay-2">
+        Every transformation at Kalos follows the same proven framework — a standardized coaching methodology that removes guesswork, ensures quality across every trainer, and produces results that can be documented and repeated.
+      </p>
+      <div class="pillars-grid">
+        <div class="pillar reveal">
+          <p class="pillar-number">01</p>
+          <h3 class="pillar-heading">Standardized coaching</h3>
+          <p class="pillar-body">A documented methodology delivered consistently by every trainer on the floor. Your program follows a proven system refined over decades of professional competition and client transformation.</p>
+        </div>
+        <div class="pillar reveal reveal-delay-1">
+          <p class="pillar-number">02</p>
+          <h3 class="pillar-heading">Technology-enabled tracking</h3>
+          <p class="pillar-body">Every session logged, every metric tracked, every result documented. A proprietary platform that makes your transformation visible — not just something you feel, something you can see and measure.</p>
+        </div>
+        <div class="pillar reveal reveal-delay-2">
+          <p class="pillar-number">03</p>
+          <h3 class="pillar-heading">Expert-led programming</h3>
+          <p class="pillar-body">Training programs designed and overseen by an IFBB professional coach. Nutrition guidance, progressive programming, and body composition analysis are built into every package.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── Environment ── -->
+  <section class="section section--bone">
+    <div class="section-inner">
+      <p class="section-label reveal">03 — The space</p>
+      <h2 class="section-heading reveal reveal-delay-1">A facility built for results, not traffic</h2>
+      <p class="section-body reveal reveal-delay-2">
+        The room is part of the product. Every surface, every light, every material is chosen to make training focused, progress photography consistent, and the experience unmistakably premium.
+      </p>
+      <div class="env-features">
+        <div class="env-feature reveal">
+          <h3 class="env-feature-title">Private by design</h3>
+          <p class="env-feature-desc">Low client density, appointment-only access, and no open gym floor. The calm of a private studio is part of what you're paying for.</p>
+        </div>
+        <div class="env-feature reveal reveal-delay-1">
+          <h3 class="env-feature-title">Editorial lighting</h3>
+          <p class="env-feature-desc">Directional, warm-temperature lighting that sculpts the physique. A controlled, consistent photo zone so every progress shot matches.</p>
+        </div>
+        <div class="env-feature reveal reveal-delay-2">
+          <h3 class="env-feature-title">Premium equipment</h3>
+          <p class="env-feature-desc">Commercial-grade, strength-focused equipment selected by our head coach. Nothing unnecessary, nothing missing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="cta-section">
+    <div class="steel-rule steel-rule--short steel-rule--center reveal" style="margin-bottom: 48px;"></div>
+    <p class="cta-location reveal">Richmond, BC</p>
+    <h2 class="cta-date reveal reveal-delay-1">Coming Fall 2026</h2>
+    <p class="cta-sub reveal reveal-delay-2">
+      Book a complimentary consultation — a coach follows up within two business days.
+    </p>
+    <a href="https://app.kalospt.ca/consultation" class="cta-button reveal reveal-delay-3">Book a free consultation</a>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="steel-rule"></div>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-wordmark" aria-label="KALOS">KΛLOS</p>
+          <p class="footer-desc">
+            A private personal training studio in Richmond, BC. Expert-led physique transformation — measured, engineered, individual.
+          </p>
+        </div>
+        <div>
+          <p class="footer-col-title">Contact</p>
+          <a href="mailto:hello@kalospt.ca" class="footer-link">hello@kalospt.ca</a>
+          <a href="https://www.instagram.com/kalos.pt/" target="_blank" rel="noopener" class="footer-link">Instagram</a>
+        </div>
+        <div>
+          <p class="footer-col-title">Get started</p>
+          <a href="https://app.kalospt.ca/consultation" class="footer-link">Book a consultation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Kalos Personal Training Studio</span>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/kalos.pt/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav background on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Scroll reveal via IntersectionObserver
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalos — Trainer Manual · Coaching Methodology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;1,400&family=Archivo+Expanded:wght@500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700..800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDkgNjQ0Ij48ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSwtMTQuMiw2NDQuMikiPjxwYXRoIGQ9Ik0xNC4yIDAgMzY4LjIgNjQ0LjJINTY1LjhMOTIzLjIgMEg3MjYuMkw0MTguMiA1NzlINTE2LjJMMjEwLjYgMFoiIGZpbGw9IiNDMDcwM0EiLz48L2c+PC9zdmc+">
+<style>
+  :root {
+    --graphite: #232629;
+    --ink:      #1b1d1f;
+    --bone:     #E8E6E1;
+    --paper:    #ffffff;
+    --steel:    #54606A;
+    --ash:      #9AA0A0;
+    --copper:   #C0703A;
+    --copper-deep: #A35E2F;
+    --line:     #CFC9BD;
+    --muted:    #7d7a72;
+    --light-bg: #F5F4F2;
+    --sans:  'Archivo', sans-serif;
+    --wide:  'Archivo Expanded', 'Archivo', sans-serif;
+    --display: 'Syne', 'Archivo Expanded', sans-serif; /* KΛLOS wordmark only */
+    --mono:  'JetBrains Mono', ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+  /* SIDE NAV */
+  .sidenav { position: fixed; top: 0; left: 0; width: 210px; height: 100vh; background: var(--graphite); padding: 40px 0; display: flex; flex-direction: column; z-index: 100; overflow-y: auto; }
+  .sidenav-logo { font-family: var(--display); font-weight: 740; font-size: 20px; letter-spacing: .02em; color: var(--bone); padding: 0 24px 24px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .sidenav-logo span { display: block; font-family: var(--mono); font-weight: 400; font-size: 9px; letter-spacing: .18em; color: var(--copper); text-transform: uppercase; margin-bottom: 6px; }
+  .sidenav-logo .wm { font-family: var(--display); font-weight: 740; font-size: 20px; letter-spacing: .02em; color: var(--bone); text-transform: none; margin-bottom: 0; }
+  .sidenav-links { padding: 20px 0; flex: 1; }
+  .sidenav-links a { display: flex; align-items: baseline; gap: 10px; padding: 8px 24px; text-decoration: none; transition: background .15s; }
+  .sidenav-links a:hover { background: rgba(255,255,255,.04); }
+  .sidenav-links a.active { background: rgba(192,112,58,.12); }
+  .sidenav-links a .nav-num { font-family: var(--mono); font-size: 9px; color: var(--copper); letter-spacing: .08em; flex-shrink: 0; }
+  .sidenav-links a .nav-label { font-family: var(--sans); font-size: 11px; color: var(--ash); letter-spacing: .02em; line-height: 1.4; }
+  .sidenav-links a:hover .nav-label, .sidenav-links a.active .nav-label { color: var(--bone); }
+  .sidenav-foot { padding: 20px 24px 0; border-top: 1px solid rgba(255,255,255,.08); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; color: rgba(154,160,160,.4); text-transform: uppercase; line-height: 1.8; }
+  .sidenav-foot a { display: block; color: var(--copper); text-decoration: none; margin-bottom: 12px; }
+  .sidenav-foot a:hover { color: var(--bone); }
+
+  /* MAIN */
+  .main { margin-left: 210px; }
+  .inner { max-width: 900px; }
+
+  /* MASTHEAD */
+  .masthead { padding: 72px 48px 52px; border-bottom: 2px solid var(--graphite); }
+  .mh-eyebrow { font-family: var(--mono); font-size: 10.5px; letter-spacing: .22em; color: var(--copper-deep); text-transform: uppercase; margin-bottom: 18px; }
+  .mh-word { font-family: var(--display); font-weight: 740; font-size: clamp(56px, 10vw, 100px); letter-spacing: .01em; color: var(--graphite); line-height: .9; }
+  .mh-rule { height: 2px; background: var(--steel); width: min(360px, 65%); margin: 20px 0 14px; }
+  .mh-tag { font-family: var(--mono); font-size: 13px; letter-spacing: .18em; color: var(--steel); }
+  .mh-meta { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--muted); margin-top: 28px; display: flex; gap: 28px; flex-wrap: wrap; text-transform: uppercase; }
+
+  /* CALLOUT */
+  .callout { border-left: 3px solid var(--copper); background: var(--bone); padding: 28px 32px; margin: 28px 0; }
+  .callout-label { font-family: var(--mono); font-size: 9.5px; letter-spacing: .2em; color: var(--copper-deep); text-transform: uppercase; margin-bottom: 12px; }
+  .callout p { font-size: 14px; line-height: 1.72; color: var(--ink); max-width: 68ch; margin-bottom: 0; }
+  .callout p + p { margin-top: 10px; }
+
+  /* SECTIONS */
+  .section { padding: 56px 48px; border-bottom: 1px solid var(--line); }
+  .section:last-of-type { border-bottom: none; }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 6px; }
+  .sec-num { font-family: var(--mono); font-size: 12px; color: var(--steel); letter-spacing: .1em; flex-shrink: 0; }
+  .sec-title { font-family: var(--wide); font-weight: 500; font-size: 21px; letter-spacing: .01em; color: var(--graphite); }
+  .sec-rule { height: 1.5px; background: var(--graphite); margin: 10px 0 28px; }
+
+  h3 { font-family: var(--sans); font-weight: 600; font-size: 12px; letter-spacing: .07em; text-transform: uppercase; color: var(--graphite); margin: 36px 0 12px; }
+  p { margin-bottom: 14px; max-width: 66ch; color: var(--ink); font-size: 14.5px; line-height: 1.72; }
+  p:last-child { margin-bottom: 0; }
+  p em { font-style: italic; color: var(--steel); }
+  p strong { font-weight: 600; color: var(--graphite); }
+
+  /* BULLETS */
+  .bullets { margin: 8px 0 16px; }
+  .bullet-item { display: flex; gap: 12px; align-items: flex-start; padding: 4px 0; font-size: 14px; color: var(--ink); line-height: 1.65; }
+  .bullet-item::before { content: ''; display: block; width: 14px; height: 1.5px; background: var(--steel); flex-shrink: 0; margin-top: 11px; }
+  .sub-bullets { margin: 6px 0 4px 26px; }
+  .sub-bullet { display: flex; gap: 10px; align-items: flex-start; padding: 2px 0; font-size: 13px; color: var(--steel); line-height: 1.6; }
+  .sub-bullet::before { content: ''; display: block; width: 8px; height: 1px; background: var(--ash); flex-shrink: 0; margin-top: 10px; }
+
+  /* STEPS */
+  .steps { margin: 8px 0 16px; counter-reset: step; }
+  .step-item { display: flex; gap: 18px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--line); counter-increment: step; font-size: 14px; line-height: 1.65; }
+  .step-item:last-child { border-bottom: none; }
+  .step-item::before { content: counter(step, decimal-leading-zero); font-family: var(--mono); font-size: 11px; color: var(--copper-deep); flex-shrink: 0; margin-top: 2px; min-width: 22px; }
+  .step-item strong { font-weight: 600; color: var(--graphite); }
+  .step-sub { margin-top: 8px; }
+  .step-sub .sub-bullet { font-size: 13px; color: var(--steel); }
+
+  /* PHASE CARDS */
+  .phase-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .phase-card { border: 1px solid var(--line); overflow: hidden; background: var(--bone); }
+  .phase-card-head { background: var(--graphite); padding: 14px 18px; }
+  .phase-card-head .phase-label { font-family: var(--mono); font-size: 9px; letter-spacing: .18em; color: var(--copper); text-transform: uppercase; margin-bottom: 4px; }
+  .phase-card-head .phase-name { font-family: var(--wide); font-weight: 500; font-size: 13px; color: var(--bone); letter-spacing: .03em; }
+  .phase-card-head .phase-duration { font-family: var(--mono); font-size: 9px; color: var(--ash); margin-top: 3px; }
+  .phase-card-body { background: var(--bone); padding: 16px 18px; }
+  .phase-row { display: flex; justify-content: space-between; align-items: baseline; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .phase-row:last-child { border-bottom: none; }
+  .phase-row .pr-label { color: var(--steel); font-size: 12.5px; }
+  .phase-row .pr-val { font-family: var(--mono); font-size: 11.5px; color: var(--graphite); }
+  .phase-note { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 10px; line-height: 1.55; }
+
+  /* SPLIT GRID */
+  .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .split-card { border: 1px solid var(--line); overflow: hidden; display: flex; flex-direction: column; }
+  .split-card-head { background: var(--graphite); padding: 11px 18px; display: flex; justify-content: space-between; align-items: center; }
+  .split-card-head .split-freq { font-family: var(--wide); font-weight: 500; font-size: 11px; letter-spacing: .06em; color: var(--bone); }
+  .split-card-head .split-days { font-family: var(--mono); font-size: 10px; color: var(--copper); }
+  .split-card-body { background: var(--bone); padding: 14px 18px; flex: 1; }
+  .split-option { padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--ink); line-height: 1.5; }
+  .split-option:last-child { border-bottom: none; }
+  .split-option .so-label { font-family: var(--mono); font-size: 9px; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; margin-bottom: 2px; }
+
+  /* TABLES */
+  .table-wrap { margin: 16px 0; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead tr { background: var(--graphite); }
+  thead th { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--bone); padding: 11px 16px; text-align: left; font-weight: 400; }
+  tbody tr { border-bottom: 1px solid var(--line); }
+  tbody tr:nth-child(even) { background: var(--light-bg); }
+  tbody td { padding: 10px 16px; color: var(--ink); vertical-align: top; line-height: 1.5; }
+  .mono-cell { font-family: var(--mono); font-size: 12px; color: var(--graphite); }
+  .copper-cell { font-family: var(--mono); font-size: 12px; color: var(--copper-deep); font-weight: 500; }
+  .standards-table tbody td:first-child { font-weight: 600; color: var(--graphite); width: 34%; }
+
+  /* FORMULA */
+  .formula-box { background: var(--bone); border: 1px solid var(--line); padding: 20px 24px; margin: 12px 0; font-family: var(--mono); font-size: 14px; color: var(--graphite); font-weight: 500; }
+  .formula-example { font-family: var(--mono); font-size: 12px; color: var(--steel); margin-top: 8px; font-weight: 400; }
+
+  /* TWO COL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+  .signal-card { border: 1px solid var(--line); padding: 22px; background: var(--bone); }
+  .signal-card h4 { font-family: var(--mono); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--copper-deep); margin-bottom: 14px; }
+
+  /* CLOSING NOTE */
+  .closing-note { background: var(--graphite); padding: 32px 36px; margin-top: 48px; }
+  .closing-note .cn-label { font-family: var(--mono); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--copper); margin-bottom: 16px; }
+  .closing-note p { font-family: var(--mono); font-size: 12px; line-height: 1.88; letter-spacing: .02em; color: var(--ash); max-width: 64ch; margin-bottom: 0; }
+  .closing-note p + p { margin-top: 12px; }
+
+  /* FOOTER */
+  footer { padding: 40px 48px 72px; border-top: 1px solid var(--line); }
+  .footer-rule { height: 1.5px; background: var(--steel); width: 80px; margin-bottom: 16px; }
+  footer p { font-family: var(--mono); font-size: 9.5px; line-height: 1.85; letter-spacing: .04em; color: var(--muted); max-width: 60ch; margin-bottom: 0; }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media print {
+    .sidenav { display: none; }
+    .main { margin-left: 0; }
+    .section, .phase-grid, .split-grid, .two-col, table { break-inside: avoid; }
+    h3, .sec-head { break-after: avoid; }
+  }
+  @media (max-width: 860px) {
+    .sidenav { display: none; }
+    .main { margin-left: 0; }
+    .masthead, .section, footer { padding-left: 24px; padding-right: 24px; }
+    .two-col, .split-grid, .phase-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="sidenav">
+  <div class="sidenav-logo">
+    <span>Trainer Manual</span>
+    <span class="wm" aria-label="KALOS">KΛLOS</span>
+  </div>
+  <div class="sidenav-links">
+    <a href="#s00"><span class="nav-num">00</span><span class="nav-label">Client Onboarding</span></a>
+    <a href="#s01"><span class="nav-num">01</span><span class="nav-label">The Kalos Standard</span></a>
+    <a href="#s02"><span class="nav-num">02</span><span class="nav-label">Training Cycle &amp; Phases</span></a>
+    <a href="#s03"><span class="nav-num">03</span><span class="nav-label">Training Splits</span></a>
+    <a href="#s04"><span class="nav-num">04</span><span class="nav-label">One Rep Max</span></a>
+    <a href="#s05"><span class="nav-num">05</span><span class="nav-label">Session Protocol</span></a>
+    <a href="#s06"><span class="nav-num">06</span><span class="nav-label">In-Session Judgment</span></a>
+    <a href="#s07"><span class="nav-num">07</span><span class="nav-label">Progression Tracking</span></a>
+    <a href="#s08"><span class="nav-num">08</span><span class="nav-label">Standards</span></a>
+  </div>
+  <div class="sidenav-foot"><a href="../platform/">Platform Guide ↗</a>Richmond, BC<br>2026 · Confidential</div>
+</nav>
+
+<div class="main">
+<div class="inner">
+
+  <header class="masthead reveal">
+    <div class="mh-eyebrow">Trainer Manual · Coaching Methodology</div>
+    <div class="mh-word" aria-label="KALOS">KΛLOS</div>
+    <div class="mh-rule"></div>
+    <div class="mh-tag">physique transformation engineered</div>
+    <div class="mh-meta">
+      <span>Richmond, BC</span><span>2026</span><span>Confidential</span>
+    </div>
+  </header>
+
+  <div class="section" style="border-bottom:none; padding-bottom:0;">
+    <div class="callout reveal">
+      <div class="callout-label">About this document</div>
+      <p>This manual defines the Kalos coaching methodology — the standardized system every Kalos trainer is required to learn, internalize, and deliver. It is the single most important document in the studio.</p>
+      <p>At Kalos, the quality of a client's result does not depend on which trainer they are assigned. It depends on the system. This document is that system. Every principle, protocol, and habit recorded here exists because it produces better, more consistent, more measurable physique transformations.</p>
+      <p>Read it thoroughly. Train with it. Return to it.</p>
+    </div>
+  </div>
+
+  <!-- 00 CLIENT ONBOARDING -->
+  <section class="section" id="s00">
+    <div class="sec-head reveal"><span class="sec-num">00</span><h2 class="sec-title">Client Onboarding Procedure</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">Every new client follows the same onboarding sequence. This process exists to ensure the right clients are matched with the right program — and that every client begins their transformation with a clear, measurable goal and a fully prescribed plan.</p>
+
+    <h3 class="reveal">Step 1 — PT Application</h3>
+    <p class="reveal">The prospective client submits a PT application covering general background information: training history, current lifestyle, availability, and initial goals. This gives the trainer context before any direct conversation takes place.</p>
+
+    <h3 class="reveal">Step 2 — Schedule the Consultation</h3>
+    <p class="reveal">Upon receiving the application, reach out to the prospect promptly to schedule an in-person or virtual consultation. The consultation is the most important sales and assessment moment in the client relationship — treat it accordingly.</p>
+
+    <h3 class="reveal">Step 3 — Conduct the Consultation</h3>
+    <p class="reveal">The consultation is a structured conversation using a standardized consultation form. Its purpose is to understand the client's full picture: their history, their motivations, their constraints, and their definition of success. Listen more than you speak.</p>
+
+    <h3 class="reveal">Step 4 — Goal Evaluation</h3>
+    <p class="reveal">Evaluate the client's stated goals against their background and capacity. Where necessary, recalibrate expectations. All confirmed goals must be <strong>SMART</strong> — specific, measurable, achievable, relevant, and time-bound.</p>
+    <div class="bullets reveal">
+      <div class="bullet-item">Identify any modifications needed to make the goal realistic</div>
+      <div class="bullet-item">Confirm the goal in SMART terms with the client before proceeding</div>
+      <div class="bullet-item">Document the confirmed goal in the client's profile</div>
+    </div>
+
+    <h3 class="reveal">Step 5 — Program Prescription</h3>
+    <p class="reveal">Based on the confirmed goal, prescribe the complete program strategy across four components:</p>
+    <div class="steps reveal">
+      <div class="step-item"><span><strong>Training program.</strong> Define the training split, weekly frequency, and intensity approach appropriate to the client's goal and experience level.</span></div>
+      <div class="step-item"><span><strong>Nutritional strategy.</strong> Prescribe the appropriate nutritional approach — meal planning, macro targets, or lifestyle adjustments — aligned to the client's transformation goal.</span></div>
+      <div class="step-item"><span><strong>Cardio regimen.</strong> Define the cardio component: modality, frequency, and intensity, calibrated to support the training program without compromising recovery.</span></div>
+      <div class="step-item"><span><strong>Supplements.</strong> Where appropriate, recommend evidence-based supplementation to support the client's goals.</span></div>
+    </div>
+
+    <h3 class="reveal">Step 6 — Package Recommendation</h3>
+    <p class="reveal">Based on the client's confirmed goal, its time-bound nature, and the prescribed weekly training frequency, recommend the appropriate PT package. The package recommendation follows directly from the math of the goal.</p>
+    <div class="callout reveal">
+      <div class="callout-label">Package recommendation example</div>
+      <p>A client's goal is to lose 16 lbs. A rate of 1 lb per week requires 16 weeks. The prescribed training frequency is 3 sessions per week. 3 × 16 = 48 sessions — the Transformation package is the correct recommendation.</p>
+      <p>Always tie the package recommendation to the client's own goal and timeline. The package is not a product you are selling — it is the vehicle for the result they have committed to.</p>
+    </div>
+  </section>
+
+  <!-- 01 THE KALOS STANDARD -->
+  <section class="section" id="s01">
+    <div class="sec-head reveal"><span class="sec-num">01</span><h2 class="sec-title">The Kalos Standard</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">Kalos exists in a single niche: <strong>physique transformation.</strong> We achieve this primarily through strength training — building the performance foundation that drives visible, lasting change in body composition. Every element of the system, from programming to tracking, serves that outcome.</p>
+
+    <p class="reveal">The personal training industry has a quality problem. Many trainers show up and train <em>with</em> their clients rather than train <em>them.</em> Programming is inconsistent. Progression is informal. The client is left to wonder whether they are actually getting better.</p>
+
+    <p class="reveal">The Kalos system exists to fix this. When a client pays for a Kalos package, they are not buying an hour of a trainer's time. They are buying into a system that guarantees constant, measurable progression — where they never need to think about what weight to lift, what exercise to do, or whether they are improving. That is our product. That is what we protect.</p>
+
+    <h3 class="reveal">What separates a Kalos trainer</h3>
+    <div class="bullets reveal">
+      <div class="bullet-item">Professional goal evaluation and goal setting — every client begins with a confirmed, SMART goal.</div>
+      <div class="bullet-item">Personalized, tailored program prescription — training split, nutrition, cardio, and supplements prescribed as a complete solution.</div>
+      <div class="bullet-item">You program every session before the client walks in.</div>
+      <div class="bullet-item">You set up equipment and are always one step ahead — the client never waits.</div>
+      <div class="bullet-item">You count every rep and watch every set.</div>
+      <div class="bullet-item">You adjust in real time based on what you observe — not rigidly to what the program prescribes.</div>
+      <div class="bullet-item">No cell phones during sessions, unless actively using the platform to track client progress.</div>
+      <div class="bullet-item">You own the client's progression. They own the results.</div>
+    </div>
+
+    <p class="reveal"><em>A client who trains at Kalos should be able to walk in, warm up, and do nothing but focus on the work. We handle everything else.</em></p>
+  </section>
+
+  <!-- 02 TRAINING CYCLE -->
+  <section class="section" id="s02">
+    <div class="sec-head reveal"><span class="sec-num">02</span><h2 class="sec-title">The Macro-Cycle Training Block</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">Every client's program is structured around a four-phase macro-cycle that makes up one complete training block. The cycle rotates through Strength, Hypertrophy 1, Hypertrophy 2, and Hypertrophy Volume — each phase applying a different rep range, exercise selection, and intensity to drive optimal progression. The phase applies to the entire split at once — every training day runs the same phase together before advancing to the next.</p>
+
+    <div class="phase-grid reveal" style="grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div class="phase-card" style="display:flex; flex-direction:column;">
+        <div class="phase-card-head">
+          <div class="phase-label">Phase 1</div>
+          <div class="phase-name">Strength</div>
+          <div class="phase-duration">1 week per block</div>
+        </div>
+        <div class="phase-card-body" style="flex:1;">
+          <div class="phase-row"><span class="pr-label">Compound exercises</span><span class="pr-val">5–6 reps · 75–80% 1RM</span></div>
+          <div class="phase-row"><span class="pr-label">Isolation exercises</span><span class="pr-val">8 reps</span></div>
+          <div class="phase-row"><span class="pr-label">1RM assessment</span><span class="pr-val">AMRAP · final set</span></div>
+          <div class="phase-note">For clients with prior training experience only. On the first Strength week, select a challenging weight the client can perform with 2–3 reps in reserve.</div>
+        </div>
+      </div>
+      <div class="phase-card" style="display:flex; flex-direction:column;">
+        <div class="phase-card-head">
+          <div class="phase-label">Phase 2</div>
+          <div class="phase-name">Hypertrophy 1</div>
+          <div class="phase-duration">1 week per block</div>
+        </div>
+        <div class="phase-card-body" style="flex:1;">
+          <div class="phase-row"><span class="pr-label">8 reps</span><span class="pr-val">65–70% 1RM</span></div>
+          <div class="phase-row"><span class="pr-label">10 reps</span><span class="pr-val">65% 1RM</span></div>
+          <div class="phase-note">Higher volume than Strength phase. More exercises, sets, and reduced rest time to drive muscle growth.</div>
+        </div>
+      </div>
+      <div class="phase-card" style="display:flex; flex-direction:column;">
+        <div class="phase-card-head">
+          <div class="phase-label">Phase 3</div>
+          <div class="phase-name">Hypertrophy 2</div>
+          <div class="phase-duration">1 week per block</div>
+        </div>
+        <div class="phase-card-body" style="flex:1;">
+          <div class="phase-row"><span class="pr-label">10 reps</span><span class="pr-val">60–65% 1RM</span></div>
+          <div class="phase-row"><span class="pr-label">12 reps</span><span class="pr-val">60% 1RM</span></div>
+          <div class="phase-note">Continued volume accumulation at slightly reduced intensity. Builds on Phase 2 stimulus.</div>
+        </div>
+      </div>
+      <div class="phase-card" style="display:flex; flex-direction:column;">
+        <div class="phase-card-head">
+          <div class="phase-label">Phase 4</div>
+          <div class="phase-name">Hypertrophy Volume</div>
+          <div class="phase-duration">1 week per block</div>
+        </div>
+        <div class="phase-card-body" style="flex:1;">
+          <div class="phase-row"><span class="pr-label">Rep range</span><span class="pr-val">15 reps · 50–55% 1RM</span></div>
+          <div class="phase-row"><span class="pr-label">Techniques</span><span class="pr-val">Supersets · drop-sets · failure sets</span></div>
+          <div class="phase-note">Maximum volume to break plateaus and drive further muscle growth. Intensity techniques applied to select exercises.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="reveal">Strength phase — compound exercise list</h3>
+    <p class="reveal">The following major compound exercises are the basis of Strength phase programming. Exercises are distributed across training days according to the client's assigned split and muscle groups.</p>
+    <div class="two-col reveal">
+      <div class="bullets">
+        <div class="bullet-item">Barbell Hip Thrust</div>
+        <div class="bullet-item">Barbell Deadlift</div>
+        <div class="bullet-item">Barbell Squat</div>
+        <div class="bullet-item">Barbell Row</div>
+        <div class="bullet-item">Landmine Row</div>
+      </div>
+      <div class="bullets">
+        <div class="bullet-item">Incline / Flat / Decline Barbell Bench Press</div>
+        <div class="bullet-item">Seated / Standing Barbell Overhead Press</div>
+        <div class="bullet-item">Barbell Curl</div>
+        <div class="bullet-item">Barbell Skull Crusher</div>
+      </div>
+    </div>
+
+    <h3 class="reveal">How the cycle self-adjusts</h3>
+    <p class="reveal">When a client completes all four phases they have completed one full training block. On week five — the start of the second block — they return to the Strength phase and perform AMRAP test sets to reassess their 1RM. If the client can perform more reps or lift more weight than the previous block, their estimated 1RM increases and all assigned weights recalibrate accordingly for the following three phases. The program progresses with the client based on their performance.</p>
+
+    <div class="callout reveal">
+      <div class="callout-label">Progressive overload by design</div>
+      <p>The four-phase cycle is not arbitrary. Each phase creates a different physiological stimulus — strength, hypertrophy at moderate volume, hypertrophy at higher volume, and peak volume with intensity techniques. By rotating through all four, the program ensures the client's body is never fully adapted to a single stimulus, and progression is built into the structure rather than left to guesswork.</p>
+    </div>
+
+    <h3 class="reveal">Deviating from the cycle</h3>
+    <p class="reveal">Client injury or acute fatigue may warrant skipping a high-intensity phase. When this occurs, document the deviation in the session log and resume the cycle at the correct point in the next session.</p>
+  </section>
+
+  <!-- 03 TRAINING SPLITS -->
+  <section class="section" id="s03">
+    <div class="sec-head reveal"><span class="sec-num">03</span><h2 class="sec-title">Training Splits</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">The training split is selected based on the client's weekly training frequency. The guiding principle is that every muscle group is trained at least once per week. Split selection is part of the initial program prescription and should be confirmed with the client at onboarding.</p>
+
+    <div class="split-grid reveal">
+      <div class="split-card">
+        <div class="split-card-head">
+          <span class="split-freq">2-Day Split</span>
+          <span class="split-days">2 days / week</span>
+        </div>
+        <div class="split-card-body">
+          <div class="split-option">
+            <div class="so-label">Option A</div>
+            Upper / Lower
+          </div>
+          <div class="split-option">
+            <div class="so-label">Option B</div>
+            Full Body &times; 2
+          </div>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card-head">
+          <span class="split-freq">3-Day Split</span>
+          <span class="split-days">3 days / week</span>
+        </div>
+        <div class="split-card-body">
+          <div class="split-option">
+            <div class="so-label">Option A</div>
+            Push / Pull / Legs
+          </div>
+          <div class="split-option">
+            <div class="so-label">Option B</div>
+            Chest + Arms / Back + Shoulders / Legs
+          </div>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card-head">
+          <span class="split-freq">4-Day Split</span>
+          <span class="split-days">4 days / week</span>
+        </div>
+        <div class="split-card-body">
+          <div class="split-option">
+            <div class="so-label">Option A</div>
+            Chest + Biceps / Back + Triceps / Shoulders + Abs / Legs
+          </div>
+          <div class="split-option">
+            <div class="so-label">Option B</div>
+            Push / Pull / Legs &times; 2
+          </div>
+        </div>
+      </div>
+      <div class="split-card">
+        <div class="split-card-head">
+          <span class="split-freq">5-Day Split</span>
+          <span class="split-days">5 days / week · Advanced</span>
+        </div>
+        <div class="split-card-body">
+          <div class="split-option">
+            <div class="so-label">Option A</div>
+            Chest / Back / Shoulders / Legs / Arms
+          </div>
+          <div class="split-option">
+            <div class="so-label">Option B</div>
+            Chest + Biceps / Back + Triceps / Shoulders + Abs / Legs / Weak Point Training
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="reveal" style="margin-top:4px;"><em>Most Kalos clients train 2–3 days per week. The 4- and 5-day splits are reserved for advanced clients with established training histories and sufficient recovery capacity.</em></p>
+  </section>
+
+  <!-- 04 ONE REP MAX -->
+  <section class="section" id="s04">
+    <div class="sec-head reveal"><span class="sec-num">04</span><h2 class="sec-title">The One Rep Max Foundation</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">All training weights at Kalos are derived from the client's one rep max (1RM) for each exercise. This is not a guideline — it is the mechanism that makes progression objective and eliminates guesswork. The 1RM is the anchor for every intensity prescription across all three phases.</p>
+
+    <h3 class="reveal">Establishing the initial 1RM</h3>
+    <p class="reveal">For a new client or a new exercise, the 1RM is established through a standard testing protocol or calculated using the Epley formula from a submaximal set. The trainer records this value in the client's profile before programming any subsequent sessions.</p>
+
+    <h3 class="reveal">When to retest — the AMRAP test</h3>
+    <p class="reveal">You do not retest 1RM on a fixed schedule. You retest when you observe it. During the <strong>Strength Phase</strong>, watch the client's working sets on major compound exercises. If the first sets at the training weight look clean — good bar speed, solid form, reps completed with capacity remaining — the final working set becomes the AMRAP test.</p>
+
+    <div class="callout reveal">
+      <div class="callout-label">AMRAP test protocol</div>
+      <p>On the final working set of every major compound exercise on Strength Day, if the preceding sets have looked strong, that last set becomes the AMRAP — the client performs as many reps as possible at the working weight rather than stopping at the target rep count.</p>
+      <p>Record the weight and the total reps completed. The platform calculates the new 1RM automatically. The result becomes the new 1RM for that exercise, and all future training weights are recalculated from it.</p>
+      <p>If the working sets looked labored or the client flagged fatigue, do not call the test. Stay at current weights and reassess at the next Strength Phase.</p>
+    </div>
+
+    <h3 class="reveal">Epley formula reference</h3>
+    <p class="reveal">The Kalos platform calculates 1RM automatically after every AMRAP test. Trainers do not need to run the numbers manually — but every trainer should understand the formula behind the calculation.</p>
+    <div class="formula-box reveal">
+      1RM = Weight &times; (1 + Reps &divide; 30)
+      <div class="formula-example">Example: Client completes 8 reps at 80 kg.&nbsp;&nbsp;1RM = 80 &times; (1 + 8 &divide; 30) = 80 &times; 1.267 = 101.3 kg</div>
+    </div>
+  </section>
+
+  <!-- 05 SESSION PROTOCOL -->
+  <section class="section" id="s05">
+    <div class="sec-head reveal"><span class="sec-num">05</span><h2 class="sec-title">Session Protocol</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">Every Kalos session follows the same sequence. This is not a suggestion — it is the standard. Consistency of process is how we deliver consistency of results.</p>
+
+    <h3 class="reveal">Before the client arrives</h3>
+    <div class="steps reveal">
+      <div class="step-item"><span><strong>Review the client's session history.</strong> Know where they are in the macro-cycle, what weights they hit last session, and any notes from previous sessions.</span></div>
+      <div class="step-item"><span><strong>Program the day's session.</strong> Determine every exercise, the target weight for each set, and the rep targets based on the current phase and the client's 1RM values. The session is planned before the client walks in.</span></div>
+    </div>
+
+    <div class="callout reveal">
+      <div class="callout-label">Why setup matters</div>
+      <p>Setting up the next exercise during the client's rest is one of the most visible expressions of the Kalos standard. It signals to the client that you are always one step ahead — that their session is managed, their time is respected, and they never have to stand around waiting. For a premium client, this is the difference between a coach and a trainer.</p>
+    </div>
+
+    <h3 class="reveal">The session opening</h3>
+    <div class="steps reveal">
+      <div class="step-item"><span><strong>Greet the client and direct them to warm up.</strong> While they warm up, confirm how they are feeling — sleep, stress, soreness — and factor this into your real-time adjustments for the session.</span></div>
+      <div class="step-item"><span><strong>Brief the session.</strong> Before the first working set, give the client a one-minute overview of what you are doing today, why, and what you are targeting. The client should always understand the purpose of the session.</span></div>
+    </div>
+
+    <h3 class="reveal">During each exercise</h3>
+    <div class="steps reveal">
+      <div class="step-item"><span><strong>Introduce the exercise.</strong> If the client is unfamiliar with the movement, demonstrate it and explain the target muscle group and the correct movement pattern before they attempt it.</span></div>
+      <div class="step-item"><span><strong>Count every rep.</strong> Out loud. Give verbal encouragement to keep the client pushing through the set. Your voice is part of the service.</span></div>
+      <div class="step-item"><span><strong>Watch and assess.</strong> While you count, you are evaluating. Is bar speed good or slow? Is form breaking down early? Does the client look well-rested or depleted? Your observation during each set determines your decision for the next one.</span></div>
+      <div class="step-item"><span><strong>Adjust the weight for the next set.</strong> If the set looked strong and the client has capacity, increase. If the client is struggling or showing fatigue signals, decrease. The programmed weight is your starting point — your in-session observation is what makes it right for today.</span></div>
+      <div class="step-item"><span><strong>Set up the next exercise.</strong> During the client's rest between sets, set up the next exercise. Load the bar, place the dumbbells, adjust the machine. The client's recovery time is your setup time — they move from one exercise to the next without waiting.</span></div>
+      <div class="step-item"><span><strong>Log the set immediately.</strong> Record the exercise, weight, and reps in the client's session log before moving on. Accurate data is how progression is tracked and how the next session is programmed.</span></div>
+    </div>
+
+    <h3 class="reveal">After the session</h3>
+    <div class="steps reveal">
+      <div class="step-item"><span><strong>Put away all equipment.</strong> Re-rack every plate, return every dumbbell, and reset every machine or bench used during the session. The client leaves without touching a single piece of equipment.</span></div>
+    </div>
+    <p class="reveal"><em>A client should never have to clean up after their own session. Tidy equipment is part of the product — the same way a premium restaurant clears your table. It signals care, and it sets the standard for the next client walking in.</em></p>
+  </section>
+
+  <!-- 06 IN-SESSION JUDGMENT -->
+  <section class="section" id="s06">
+    <div class="sec-head reveal"><span class="sec-num">06</span><h2 class="sec-title">In-Session Judgment</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">The macro-cycle and 1RM percentages give you a plan. What you observe during the session determines whether you execute that plan, push beyond it, or pull back. This real-time judgment is the most skilled part of the work.</p>
+
+    <div class="two-col reveal">
+      <div class="signal-card">
+        <h4>Signals to increase weight</h4>
+        <div class="bullets">
+          <div class="bullet-item">Rep speed is fast and controlled throughout the set</div>
+          <div class="bullet-item">The client completes the target reps with visible capacity remaining</div>
+          <div class="bullet-item">Form does not break down at any point in the set</div>
+          <div class="bullet-item">The client reports feeling well-rested and is showing up energized</div>
+        </div>
+      </div>
+      <div class="signal-card">
+        <h4>Signals to maintain or reduce</h4>
+        <div class="bullets">
+          <div class="bullet-item">Rep speed slows significantly in the final reps</div>
+          <div class="bullet-item">Form begins to compromise before the target rep count is reached</div>
+          <div class="bullet-item">The client reports poor sleep, high stress, or unusual fatigue</div>
+          <div class="bullet-item">The client flags unusual soreness or discomfort in a working muscle</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      <div class="callout-label">The principle of loaded attention</div>
+      <p>A client who trains at Kalos is paying for the luxury of not having to think. They should not be tracking their own weights, counting their own reps, or deciding whether to go heavier. That cognitive load belongs to you.</p>
+      <p>When a client finishes a set, your job is already done for the next one. The weight is adjusted. The plan is updated. They rest. You think.</p>
+    </div>
+  </section>
+
+  <!-- 07 PROGRESSION TRACKING -->
+  <section class="section" id="s07">
+    <div class="sec-head reveal"><span class="sec-num">07</span><h2 class="sec-title">Progression Tracking</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">Progression tracking is not an administrative task. It is the proof that the system is working — for the client, for the studio, and for the brand.</p>
+
+    <h3 class="reveal">What to log every session</h3>
+    <div class="bullets reveal">
+      <div class="bullet-item">Exercise name</div>
+      <div class="bullet-item">Sets performed</div>
+      <div class="bullet-item">Weight used for each set</div>
+      <div class="bullet-item">Reps completed for each set</div>
+      <div class="bullet-item">Any notes on form, fatigue, or notable performance</div>
+      <div class="bullet-item">Current 1RM for each tracked exercise (updated when retested)</div>
+    </div>
+
+    <h3 class="reveal">Body composition tracking</h3>
+    <p class="reveal">Client measurements and progress photos are taken at regular intervals per the schedule defined in the client onboarding protocol. The trainer is responsible for ensuring this data is captured accurately and logged in the platform at the time of measurement. This data feeds the client's progress dashboard and is the primary evidence used in before-and-after content.</p>
+
+    <h3 class="reveal">Why this matters for the business</h3>
+    <p class="reveal">Every documented transformation that Kalos produces is marketing. The client's progress data — logged, tracked, and visualized by the platform — is the output that drives referrals, social content, and new client acquisition. When you log accurately, you are not just helping your client. You are building the studio.</p>
+  </section>
+
+  <!-- 08 STANDARDS -->
+  <section class="section" id="s08">
+    <div class="sec-head reveal"><span class="sec-num">08</span><h2 class="sec-title">Non-Negotiable Standards</h2></div>
+    <div class="sec-rule reveal"></div>
+
+    <p class="reveal">The following are the minimum standards every Kalos trainer is required to meet on every session, with every client, without exception.</p>
+
+    <div class="table-wrap reveal">
+      <table class="standards-table">
+        <thead><tr><th>Standard</th><th>Requirement</th></tr></thead>
+        <tbody>
+          <tr><td>Pre-session programming</td><td>Session is fully programmed before the client arrives.</td></tr>
+          <tr><td>Cycle adherence</td><td>Correct phase (Strength / Hypertrophy 1 / Hypertrophy 2 / Hypertrophy Volume) followed for every exercise.</td></tr>
+          <tr><td>No cell phones</td><td>Phone is put away during sessions. The only exception is using the platform to log or track client progress.</td></tr>
+          <tr><td>Rep counting</td><td>Every rep is counted out loud during every set.</td></tr>
+          <tr><td>Active observation</td><td>Trainer is watching every rep — not distracted, not disengaged.</td></tr>
+          <tr><td>Real-time adjustment</td><td>Weight is adjusted between sets based on observed performance.</td></tr>
+          <tr><td>Equipment setup</td><td>Next exercise is set up during the client's rest period. Client never waits.</td></tr>
+          <tr><td>Session logging</td><td>Every set is logged with weight and reps before the session ends.</td></tr>
+          <tr><td>1RM updates</td><td>1RM is recalculated and updated whenever an AMRAP test is conducted.</td></tr>
+          <tr><td>Equipment tidy-up</td><td>All weights re-racked and equipment reset before the client leaves. No exceptions.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="closing-note reveal">
+      <div class="cn-label">A note from the Head Coach</div>
+      <p>The methodology in this document is the result of over a decade of working with clients and producing results. Every detail exists for a reason.</p>
+      <p>Clients who come to Kalos are paying a premium because they have tried other things and want something different. They want certainty. Our job is to give them that — not through promises, but through a system that works every time, no matter which trainer is on the floor.</p>
+      <p>When you follow this system, your clients get better results. When they get better results, they stay longer, refer their friends, and become part of the evidence base that makes this studio's reputation. The methodology protects you, the client, and the brand. Follow it.</p>
+      <p style="color: var(--bone); margin-top: 16px;">— Matt L.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-rule"></div>
+    <p style="margin-bottom: 14px;"><a href="../platform/" style="color: var(--copper); text-decoration: none;">Companion · Platform Guide ↗</a></p>
+    <p>Kalos Personal Training Studio &middot; Trainer Manual &middot; Coaching Methodology<br>Richmond, BC &middot; 2026 &middot; Confidential</p>
+  </footer>
+
+</div>
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 35);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.06 });
+  reveals.forEach(el => io.observe(el));
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sidenav-links a');
+  const onScroll = () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+</body>
+</html>
