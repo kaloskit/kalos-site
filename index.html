@@ -270,6 +270,71 @@
   }
   .footer-social a:hover { color: var(--bone); }
 
+  /* ── Software mockups ── */
+  .sw-band { margin-top: 56px; }
+  .sw-band + .pillars-grid { margin-top: 72px; }
+  .sw-composite { position: relative; }
+
+  .browser {
+    border-radius: 11px; overflow: hidden;
+    border: 1px solid rgba(84, 96, 106, 0.45);
+    background: var(--graphite-light);
+    box-shadow: 0 30px 60px -22px rgba(0, 0, 0, 0.6), 0 8px 22px -12px rgba(0, 0, 0, 0.45);
+  }
+  .browser-bar {
+    position: relative; display: flex; align-items: center; gap: 7px;
+    padding: 11px 15px; background: var(--graphite-light);
+    border-bottom: 1px solid rgba(84, 96, 106, 0.35);
+  }
+  .browser-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--steel); }
+  .browser-dot:nth-child(2) { background: var(--ash); opacity: 0.55; }
+  .browser-dot:nth-child(3) { background: var(--steel); opacity: 0.7; }
+  .browser-url {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em;
+    color: var(--ash); background: var(--graphite);
+    padding: 4px 16px; border-radius: 6px; max-width: 60%;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .browser-screen { display: block; }
+  .browser-screen img { display: block; width: 100%; height: auto; }
+
+  .sw-phones { display: contents; }
+  .phone {
+    position: absolute; z-index: 2;
+    background: #141618; padding: 9px; border-radius: 40px;
+    border: 1px solid rgba(84, 96, 106, 0.55);
+    box-shadow: 0 36px 70px -18px rgba(0, 0, 0, 0.72), 0 12px 26px -12px rgba(0, 0, 0, 0.55);
+  }
+  .phone-screen { border-radius: 32px; overflow: hidden; }
+  .phone-screen img { display: block; width: 100%; height: auto; }
+
+  /* Band 1 — desktop with a single phone at the bottom-right */
+  .sw-composite--right .phone { width: 25%; right: -2%; bottom: 5%; }
+
+  /* Band 2 — desktop with a two-phone fan at the bottom-left */
+  .sw-composite--left .phone { width: 22%; }
+  .sw-composite--left .phone--back  { left: -1%; bottom: 9%; z-index: 2; }
+  .sw-composite--left .phone--front { left: 15%; bottom: 0;  z-index: 3; }
+
+  .sw-caption {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em;
+    color: var(--ash); margin-top: 30px;
+  }
+
+  @media (max-width: 760px) {
+    .sw-band { margin-top: 44px; }
+    .phone { position: static; width: auto; padding: 7px; border-radius: 30px; }
+    .phone-screen { border-radius: 24px; }
+    .sw-phones {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 18px; margin-top: 22px;
+    }
+    .sw-composite--right .phone { width: 54%; max-width: 200px; }
+    .sw-composite--left .phone  { width: 46%; max-width: 190px; }
+    .sw-caption { margin-top: 22px; }
+  }
+
   /* ── Responsive ── */
   @media (max-width: 900px) {
     .facts { grid-template-columns: repeat(2, 1fr); gap: 28px; }
@@ -405,6 +470,34 @@
         logged. In your account, your records, strength trends, and progress photos stack up week after
         week — proof that it's working.
       </p>
+
+      <!-- Band 1 — client portal on the web, paired with the app -->
+      <div class="sw-band reveal reveal-delay-3">
+        <div class="sw-composite sw-composite--right">
+          <div class="browser">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-url">app.kalospt.ca</span>
+            </div>
+            <div class="browser-screen">
+              <img src="assets/software/desktop-tracking.png" alt="Kalos client portal Progress Tracking page — a weekly grid of daily weight, cardio, steps, calories, and macros measured against targets."
+                   width="1600" height="940" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="sw-phones">
+            <div class="phone">
+              <div class="phone-screen">
+                <img src="assets/software/phone-dashboard.png" alt="The Kalos iOS app dashboard — next session, sessions remaining, steps today, and a weekly steps chart."
+                     width="294" height="640" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="sw-caption">THE CLIENT PORTAL — WEB</p>
+      </div>
+
       <div class="pillars-grid">
         <div class="pillar reveal">
           <p class="pillar-number">01</p>
@@ -421,6 +514,39 @@
           <h3 class="pillar-heading">A room that pushes you</h3>
           <p class="pillar-body">Leaderboards and shared PRs put you among people chasing the same thing. Opt in, and let it pull you forward.</p>
         </div>
+      </div>
+
+      <!-- Band 2 — the app, paired with the records page on the web -->
+      <div class="sw-band reveal reveal-delay-2">
+        <div class="sw-composite sw-composite--left">
+          <div class="browser">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-url">app.kalospt.ca</span>
+            </div>
+            <div class="browser-screen">
+              <img src="assets/software/desktop-records.png" alt="Kalos client portal Personal Record page — all-time and current weight-loss charts, cardio and calorie trends, average macros, and 1RM personal bests."
+                   width="1600" height="929" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="sw-phones">
+            <div class="phone phone--back">
+              <div class="phone-screen">
+                <img src="assets/software/phone-records.png" alt="The Kalos iOS app Records screen — weight-lost totals with all-time and current body-weight trend charts."
+                     width="294" height="640" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="phone phone--front">
+              <div class="phone-screen">
+                <img src="assets/software/phone-food.png" alt="The Kalos iOS app Food screen — daily calories against target with protein, carbs, and fats rings and a meal diary."
+                     width="294" height="640" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="sw-caption">THE KΛLOS APP — iOS</p>
       </div>
     </div>
   </section>
