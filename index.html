@@ -312,10 +312,8 @@
   /* Band 1 — desktop with a single phone at the bottom-right */
   .sw-composite--right .phone { width: 25%; right: -2%; bottom: 5%; }
 
-  /* Band 2 — desktop with a two-phone fan at the bottom-right */
-  .sw-composite--left .phone { width: 22%; }
-  .sw-composite--left .phone--back  { right: 13%; bottom: 16%; z-index: 2; }
-  .sw-composite--left .phone--front { right: -2%; bottom: 0;  z-index: 3; }
+  /* Band 2 — same single bottom-right phone as band 1 */
+  .sw-composite--left .phone { width: 25%; right: -2%; bottom: 5%; }
 
   .sw-caption {
     font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em;
@@ -532,13 +530,7 @@
             </div>
           </div>
           <div class="sw-phones">
-            <div class="phone phone--back">
-              <div class="phone-screen">
-                <img src="assets/software/phone-records.png" alt="The Kalos iOS app Records screen — weight-lost totals with all-time and current body-weight trend charts."
-                     width="294" height="640" loading="lazy" decoding="async">
-              </div>
-            </div>
-            <div class="phone phone--front">
+            <div class="phone">
               <div class="phone-screen">
                 <img src="assets/software/phone-food.png" alt="The Kalos iOS app Food screen — daily calories against target with protein, carbs, and fats rings and a meal diary."
                      width="294" height="640" loading="lazy" decoding="async">
