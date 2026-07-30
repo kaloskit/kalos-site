@@ -211,16 +211,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
      selector, which would silently never match here. */
   .slide.active:has(.slide-visual--panel) {
     display: flex; flex-direction: column;
+    height: 82vh; min-height: 560px; /* match the photo slides' fixed height */
   }
   .slide:has(.slide-visual--panel) .slide-visual--panel {
-    order: -1; position: relative;
-    height: auto; min-height: 360px;
-    justify-content: center; padding: 60px 20px 32px;
+    order: -1; position: relative; flex-shrink: 0;
+    height: auto; min-height: 320px;
+    justify-content: center; padding: 84px 20px 20px; /* nav is 68px — clear it */
   }
   .slide:has(.slide-visual--panel) .slide-copy {
     order: 1; position: static;
     left: auto; right: auto; bottom: auto; max-width: none;
-    padding: 24px 22px 8px; background: var(--graphite);
+    padding: 12px 22px 8px; background: var(--graphite);
   }
   .slide-sw { width: 100%; }
   .slide-sw .phone { position: absolute; width: 30%; right: 2%; bottom: -12%; padding: 5px; border-radius: 22px; }
