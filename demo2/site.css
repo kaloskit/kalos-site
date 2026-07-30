@@ -134,15 +134,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .slide-visual { position: absolute; inset: 0; }
 .slide-visual::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(75deg, rgba(20,22,24,.62) 0%, rgba(20,22,24,.28) 46%, rgba(20,22,24,.05) 75%);
+  background:
+    linear-gradient(80deg, rgba(20,22,24,.92) 0%, rgba(20,22,24,.72) 38%, rgba(20,22,24,.34) 62%, rgba(20,22,24,0) 82%),
+    linear-gradient(to top, rgba(20,22,24,.6) 0%, rgba(20,22,24,0) 34%);
 }
 .slide-copy {
-  position: absolute; left: 56px; bottom: 120px; z-index: 2;
-  max-width: 560px; padding: 40px 44px;
-  background: rgba(26, 28, 30, 0.55);
-  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(232, 230, 225, 0.14);
-  border-radius: 4px;
+  position: absolute; left: 56px; bottom: 116px; z-index: 2;
+  max-width: 600px; padding: 0;
 }
 .slide-kicker { font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--copper); margin-bottom: 18px; }
 .slide-title { font-family: var(--font-wide); font-weight: 500; font-size: clamp(26px, 3vw, 38px); line-height: 1.16; color: var(--bone); margin-bottom: 16px; }
@@ -172,8 +170,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   .slide { position: relative; display: none; }
   .slide.active { display: block; }
   .slide-visual { position: relative; height: 62vh; min-height: 420px; }
-  .slide-copy { position: relative; left: auto; bottom: auto; max-width: none; margin: -80px 20px 0; padding: 28px 24px 32px; }
-  .slider-controls { position: relative; left: auto; bottom: auto; padding: 20px 24px 28px; }
+  .slide-copy { position: relative; left: auto; bottom: auto; max-width: none; margin: 0; padding: 26px 24px 8px; background: var(--graphite); }
+  .slider-controls { position: relative; left: auto; bottom: auto; padding: 20px 24px 28px; background: var(--graphite); }
 }
 
 /* ── Slide software composite ── */
