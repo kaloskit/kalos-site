@@ -200,6 +200,22 @@ body {
   .slider-controls { left: 24px; bottom: 36px; }
 }
 
+/* ── Slide software composite ── */
+.slide-visual--panel {
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(ellipse 80% 70% at 60% 30%, rgba(192, 112, 58, 0.10) 0%, transparent 65%),
+    linear-gradient(160deg, var(--graphite-light) 0%, #17191b 100%);
+}
+.slide-sw { position: relative; width: min(80%, 720px); z-index: 2; }
+.slide-sw .phone { position: absolute; width: 27%; right: -5%; bottom: -9%; }
+@media (max-width: 900px) {
+  .slide-visual--panel { padding: 28px 20px 36px; }
+  .slide-sw { width: 100%; }
+  .slide-sw .phone { position: absolute; width: 30%; right: 2%; bottom: -12%; padding: 5px; border-radius: 22px; }
+  .slide-sw .phone .phone-screen { border-radius: 17px; }
+}
+
 /* ── Art panels (photography placeholders) ── */
 .art-panel {
   position: relative; overflow: hidden; background:
