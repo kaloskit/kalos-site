@@ -76,6 +76,15 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .nav-cta:hover { background: var(--copper-deep); border-color: var(--copper-deep); color: #fff; }
 @media (max-width: 900px) { .nav-links { display: none; } }
 
+/* Dark header variant (home page — sits over the dark hero) */
+.nav--dark { background: rgba(26,28,30,.78); border-bottom-color: rgba(232,230,225,.08); }
+.nav--dark .nav-wordmark { color: var(--bone); }
+.nav--dark .nav-link { color: var(--ash); }
+.nav--dark .nav-link:hover { color: var(--bone); }
+.nav--dark .nav-link.active { color: var(--copper); }
+.nav--dark .nav-cta { color: var(--graphite); background: var(--bone); border-color: var(--bone); }
+.nav--dark .nav-cta:hover { background: var(--copper-deep); border-color: var(--copper-deep); color: #fff; }
+
 /* ── Buttons ── */
 .btn-primary, .btn-ghost, .btn-copper {
   display: inline-block; font-family: var(--font-mono); font-weight: 500; font-size: 13px;
