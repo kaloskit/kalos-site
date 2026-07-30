@@ -160,6 +160,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 }
 .slide-link:hover { color: var(--copper); }
 
+/* Slide 1's photo is 16:9 while the slide is whatever the viewport is, so a
+   fitted (contain) treatment left bars — top/bottom on a 16:10 laptop, sides
+   on an ultrawide — and a hard seam where the photo stopped. It now CROPS to
+   fill like every other slide's photo (they're all cover), which removes the
+   letterbox entirely rather than trying to disguise it: no mask, no matched
+   backdrop, no seam at any size. object-position keeps the subject framed as
+   the crop axis flips at 16:9. Mobile's own cover rule still overrides below
+   901px. */
+.slide-photo-fit {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 60% 40%;
+}
+
 .slider-controls { position: absolute; left: 56px; bottom: 44px; z-index: 5; display: flex; align-items: center; gap: 20px; }
 .slider-dots { display: flex; gap: 10px; }
 .slider-dot { width: 28px; height: 2px; background: rgba(232,230,225,.35); border: none; padding: 0; cursor: pointer; transition: background .3s ease; }
@@ -208,16 +221,21 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
    this slide needs its own scrim — full strength under the text, gone by the
    time it reaches the mockup's body. z-index 3 puts it above the composite
    (z-index 2) and below the copy (z-index 4). Mobile stacks the copy below the
-   panel in normal flow, so there's nothing to scrim — see the media block. */
+   panel in normal flow, so there's nothing to scrim — see the media block.
+
+   Stops are in PX, not %: the copy is pinned at left:56px with max-width:600px,
+   so it always ends at x=656 no matter how wide the screen is. Percentage stops
+   stretched the fade with the viewport and left the mockup dimmed far past the
+   text on big screens (still ~44% dark at 1300px on a 2560 display). */
 .slide-visual--panel::after {
   display: block; z-index: 3;
   background: linear-gradient(
     to right,
-    rgba(20, 22, 24, .95) 0%,
-    rgba(20, 22, 24, .92) 30%,
-    rgba(20, 22, 24, .68) 46%,
-    rgba(20, 22, 24, .18) 58%,
-    rgba(20, 22, 24, 0) 68%
+    rgba(20, 22, 24, .95) 0,
+    rgba(20, 22, 24, .92) 380px,
+    rgba(20, 22, 24, .66) 620px,
+    rgba(20, 22, 24, .2) 780px,
+    rgba(20, 22, 24, 0) 900px
   );
 }
 /* Both were z-index 2, and the visual comes later in the DOM — which is why
@@ -246,7 +264,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
       linear-gradient(160deg, #2c2f33 0%, #17191b 100%);
   }
   .slide:has(.slide-visual--panel) .slide-visual--panel {
-    order: -1; position: relative; flex-shrink: 0;
+    /* The panel absorbs ALL the slack (grow 1, never shrink) and the base rule
+       centers its content — so the composite sits in the middle of the space
+       between the nav and the copy instead of riding up against the nav with
+       the leftover space dumped underneath it. */
+    order: -1; position: relative; flex: 1 0 auto;
     height: auto; min-height: 0;
     background: none; /* the slide paints it now */
     /* Nothing floats over the composite here, so the desktop scrim would just
@@ -261,10 +283,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   .slide:has(.slide-visual--panel) .slide-copy {
     order: 1; position: static;
     left: auto; right: auto; bottom: auto; max-width: none;
-    /* margin-top:auto pins the copy to the foot of the slide, and the bottom
-       padding lands the link exactly where the photo slides' absolutely
-       positioned copy (bottom: 86px) lands it — same height, same baseline. */
-    margin-top: auto; padding: 4px 22px 86px; background: none;
+    /* The panel above absorbs the slack, so the copy already sits at the foot;
+       the bottom padding lands the link exactly where the photo slides'
+       absolutely positioned copy (bottom: 86px) lands it — same baseline. */
+    padding: 4px 22px 86px; background: none;
   }
   .slide-sw { width: 100%; }
   .slide:has(.slide-visual--panel) .slide-sw { width: 92%; }
