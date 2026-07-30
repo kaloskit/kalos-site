@@ -419,3 +419,94 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   .footer { padding: 44px 22px; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
 }
+
+
+/* ═══ DARK VARIANT (demo 2) — overrides on the editorial system ═══ */
+body { background: #1E2124; color: var(--bone); }
+.nav { background: rgba(26,28,30,.78); border-bottom-color: rgba(232,230,225,.08); }
+.nav-wordmark { color: var(--bone); }
+.nav-link { color: var(--ash); } .nav-link:hover { color: var(--bone); } .nav-link.active { color: var(--copper); }
+.nav-cta { color: var(--graphite); background: var(--bone); border-color: var(--bone); }
+.nav-cta:hover { background: var(--copper-deep); border-color: var(--copper-deep); color: #fff; }
+.btn-primary { color: var(--graphite); background: var(--bone); border-color: var(--bone); }
+.btn-primary:hover { background: transparent; color: var(--bone); }
+.btn-ghost { color: var(--bone); border-color: rgba(232,230,225,.35); }
+.btn-ghost:hover { border-color: var(--bone); }
+.section-label { color: var(--copper); }
+.section-heading { color: var(--bone); }
+.section-body { color: var(--ash); } .section-body strong { color: var(--bone); }
+.section-body a { color: var(--copper); border-bottom-color: rgba(192,112,58,.4); }
+.steel-rule { background: rgba(232,230,225,.14); }
+.steel-rule--short { background: var(--copper); }
+.page-hero-crumb { color: var(--copper); }
+.page-hero-title { color: var(--bone); } .page-hero-sub { color: var(--ash); }
+.page-hero::after { background: rgba(232,230,225,.14); }
+/* contrast bands flip to BONE punctuation */
+.section--contrast { background: var(--bone); color: var(--ink); }
+.section--contrast .section-heading { color: var(--graphite); }
+.section--contrast .section-body { color: #4a4f52; }
+.section--contrast .section-body strong { color: var(--graphite); }
+.section--contrast .section-label { color: var(--copper-deep); }
+.section--contrast .steel-rule { background: var(--line); }
+.facts { background: rgba(232,230,225,.12); border-color: rgba(232,230,225,.12); }
+.fact { background: #17191B; } .fact-num { color: var(--bone); } .fact-label { color: var(--ash); }
+.section--contrast .facts { background: var(--line); border-color: var(--line); }
+.section--contrast .fact { background: var(--white); }
+.section--contrast .fact-num { color: var(--graphite); }
+.section--contrast .fact-label { color: var(--steel); }
+.pillar { border-top-color: rgba(232,230,225,.14); } .pillar-number { color: var(--copper); }
+.pillar-heading { color: var(--bone); } .pillar-body { color: var(--ash); }
+.section--contrast .pillar { border-top-color: var(--line); }
+.section--contrast .pillar-number { color: var(--copper-deep); }
+.section--contrast .pillar-heading { color: var(--graphite); }
+.section--contrast .pillar-body { color: #4a4f52; }
+.step { background: #17191B; border-color: rgba(232,230,225,.1); }
+.step-num { color: var(--copper); } .step-title { color: var(--bone); } .step-body { color: var(--ash); }
+.section--contrast .step { background: var(--white); border-color: var(--line); }
+.section--contrast .step-num { color: var(--copper-deep); }
+.section--contrast .step-title { color: var(--graphite); }
+.section--contrast .step-body { color: #4a4f52; }
+.step-link { color: var(--copper); } .step-link:hover { border-color: var(--copper); }
+.section--contrast .step-link { color: var(--copper-deep); }
+.package { background: #17191B; border-color: rgba(232,230,225,.12); }
+.package:hover { background: #17191B; box-shadow: 0 24px 48px -24px rgba(0,0,0,.65); }
+.package-name { color: var(--bone); } .package-rate { color: var(--bone); }
+.package-tag { color: var(--copper); } .package-desc { color: var(--ash); }
+.package-sessions { color: var(--ash); }
+.package-features { border-top-color: rgba(232,230,225,.14); }
+.package-feature-item { color: var(--ash); }
+.package-feature-item strong { color: var(--bone); }
+.package-feature-item::before { background: var(--copper); }
+.package--feature { background: var(--bone); border-color: var(--bone); }
+.package--feature:hover { background: var(--bone); }
+.package--feature .package-name, .package--feature .package-rate { color: var(--graphite); }
+.package--feature .package-tag { color: var(--copper-deep); }
+.package--feature .package-desc { color: #4a4f52; }
+.package--feature .package-sessions { color: var(--steel); }
+.package--feature .package-features { border-top-color: var(--line); }
+.package--feature .package-feature-item { color: #4a4f52; }
+.package--feature .package-feature-item strong { color: var(--graphite); }
+.package--feature .package-feature-item::before { background: var(--copper-deep); }
+.packages-note { color: var(--ash); }
+.team-card { background: #17191B; border-color: rgba(232,230,225,.12); }
+.team-name { color: var(--bone); } .team-bio { color: var(--ash); } .team-role { color: var(--copper); }
+.team-cred { color: var(--ash); border-color: rgba(232,230,225,.2); }
+.stat-cell { background: #17191B; border-color: rgba(232,230,225,.12); }
+.stat-cell-num { color: var(--bone); } .stat-cell-label { color: var(--ash); }
+.cta-section { background: var(--bone); }
+.cta-section::before { background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(192,112,58,.12) 0%, transparent 70%); }
+.cta-location { color: var(--steel); } .cta-date { color: var(--graphite); } .cta-sub { color: #4a4f52; }
+.cta-section .btn-primary { background: var(--graphite); color: var(--bone); border-color: var(--graphite); }
+.cta-section .btn-primary:hover { background: transparent; color: var(--graphite); }
+.footer { background: #1E2124; }
+.footer-wordmark { color: var(--bone); } .footer-desc { color: var(--ash); }
+.footer-col-title { color: var(--steel); } .footer-link { color: var(--ash); } .footer-link:hover { color: var(--copper); }
+.footer-bottom { border-top-color: rgba(232,230,225,.12); } .footer-copy { color: var(--steel); }
+.footer-social a { color: var(--steel); } .footer-social a:hover { color: var(--copper); }
+.browser { border-color: rgba(232,230,225,.15); background: #17191B; box-shadow: 0 36px 72px -28px rgba(0,0,0,.7), 0 8px 22px -12px rgba(0,0,0,.5); }
+.browser-bar { background: #26292C; border-bottom-color: rgba(232,230,225,.1); }
+.browser-dot { background: #4a4f52; }
+.browser-url { color: var(--ash); background: #1E2124; }
+.sw-caption { color: var(--ash); }
+.demo-banner { background: var(--copper-deep); color: #fff; }
+a:focus-visible, button:focus-visible { outline-color: var(--copper); }
