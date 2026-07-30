@@ -292,7 +292,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .steps-grid--4 { grid-template-columns: repeat(4, 1fr); }
 .step { padding: 26px 24px 28px; background: var(--white); border: 1px solid var(--line); border-radius: 4px; }
 .section--contrast .step { background: var(--graphite-deep); border-color: rgba(232,230,225,.12); }
+.step-icon {
+  flex: none; width: 18px; height: 18px;
+  fill: none; stroke: currentColor;
+  stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+}
 .step-num { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; color: var(--copper-deep); margin-bottom: 14px; }
+.step-num:has(.step-icon) { display: flex; align-items: center; gap: 9px; }
 .section--contrast .step-num { color: var(--copper); }
 .step-title { font-family: var(--font-wide); font-weight: 500; font-size: 18px; margin-bottom: 10px; color: var(--graphite); }
 .section--contrast .step-title { color: var(--bone); }
