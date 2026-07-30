@@ -204,10 +204,36 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .slide-sw { position: relative; width: min(54%, 860px); z-index: 2; }
 .slide-sw .phone { position: absolute; width: 26%; right: -5%; bottom: -9%; }
 @media (max-width: 900px) {
-  .slide-visual--panel { justify-content: center; padding: 90px 20px 60px; }
+  /* The panel slide isn't a photo — it composes its own dark backdrop, so its
+     copy must flow in normal document order below it, never overlaid. The
+     slide's DOM order is copy-then-panel for every slide (confirmed against
+     the live markup), so scope by :has() rather than an adjacent-sibling
+     selector, which would silently never match here. */
+  .slide.active:has(.slide-visual--panel) {
+    display: flex; flex-direction: column;
+  }
+  .slide:has(.slide-visual--panel) .slide-visual--panel {
+    order: -1; position: relative;
+    height: auto; min-height: 360px;
+    justify-content: center; padding: 60px 20px 32px;
+  }
+  .slide:has(.slide-visual--panel) .slide-copy {
+    order: 1; position: static;
+    left: auto; right: auto; bottom: auto; max-width: none;
+    padding: 24px 22px 8px; background: var(--graphite);
+  }
   .slide-sw { width: 100%; }
   .slide-sw .phone { position: absolute; width: 30%; right: 2%; bottom: -12%; padding: 5px; border-radius: 22px; }
   .slide-sw .phone .phone-screen { border-radius: 17px; }
+  /* Controls are a SIBLING of .slide, not a child — .slide:has() above can't
+     reach them. Take them out of the absolute-overlay flow (which assumes a
+     full-bleed photo) and place them in normal flow, after the copy, only
+     while the panel slide is the active one. */
+  .slider:has(.slide.active .slide-visual--panel) .slider-controls {
+    position: static;
+    margin: 4px 22px 28px;
+    padding: 0;
+  }
 }
 
 /* ── Art panels (placeholders / photo frames) ── */
