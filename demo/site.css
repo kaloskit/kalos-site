@@ -215,29 +215,24 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   }
   .slide:has(.slide-visual--panel) .slide-visual--panel {
     order: -1; position: relative; flex-shrink: 0;
-    height: auto; min-height: 320px;
+    height: auto; min-height: 0;
     /* top: clear the 68px fixed nav. bottom: the phone is absolutely
-       positioned to hang below the browser mockup, so the panel must reserve
-       room for that overhang or the copy block below paints over it. */
-    justify-content: center; padding: 78px 20px 44px;
+       positioned to hang below the browser mockup (~29px), so the panel must
+       reserve room for that overhang or the copy below paints over it. */
+    justify-content: center; padding: 72px 20px 32px;
   }
   .slide:has(.slide-visual--panel) .slide-copy {
     order: 1; position: static;
     left: auto; right: auto; bottom: auto; max-width: none;
-    padding: 12px 22px 8px; background: var(--graphite);
+    padding: 4px 22px 0; background: var(--graphite);
   }
   .slide-sw { width: 100%; }
+  .slide:has(.slide-visual--panel) .slide-sw { width: 92%; }
   .slide-sw .phone { position: absolute; width: 30%; right: 2%; bottom: -12%; padding: 5px; border-radius: 22px; }
   .slide-sw .phone .phone-screen { border-radius: 17px; }
-  /* Controls are a SIBLING of .slide, not a child — .slide:has() above can't
-     reach them. Take them out of the absolute-overlay flow (which assumes a
-     full-bleed photo) and place them in normal flow, after the copy, only
-     while the panel slide is the active one. */
-  .slider:has(.slide.active .slide-visual--panel) .slider-controls {
-    position: static;
-    margin: 4px 22px 28px;
-    padding: 0;
-  }
+  /* Controls stay absolutely positioned (as on the photo slides) so this slide
+     is exactly as tall as the others — they still read as sitting under the
+     copy, because the panel + copy are sized to end above them. */
 }
 
 /* ── Art panels (placeholders / photo frames) ── */
