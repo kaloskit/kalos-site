@@ -139,7 +139,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
     linear-gradient(to top, rgba(20,22,24,.6) 0%, rgba(20,22,24,0) 34%);
 }
 .slide-copy {
-  position: absolute; left: 56px; bottom: 116px; z-index: 2;
+  position: absolute; left: 56px; bottom: 190px; z-index: 2;
   max-width: 600px; padding: 0;
 }
 .slide-kicker { font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--copper); margin-bottom: 18px; }
