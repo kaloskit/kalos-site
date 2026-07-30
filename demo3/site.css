@@ -135,16 +135,16 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .slide-visual::after {
   content: ''; position: absolute; inset: 0;
   background:
-    linear-gradient(80deg, rgba(20,22,24,.92) 0%, rgba(20,22,24,.72) 38%, rgba(20,22,24,.34) 62%, rgba(20,22,24,0) 82%),
-    linear-gradient(to top, rgba(20,22,24,.6) 0%, rgba(20,22,24,0) 34%);
+    linear-gradient(80deg, rgba(20,22,24,.85) 0%, rgba(20,22,24,.55) 30%, rgba(20,22,24,.18) 52%, rgba(20,22,24,0) 66%),
+    linear-gradient(to top, rgba(20,22,24,.4) 0%, rgba(20,22,24,0) 24%);
 }
 .slide-copy {
   position: absolute; left: 56px; bottom: 190px; z-index: 2;
   max-width: 600px; padding: 0;
 }
 .slide-kicker { font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--copper); margin-bottom: 18px; }
-.slide-title { font-family: var(--font-wide); font-weight: 500; font-size: clamp(26px, 3vw, 38px); line-height: 1.16; color: var(--bone); margin-bottom: 16px; }
-.slide-desc { font-size: 15px; line-height: 1.75; color: rgba(232,230,225,.82); margin-bottom: 26px; }
+.slide-title { font-family: var(--font-wide); font-weight: 500; font-size: clamp(26px, 3vw, 38px); line-height: 1.16; color: var(--bone); margin-bottom: 16px; text-shadow: 0 2px 28px rgba(20,22,24,.65); }
+.slide-desc { font-size: 15px; line-height: 1.75; color: rgba(232,230,225,.88); margin-bottom: 26px; text-shadow: 0 1px 18px rgba(20,22,24,.7); }
 .slide-link {
   font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
   color: var(--bone); text-decoration: none; border-bottom: 1px solid var(--copper); padding-bottom: 6px; transition: color .3s ease;
