@@ -212,10 +212,17 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   .slide.active:has(.slide-visual--panel) {
     display: flex; flex-direction: column;
     height: 82vh; min-height: 560px; /* match the photo slides' fixed height */
+    /* Own the backdrop at slide level so ONE continuous gradient spans the
+       composite and the copy below it — otherwise the panel's gradient meets
+       the copy's flat --graphite and leaves a visible seam. */
+    background:
+      radial-gradient(ellipse 80% 50% at 65% 22%, rgba(192, 112, 58, 0.12) 0%, transparent 65%),
+      linear-gradient(160deg, #2c2f33 0%, #17191b 100%);
   }
   .slide:has(.slide-visual--panel) .slide-visual--panel {
     order: -1; position: relative; flex-shrink: 0;
     height: auto; min-height: 0;
+    background: none; /* the slide paints it now */
     /* top: clear the 68px fixed nav. bottom: the phone is absolutely
        positioned to hang below the browser mockup (~29px), so the panel must
        reserve room for that overhang or the copy below paints over it. */
@@ -224,7 +231,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   .slide:has(.slide-visual--panel) .slide-copy {
     order: 1; position: static;
     left: auto; right: auto; bottom: auto; max-width: none;
-    padding: 4px 22px 0; background: var(--graphite);
+    padding: 4px 22px 0; background: none;
   }
   .slide-sw { width: 100%; }
   .slide:has(.slide-visual--panel) .slide-sw { width: 92%; }
