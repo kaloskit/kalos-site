@@ -204,9 +204,29 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
     radial-gradient(ellipse 80% 70% at 65% 30%, rgba(192, 112, 58, 0.12) 0%, transparent 65%),
     linear-gradient(160deg, #2c2f33 0%, #17191b 100%);
 }
-.slide-visual--panel::after { display: none; }
+/* Desktop: the copy floats OVER the composite, same as the photo slides, so
+   this slide needs its own scrim — full strength under the text, gone by the
+   time it reaches the mockup's body. z-index 3 puts it above the composite
+   (z-index 2) and below the copy (z-index 4). Mobile stacks the copy below the
+   panel in normal flow, so there's nothing to scrim — see the media block. */
+.slide-visual--panel::after {
+  display: block; z-index: 3;
+  background: linear-gradient(
+    to right,
+    rgba(20, 22, 24, .95) 0%,
+    rgba(20, 22, 24, .92) 30%,
+    rgba(20, 22, 24, .68) 46%,
+    rgba(20, 22, 24, .18) 58%,
+    rgba(20, 22, 24, 0) 68%
+  );
+}
+/* Both were z-index 2, and the visual comes later in the DOM — which is why
+   the mockup painted on top of the headline. */
+.slide:has(.slide-visual--panel) .slide-copy { z-index: 4; }
 /* 980px cap (was 860) so the mockup keeps filling its half on big screens —
-   only bites above ~1590px, where 54% would otherwise clear the old cap. */
+   only bites above ~1590px, where 54% would otherwise clear the old cap.
+   Below ~1590px the composite reaches into the copy column; that's fine, the
+   copy floats over it (see the scrim above) exactly like the photo slides. */
 .slide-sw { position: relative; width: min(54%, 980px); z-index: 2; }
 .slide-sw .phone { position: absolute; width: 26%; right: -5%; bottom: -9%; }
 @media (max-width: 900px) {
@@ -229,12 +249,15 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
     order: -1; position: relative; flex-shrink: 0;
     height: auto; min-height: 0;
     background: none; /* the slide paints it now */
+    /* Nothing floats over the composite here, so the desktop scrim would just
+       dim the mockup for no reason. */
     /* top: clear the 68px fixed nav, plus breathing room under it. bottom: the
        phone is absolutely positioned to hang below the browser mockup (~29px),
        so the panel must reserve room for that overhang or the copy below
        paints over it. */
     justify-content: center; padding: 92px 20px 32px;
   }
+  .slide-visual--panel::after { display: none; }
   .slide:has(.slide-visual--panel) .slide-copy {
     order: 1; position: static;
     left: auto; right: auto; bottom: auto; max-width: none;
@@ -308,7 +331,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
 }
 .step-num { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; color: var(--copper-deep); margin-bottom: 14px; }
-.step-num:has(.step-icon) { display: flex; align-items: center; gap: 9px; }
+.step-num:has(.step-icon),
+.pillar-number:has(.step-icon) { display: flex; align-items: center; gap: 9px; }
 .section--contrast .step-num { color: var(--copper); }
 .step-title { font-family: var(--font-wide); font-weight: 500; font-size: 18px; margin-bottom: 10px; color: var(--graphite); }
 .section--contrast .step-title { color: var(--bone); }
