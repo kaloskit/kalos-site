@@ -1,5 +1,5 @@
 /* KALOS marketing site — DEMO 2 "Editorial" concept
-   Light bone ground · Playfair Display serif headlines · Inter body ·
+   Light bone ground · Archivo Expanded display · Archivo body (brand faces only) ·
    JetBrains Mono instrument labels · Syne wordmark only · copper accents.
    Same brand tokens as the app; inverse pole of demo 1's dark cinematic. */
 
@@ -17,8 +17,8 @@
   --copper-deep: #A35E2F;
   --ink: #1b1d1f;
   --line: #D8D3C8;
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-wide: 'Archivo Expanded', 'Archivo', sans-serif;
+  --font-sans: 'Archivo', 'Helvetica Neue', sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
   --font-display: 'Syne', sans-serif; /* KΛLOS wordmark only */
 }
@@ -98,8 +98,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   text-transform: uppercase; color: var(--copper-deep); margin-bottom: 22px;
 }
 .section-heading {
-  font-family: var(--font-serif); font-weight: 500; font-size: clamp(32px, 4.4vw, 52px);
-  letter-spacing: 0; line-height: 1.12; margin-bottom: 26px; max-width: 760px; color: var(--graphite);
+  font-family: var(--font-wide); font-weight: 500; font-size: clamp(28px, 3.8vw, 44px);
+  letter-spacing: .01em; line-height: 1.16; margin-bottom: 26px; max-width: 760px; color: var(--graphite);
 }
 .section-body { font-size: 16.5px; line-height: 1.85; color: #4a4f52; max-width: 640px; }
 .section-body + .section-body { margin-top: 18px; }
@@ -122,8 +122,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 }
 .page-hero-crumb { font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--copper-deep); margin-bottom: 22px; }
 .page-hero-title {
-  font-family: var(--font-serif); font-weight: 500; font-size: clamp(40px, 6vw, 72px);
-  line-height: 1.06; letter-spacing: -0.01em; margin-bottom: 26px; max-width: 860px; color: var(--graphite);
+  font-family: var(--font-wide); font-weight: 500; font-size: clamp(34px, 5vw, 60px);
+  line-height: 1.1; letter-spacing: .01em; margin-bottom: 26px; max-width: 860px; color: var(--graphite);
 }
 .page-hero-sub { font-size: 18px; line-height: 1.8; color: #4a4f52; max-width: 660px; }
 
@@ -145,7 +145,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   border-radius: 4px;
 }
 .slide-kicker { font-family: var(--font-mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--copper); margin-bottom: 18px; }
-.slide-title { font-family: var(--font-serif); font-weight: 500; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; color: var(--bone); margin-bottom: 16px; }
+.slide-title { font-family: var(--font-wide); font-weight: 500; font-size: clamp(26px, 3vw, 38px); line-height: 1.16; color: var(--bone); margin-bottom: 16px; }
 .slide-desc { font-size: 15px; line-height: 1.75; color: rgba(232,230,225,.82); margin-bottom: 26px; }
 .slide-link {
   font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
@@ -219,7 +219,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 /* ── Facts strip ── */
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 72px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
 .fact { background: var(--white); padding: 30px 26px; border-top: none; }
-.fact-num { font-family: var(--font-serif); font-weight: 500; font-size: 34px; color: var(--graphite); line-height: 1; margin-bottom: 12px; }
+.fact-num { font-family: var(--font-wide); font-weight: 500; font-size: 34px; color: var(--graphite); line-height: 1; margin-bottom: 12px; }
 .fact-label { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .08em; color: var(--steel); line-height: 1.6; text-transform: uppercase; }
 .section--contrast .facts { background: rgba(232,230,225,.12); border-color: rgba(232,230,225,.12); }
 .section--contrast .fact { background: var(--graphite-deep); }
@@ -233,7 +233,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .section--contrast .pillar { border-top-color: rgba(232,230,225,.14); }
 .pillar-number { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; color: var(--copper-deep); margin-bottom: 18px; }
 .section--contrast .pillar-number { color: var(--copper); }
-.pillar-heading { font-family: var(--font-serif); font-weight: 500; font-size: 21px; margin-bottom: 12px; color: var(--graphite); }
+.pillar-heading { font-family: var(--font-wide); font-weight: 500; font-size: 21px; margin-bottom: 12px; color: var(--graphite); }
 .section--contrast .pillar-heading { color: var(--bone); }
 .pillar-body { font-size: 14.5px; line-height: 1.8; color: #4a4f52; }
 .section--contrast .pillar-body { color: var(--ash); }
@@ -246,7 +246,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .section--contrast .step { background: var(--graphite-deep); border-color: rgba(232,230,225,.12); }
 .step-num { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; color: var(--copper-deep); margin-bottom: 14px; }
 .section--contrast .step-num { color: var(--copper); }
-.step-title { font-family: var(--font-serif); font-weight: 500; font-size: 18px; margin-bottom: 10px; color: var(--graphite); }
+.step-title { font-family: var(--font-wide); font-weight: 500; font-size: 18px; margin-bottom: 10px; color: var(--graphite); }
 .section--contrast .step-title { color: var(--bone); }
 .step-body { font-size: 13.5px; line-height: 1.7; color: #4a4f52; }
 .section--contrast .step-body { color: var(--ash); }
@@ -272,11 +272,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   font-family: var(--font-mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase;
   color: #fff; background: var(--copper-deep); border: none; padding: 5px 12px; border-radius: 999px;
 }
-.package-name { font-family: var(--font-serif); font-weight: 500; font-size: 22px; letter-spacing: 0; margin-bottom: 4px; color: var(--graphite); }
+.package-name { font-family: var(--font-wide); font-weight: 500; font-size: 22px; letter-spacing: 0; margin-bottom: 4px; color: var(--graphite); }
 .package--feature .package-name { color: var(--bone); }
 .package-tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--copper-deep); margin-bottom: 26px; }
 .package--feature .package-tag { color: var(--copper); }
-.package-rate { font-family: var(--font-serif); font-weight: 500; font-size: 42px; color: var(--graphite); line-height: 1; }
+.package-rate { font-family: var(--font-wide); font-weight: 500; font-size: 42px; color: var(--graphite); line-height: 1; }
 .package--feature .package-rate { color: var(--bone); }
 .package-rate span { font-family: var(--font-mono); font-size: 12px; color: var(--ash); letter-spacing: .06em; }
 .package-sessions { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; color: var(--steel); margin-top: 14px; }
@@ -299,7 +299,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .team-photo { margin-bottom: 26px; }
 .team-photo .art-panel { border-radius: 4px; }
 .team-role { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--copper-deep); margin-bottom: 10px; }
-.team-name { font-family: var(--font-serif); font-weight: 500; font-size: 30px; margin-bottom: 14px; color: var(--graphite); }
+.team-name { font-family: var(--font-wide); font-weight: 500; font-size: 30px; margin-bottom: 14px; color: var(--graphite); }
 .team-bio { font-size: 14.5px; line-height: 1.8; color: #4a4f52; max-width: 480px; }
 .team-bio + .team-bio { margin-top: 12px; }
 .team-creds { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -311,7 +311,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .section--contrast .result-card { background: var(--graphite-deep); }
 .result-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 .result-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
-.result-stat { font-family: var(--font-serif); font-weight: 500; font-size: 30px; color: var(--copper); line-height: 1.1; }
+.result-stat { font-family: var(--font-wide); font-weight: 500; font-size: 30px; color: var(--copper); line-height: 1.1; }
 .result-span { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--ash); margin-top: 6px; }
 .result-quote { font-size: 13.5px; line-height: 1.7; color: var(--ash); font-style: italic; margin-top: 16px; flex: 1; }
 .result-name { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; color: var(--bone); margin-top: 16px; }
@@ -319,7 +319,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 /* ── Stat band ── */
 .stat-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; background: none; margin-top: 64px; }
 .stat-cell { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 36px 28px; text-align: center; }
-.stat-cell-num { font-family: var(--font-serif); font-weight: 500; font-size: 34px; color: var(--graphite); line-height: 1.1; }
+.stat-cell-num { font-family: var(--font-wide); font-weight: 500; font-size: 34px; color: var(--graphite); line-height: 1.1; }
 .stat-cell-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--steel); margin-top: 12px; line-height: 1.6; }
 
 /* ── CTA band ── */
@@ -330,7 +330,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   pointer-events: none;
 }
 .cta-location { font-family: var(--font-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--ash); margin-bottom: 20px; position: relative; }
-.cta-date { font-family: var(--font-serif); font-weight: 500; font-size: clamp(40px, 6vw, 64px); letter-spacing: 0; text-transform: none; color: var(--bone); margin-bottom: 24px; position: relative; }
+.cta-date { font-family: var(--font-wide); font-weight: 500; font-size: clamp(34px, 5vw, 54px); letter-spacing: .01em; text-transform: none; color: var(--bone); margin-bottom: 24px; position: relative; }
 .cta-sub { font-size: 16px; color: var(--ash); margin-bottom: 48px; line-height: 1.7; max-width: 480px; margin-left: auto; margin-right: auto; position: relative; }
 .cta-section .btn-primary { background: var(--bone); color: var(--graphite); border-color: var(--bone); position: relative; }
 .cta-section .btn-primary:hover { background: transparent; color: var(--bone); }
