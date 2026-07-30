@@ -195,13 +195,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 /* ── Slide software composite ── */
 .slide-visual--panel {
   display: flex; align-items: center; justify-content: flex-end;
-  padding: 130px 7% 130px 0;
+  /* The composite is right-anchored, but a flat 7% keeps pushing it at the
+     screen edge as the viewport grows, stranding it far from the copy. Past
+     ~1770px the inset switches to a centred stage (right edge never beyond
+     centre + 760px) so it drifts back toward the middle instead. */
+  padding: 130px max(7%, calc(50% - 760px)) 130px 0;
   background:
     radial-gradient(ellipse 80% 70% at 65% 30%, rgba(192, 112, 58, 0.12) 0%, transparent 65%),
     linear-gradient(160deg, #2c2f33 0%, #17191b 100%);
 }
 .slide-visual--panel::after { display: none; }
-.slide-sw { position: relative; width: min(54%, 860px); z-index: 2; }
+/* 980px cap (was 860) so the mockup keeps filling its half on big screens —
+   only bites above ~1590px, where 54% would otherwise clear the old cap. */
+.slide-sw { position: relative; width: min(54%, 980px); z-index: 2; }
 .slide-sw .phone { position: absolute; width: 26%; right: -5%; bottom: -9%; }
 @media (max-width: 900px) {
   /* The panel slide isn't a photo — it composes its own dark backdrop, so its
