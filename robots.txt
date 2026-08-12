@@ -2,7 +2,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /demo2/
 
 # AI / LLM crawlers — explicitly allowed
 User-agent: GPTBot
