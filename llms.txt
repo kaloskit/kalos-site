@@ -23,5 +23,17 @@ Key facts:
 - [Packages](https://kalospt.ca/packages/): Session packages and pricing.
 - [Results](https://kalospt.ca/results/): Client transformations, documented with numbers.
 - [The Team](https://kalospt.ca/team/): The coaches — one standard, every coach.
+- [FAQ](https://kalospt.ca/faq/): Cost, getting started, location, coaching model, nutrition, and tracking, answered directly.
 - [Contact](https://kalospt.ca/contact/): Book the free consultation or reach the studio.
 - [Privacy Policy](https://kalospt.ca/privacy/): How client data is collected, used, and protected.
+
+## FAQ (canonical answers)
+
+- **How much does personal training cost at KALOS?** One-on-one sessions run $100 to $130 CAD per session depending on package size: Starter is 12 sessions at $130 ($1,560), Momentum is 24 at $115 ($2,760), Transformation is 36 at $105 ($3,780), and VIP is 48 at $100 ($4,800). Every package gets the same coaching standard and full tracking in the KALOS app; larger packages simply cost less per session.
+- **How do I start at KALOS?** Book a free consultation at kalospt.ca. A coach reaches out within two business days, and you sit down together for a free 60-minute conversation covering your goal, your training history, and the plan to get you there. You buy nothing before that conversation, and there's no obligation after it.
+- **Where is KALOS located, and when does it open?** The studio is at 12060 Vulcan Way, Richmond, BC V6V 1J8, in the Bridgeport area. It opens in fall 2026 and is in build-out now. Consultations are open ahead of opening, so your goal, coach match, and plan are ready before the doors are.
+- **How is KALOS different from a regular gym?** KALOS isn't a membership gym. The floor is private and appointment-only: no crowds, no waiting for equipment, and every station set up for you before you arrive. Coaching is strictly one-on-one, and the studio is built for one outcome: physique transformation, with the numbers to prove it.
+- **Does it matter which KALOS coach I get?** No, and that's the point. Every KALOS coach runs the same proven method, so your result doesn't depend on trainer roulette. You're matched to the coach who fits your goal, and the standard is identical across the team.
+- **Is nutrition coaching included at KALOS?** Yes. Your program covers training, nutrition, and cardio as one plan. You log food and hit macro targets in the KALOS app, and your coach reviews the data with you; the same numbers driving your training drive your nutrition.
+- **How does KALOS measure progress?** Every session, lift, and check-in is logged in the KALOS app: personal records, body-weight trends, food, and cardio. Strength is anchored by max-effort benchmark sets, and muscle-building volume is calculated from the client's own numbers. Progress reviews happen off the floor, in a proper sit-down.
+- **Do I need training experience to join KALOS?** No. The method starts from your numbers, wherever they are; first-timers and experienced lifters run the same system at different loads. What you need is a goal. The consultation turns 'get in shape' into a specific, measurable target with a date on it.
