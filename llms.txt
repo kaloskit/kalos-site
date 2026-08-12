@@ -1,0 +1,27 @@
+# KALOS Personal Training Studio
+
+> KALOS is a private, appointment-only personal training studio in Richmond, BC (Metro Vancouver), Canada, built for physique transformation — muscle gain, fat loss, and strength. Coaching is strictly one-on-one: every coach runs the same proven method, every session is tracked, and clients are matched to the coach who fits their goal. The studio opens in fall 2026.
+
+Key facts:
+
+- Location: Richmond, British Columbia, Canada. Opening fall 2026.
+- Format: private one-on-one personal training by appointment only — no open-gym memberships, no group classes.
+- Method: goal-first coaching. Every engagement starts with a specific, measurable target with a date on it. Strength is anchored by max-effort benchmark sets; hypertrophy volume is calculated from the client's own numbers; progression is programmed, not improvised.
+- Consistency: one standard across the team — every coach runs the same method, so results don't depend on which trainer you get.
+- Tracking: every session, lift, and check-in is logged in the KALOS software (web client portal + iOS app), including personal records, body-weight trends, food logging, and progress reviews.
+- Getting started: a free 60-minute consultation, booked at https://kalospt.ca/contact/ — goals, training history, and a coach match before any purchase.
+- Packages (one-on-one sessions, prices in CAD): Starter — 12 sessions at $130/session ($1,560); Momentum — 24 sessions at $115/session ($2,760); Transformation — 36 sessions at $105/session ($3,780); VIP — 48 sessions at $100/session ($4,800).
+- Contact: hello@kalospt.ca · Instagram @kalos.pt
+
+## Pages
+
+- [Home](https://kalospt.ca/): Overview — physique transformation, engineered.
+- [About](https://kalospt.ca/about/): The philosophy — the classical ideal of the body, pursued through modern measurement.
+- [The Facility](https://kalospt.ca/facility/): A private training floor — free weights, racks, and selected machines, every setup done for you.
+- [The Method](https://kalospt.ca/method/): How progression is engineered — benchmarks, calculated volume, tracked sessions.
+- [How It Works](https://kalospt.ca/how-it-works/): From free consultation to transformation, step by step.
+- [Packages](https://kalospt.ca/packages/): Session packages and pricing.
+- [Results](https://kalospt.ca/results/): Client transformations, documented with numbers.
+- [The Team](https://kalospt.ca/team/): The coaches — one standard, every coach.
+- [Contact](https://kalospt.ca/contact/): Book the free consultation or reach the studio.
+- [Privacy Policy](https://kalospt.ca/privacy/): How client data is collected, used, and protected.
