@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KALOS — Personal Training Studio · Richmond, BC</title>
-<meta name="description" content="Private one-on-one coaching for physique transformation in Richmond, BC. A proven method, the same standard from every coach, tracked every session. Opening fall 2026.">
+<meta name="description" content="Private one-on-one coaching for physique transformation in Richmond, BC. Every coach runs the same proven method, and every session is tracked.">
 <meta property="og:title" content="KALOS — Personal Training Studio · Richmond, BC">
-<meta property="og:description" content="Private one-on-one coaching for physique transformation. A proven method, the same standard from every coach, tracked every session. Opening fall 2026.">
+<meta property="og:description" content="Private one-on-one coaching for physique transformation in Richmond, BC. Every coach runs the same proven method, and every session is tracked.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kalospt.ca/">
 <meta property="og:site_name" content="KALOS">
@@ -17,381 +17,168 @@
 <meta property="og:image:alt" content="KALOS — physique transformation, engineered. Personal training studio, Richmond, BC.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="KALOS — Personal Training Studio · Richmond, BC">
-<meta name="twitter:description" content="Private one-on-one coaching for physique transformation. A proven method, tracked every session. Opening fall 2026.">
+<meta name="twitter:description" content="Private one-on-one coaching for physique transformation. Every coach runs the same proven method, and every session is tracked.">
 <meta name="twitter:image" content="https://kalospt.ca/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Expanded:wght@500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700..800&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDkgNjQ0Ij48ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSwtMTQuMiw2NDQuMikiPjxwYXRoIGQ9Ik0xNC4yIDAgMzY4LjIgNjQ0LjJINTY1LjhMOTIzLjIgMEg3MjYuMkw0MTguMiA1NzlINTE2LjJMMjEwLjYgMFoiIGZpbGw9IiNDMDcwM0EiLz48L2c+PC9zdmc+">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --graphite: #232629;
-    --graphite-light: #2c2f33;
-    --bone: #E8E6E1;
-    --steel: #54606A;
-    --ash: #9AA0A0;
-    --copper: #C0703A;
-    --font-sans: 'Archivo', 'Helvetica Neue', sans-serif;
-    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
-    --font-display: 'Syne', 'Archivo', sans-serif; /* logo/wordmark only */
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--graphite);
-    color: var(--bone);
-    font-family: var(--font-sans);
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-  }
-
-  /* ── Scroll reveal ── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(32px);
-    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
-                transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.1s; }
-  .reveal-delay-2 { transition-delay: 0.2s; }
-  .reveal-delay-3 { transition-delay: 0.3s; }
-  .reveal-delay-4 { transition-delay: 0.4s; }
-
-  /* ── Steel rule ── */
-  .steel-rule { width: 100%; height: 1px; background: var(--steel); }
-  .steel-rule--short { width: 80px; }
-  .steel-rule--center { margin-left: auto; margin-right: auto; }
-
-  /* ── Nav ── */
-  .nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 22px 40px; display: flex; justify-content: space-between; align-items: center;
-    transition: background 0.4s ease, backdrop-filter 0.4s ease;
-  }
-  .nav.scrolled {
-    background: rgba(35, 38, 41, 0.92);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  }
-  .nav-wordmark {
-    font-family: var(--font-display); font-weight: 740; font-size: 19px;
-    letter-spacing: 0.02em; color: var(--bone); text-decoration: none;
-  }
-  .nav-right { display: flex; align-items: center; gap: 28px; }
-  .nav-links { display: flex; gap: 26px; }
-  .nav-link {
-    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.10em;
-    color: var(--ash); text-decoration: none; transition: color 0.3s ease;
-  }
-  .nav-link:hover { color: var(--bone); }
-  .nav-cta {
-    font-family: var(--font-mono); font-weight: 400; font-size: 11px; letter-spacing: 0.10em;
-    color: var(--ash); text-decoration: none; padding: 8px 20px;
-    border: 1px solid var(--steel); transition: all 0.3s ease; white-space: nowrap;
-  }
-  .nav-cta:hover { color: var(--graphite); background: var(--bone); border-color: var(--bone); }
-  @media (max-width: 760px) { .nav-links { display: none; } }
-
-  /* ── Buttons ── */
-  .btn-primary, .btn-ghost {
-    display: inline-block; font-family: var(--font-mono); font-weight: 500; font-size: 13px;
-    letter-spacing: 0.10em; text-decoration: none; padding: 15px 36px;
-    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .btn-primary { color: var(--graphite); background: var(--bone); border: 1px solid var(--bone); }
-  .btn-primary:hover { background: transparent; color: var(--bone); }
-  .btn-ghost { color: var(--bone); background: transparent; border: 1px solid var(--steel); }
-  .btn-ghost:hover { border-color: var(--bone); }
-
-  /* ── Hero ── */
-  .hero {
-    min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
-    align-items: center; text-align: center; padding: 120px 32px 90px; position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: ''; position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 50% 40%, rgba(192, 112, 58, 0.05) 0%, transparent 70%),
-      radial-gradient(ellipse 80% 60% at 20% 80%, rgba(84, 96, 106, 0.06) 0%, transparent 60%);
-    pointer-events: none;
-  }
-  .hero-wordmark {
-    font-family: var(--font-display); font-weight: 740; font-size: clamp(56px, 12vw, 120px);
-    letter-spacing: 0.01em; line-height: 1; color: var(--bone); margin-bottom: 24px; position: relative;
-  }
-  .hero .steel-rule { margin-bottom: 24px; max-width: 120px; }
-  .hero-tagline {
-    font-family: var(--font-mono); font-weight: 400; font-size: 12px; letter-spacing: 0.18em;
-    text-transform: lowercase; color: var(--ash); margin-bottom: 44px;
-  }
-  .hero-statement {
-    font-family: var(--font-sans); font-weight: 400; font-size: clamp(19px, 2.5vw, 24px);
-    line-height: 1.6; color: var(--bone); max-width: 620px; margin-bottom: 16px;
-  }
-  .hero-statement strong { font-weight: 500; color: var(--copper); }
-  .hero-sub {
-    font-family: var(--font-sans); font-size: 15px; line-height: 1.7; color: var(--ash);
-    max-width: 520px; margin-bottom: 44px;
-  }
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
-  .hero-scroll {
-    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
-  }
-  .hero-scroll-text {
-    font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em;
-    text-transform: uppercase; color: var(--steel);
-  }
-  .hero-scroll-line {
-    width: 1px; height: 36px; background: linear-gradient(to bottom, var(--steel), transparent);
-    animation: scrollPulse 2s ease-in-out infinite;
-  }
-  @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-
-  /* ── Section shared ── */
-  .section { padding: 120px 40px; }
-  .section--bone { background: var(--bone); color: var(--graphite); }
-  .section--bone .steel-rule { background: #c8c5be; }
-  .section--bone .section-label { color: var(--steel); }
-  .section--bone .section-body { color: var(--steel); }
-  .section--bone .pillar-body { color: var(--steel); }
-  .section--bone .pillar { border-top-color: #c8c5be; }
-
-  .section-inner { max-width: 1080px; margin: 0 auto; }
-  .section-label {
-    font-family: var(--font-mono); font-weight: 400; font-size: 10px; letter-spacing: 0.16em;
-    text-transform: uppercase; color: var(--steel); margin-bottom: 24px;
-  }
-  .section-heading {
-    font-family: var(--font-sans); font-weight: 500; font-size: clamp(28px, 4vw, 44px);
-    letter-spacing: 0.02em; line-height: 1.18; margin-bottom: 24px; max-width: 720px;
-  }
-  .section-body {
-    font-family: var(--font-sans); font-weight: 400; font-size: 16px; line-height: 1.8;
-    color: var(--ash); max-width: 620px;
-  }
-
-  /* ── Fact strip ── */
-  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 72px; }
-  .fact { padding-top: 24px; border-top: 1px solid var(--steel); }
-  .fact-num {
-    font-family: var(--font-sans); font-weight: 500; font-size: 30px; letter-spacing: 0.01em;
-    color: var(--copper); line-height: 1; margin-bottom: 10px;
-  }
-  .fact-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--ash); line-height: 1.5; }
-
-  /* ── Pillars ── */
-  .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 64px; }
-  .pillar { padding-top: 32px; border-top: 1px solid var(--steel); }
-  .pillar-number {
-    font-family: var(--font-mono); font-weight: 400; font-size: 10px; letter-spacing: 0.16em;
-    color: var(--copper); margin-bottom: 20px;
-  }
-  .pillar-heading {
-    font-family: var(--font-sans); font-weight: 500; font-size: 18px; letter-spacing: 0.02em; margin-bottom: 12px;
-  }
-  .pillar-body { font-family: var(--font-sans); font-weight: 400; font-size: 14px; line-height: 1.8; color: var(--ash); }
-
-  /* ── Steps ── */
-  .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 64px; }
-  .step { padding-top: 32px; border-top: 1px solid var(--steel); }
-  .section--bone .step { border-top-color: #c8c5be; }
-  .step-num {
-    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; color: var(--copper); margin-bottom: 16px;
-  }
-  .step-title { font-family: var(--font-sans); font-weight: 500; font-size: 16px; letter-spacing: 0.02em; margin-bottom: 10px; }
-  .step-body { font-family: var(--font-sans); font-size: 14px; line-height: 1.7; color: var(--ash); }
-  .section--bone .step-body { color: var(--steel); }
-
-  /* ── Packages ── */
-  .packages-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 64px;
-    background: rgba(84, 96, 106, 0.2);
-  }
-  .package { background: var(--graphite); padding: 40px 28px; display: flex; flex-direction: column; transition: background 0.3s ease; }
-  .package:hover { background: var(--graphite-light); }
-  .package--feature { background: var(--graphite-light); }
-  .package-name { font-family: var(--font-sans); font-weight: 500; font-size: 17px; letter-spacing: 0.04em; margin-bottom: 6px; }
-  .package-tag {
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--copper); margin-bottom: 28px;
-  }
-  .package-rate { font-family: var(--font-sans); font-weight: 500; font-size: 40px; letter-spacing: 0.01em; color: var(--bone); line-height: 1; }
-  .package-rate span { font-family: var(--font-mono); font-size: 12px; color: var(--ash); letter-spacing: 0.06em; }
-  .package-sessions { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; color: var(--ash); margin-top: 14px; }
-  .package-desc { font-family: var(--font-sans); font-size: 13px; line-height: 1.6; color: var(--ash); margin-top: 18px; }
-  .packages-note { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; color: var(--steel); margin-top: 32px; line-height: 1.7; }
-
-  /* ── CTA banner ── */
-  .cta-section { padding: 160px 40px; text-align: center; position: relative; }
-  .cta-section::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(192, 112, 58, 0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .cta-location {
-    font-family: var(--font-mono); font-weight: 400; font-size: 11px; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--ash); margin-bottom: 20px;
-  }
-  .cta-date {
-    font-family: var(--font-sans); font-weight: 500; font-size: clamp(36px, 6vw, 56px); letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--bone); margin-bottom: 24px;
-  }
-  .cta-sub {
-    font-family: var(--font-sans); font-weight: 400; font-size: 16px; color: var(--ash);
-    margin-bottom: 48px; line-height: 1.6; max-width: 460px; margin-left: auto; margin-right: auto;
-  }
-
-  /* ── Footer ── */
-  .footer { padding: 56px 40px; }
-  .footer-inner { max-width: 1080px; margin: 0 auto; }
-  .footer .steel-rule { margin-bottom: 40px; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-  .footer-wordmark { font-family: var(--font-display); font-weight: 740; font-size: 21px; letter-spacing: 0.02em; color: var(--bone); margin-bottom: 12px; }
-  .footer-desc { font-family: var(--font-sans); font-size: 13px; line-height: 1.7; color: var(--ash); max-width: 300px; }
-  .footer-col-title { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--steel); margin-bottom: 16px; }
-  .footer-col-title + .footer-col-title { margin-top: 28px; }
-  .footer-link {
-    display: block; font-family: var(--font-sans); font-size: 13px; color: var(--ash);
-    text-decoration: none; margin-bottom: 10px; transition: color 0.3s ease;
-  }
-  .footer-link:hover { color: var(--bone); }
-  .footer-bottom { padding-top: 32px; border-top: 1px solid rgba(84, 96, 106, 0.3); display: flex; justify-content: space-between; align-items: center; }
-  .footer-copy { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; color: var(--steel); }
-  .footer-social { display: flex; gap: 24px; }
-  .footer-social a {
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.10em; text-transform: uppercase;
-    color: var(--steel); text-decoration: none; transition: color 0.3s ease;
-  }
-  .footer-social a:hover { color: var(--bone); }
-
-  /* ── Software mockups ── */
-  .sw-band { margin-top: 56px; }
-  .sw-band + .pillars-grid { margin-top: 72px; }
-  .sw-composite { position: relative; }
-
-  .browser {
-    border-radius: 11px; overflow: hidden;
-    border: 1px solid rgba(84, 96, 106, 0.45);
-    background: var(--graphite-light);
-    box-shadow: 0 30px 60px -22px rgba(0, 0, 0, 0.6), 0 8px 22px -12px rgba(0, 0, 0, 0.45);
-  }
-  .browser-bar {
-    position: relative; display: flex; align-items: center; gap: 7px;
-    padding: 11px 15px; background: var(--graphite-light);
-    border-bottom: 1px solid rgba(84, 96, 106, 0.35);
-  }
-  .browser-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--steel); }
-  .browser-dot:nth-child(2) { background: var(--ash); opacity: 0.55; }
-  .browser-dot:nth-child(3) { background: var(--steel); opacity: 0.7; }
-  .browser-url {
-    position: absolute; left: 50%; transform: translateX(-50%);
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em;
-    color: var(--ash); background: var(--graphite);
-    padding: 4px 16px; border-radius: 6px; max-width: 60%;
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  }
-  .browser-screen { display: block; }
-  .browser-screen img { display: block; width: 100%; height: auto; }
-
-  .sw-phones { display: contents; }
-  .phone {
-    position: absolute; z-index: 2;
-    background: #141618; padding: 9px; border-radius: 40px;
-    border: 1px solid rgba(84, 96, 106, 0.55);
-    box-shadow: 0 36px 70px -18px rgba(0, 0, 0, 0.72), 0 12px 26px -12px rgba(0, 0, 0, 0.55);
-  }
-  .phone-screen { border-radius: 32px; overflow: hidden; }
-  .phone-screen img { display: block; width: 100%; height: auto; }
-
-  /* Band 1 — desktop with a single phone at the bottom-right */
-  .sw-composite--right .phone { width: 25%; right: -2%; bottom: 5%; }
-
-  /* Band 2 — same single bottom-right phone as band 1 */
-  .sw-composite--left .phone { width: 25%; right: -2%; bottom: 5%; }
-
-  .sw-caption {
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em;
-    color: var(--ash); margin-top: 30px;
-  }
-
-  @media (max-width: 760px) {
-    .sw-band { margin-top: 44px; }
-    .phone { position: static; width: auto; padding: 7px; border-radius: 30px; }
-    .phone-screen { border-radius: 24px; }
-    .sw-phones {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 18px; margin-top: 22px;
-    }
-    .sw-composite--right .phone { width: 54%; max-width: 200px; }
-    .sw-composite--left .phone  { width: 46%; max-width: 190px; }
-    .sw-caption { margin-top: 22px; }
-  }
-
-  /* ── Responsive ── */
-  @media (max-width: 900px) {
-    .facts { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-    .pillars-grid { grid-template-columns: 1fr; gap: 32px; }
-    .steps-grid { grid-template-columns: repeat(2, 1fr); }
-    .packages-grid { grid-template-columns: repeat(2, 1fr); }
-    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-  }
-  @media (max-width: 600px) {
-    .section { padding: 80px 24px; }
-    .cta-section { padding: 120px 24px; }
-    .nav { padding: 18px 22px; }
-    .facts { grid-template-columns: 1fr 1fr; }
-    .steps-grid { grid-template-columns: 1fr; }
-    .packages-grid { grid-template-columns: 1fr; }
-    .footer { padding: 40px 24px; }
-    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-  }
-</style>
+<link rel="stylesheet" href="site.css?v=6">
 </head>
 <body>
 
   <!-- ── Nav ── -->
-  <nav class="nav" id="nav">
-    <a href="#" class="nav-wordmark" aria-label="KALOS">KΛLOS</a>
+  <nav class="nav nav--dark" id="nav">
+    <a href="./" class="nav-wordmark" aria-label="KALOS">KΛLOS</a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="#what" class="nav-link">Overview</a>
-        <a href="#method" class="nav-link">Method</a>
-        <a href="#platform" class="nav-link">Software</a>
+        <a href="about/" class="nav-link">About</a>
+        <a href="facility/" class="nav-link">Facility</a>
+        <a href="method/" class="nav-link">Method</a>
+        <a href="packages/" class="nav-link">Packages</a>
+        <a href="team/" class="nav-link">Team</a>
+        <a href="results/" class="nav-link">Results</a>
+        <a href="contact/" class="nav-link">Contact</a>
       </div>
       <a href="https://app.kalospt.ca/consultation" class="nav-cta">Book a consultation</a>
     </div>
   </nav>
 
-  <!-- ── Hero ── -->
-  <section class="hero">
-    <h1 class="hero-wordmark" aria-label="KALOS">KΛLOS</h1>
-    <div class="steel-rule steel-rule--short steel-rule--center"></div>
-    <p class="hero-tagline">personal training studio</p>
-    <p class="hero-statement">
-      Physique Transformation, Engineered
-    </p>
-    <p class="hero-sub">
-      Kalos is private, one-on-one coaching with one focus: changing how your body looks. A proven method,
-      the same standard from every coach, and software that tracks every rep — so your progress is something
-      you can see, not just hope for.
-    </p>
-    <div class="hero-actions">
-      <a href="https://app.kalospt.ca/consultation" class="btn-primary">Book your free consultation</a>
-      <a href="#what" class="btn-ghost">See how it works</a>
+  <!-- ── Story slider ── -->
+  <section class="slider" id="slider" aria-roledescription="carousel" aria-label="What Kalos is">
+
+    <!-- Slide 1 — Overview -->
+    <div class="slide active" role="group" aria-label="1 of 6">
+      <div class="slide-copy">
+        <p class="slide-kicker">KΛLOS · Personal Training Studio</p>
+        <h1 class="slide-title">Physique transformation, engineered.</h1>
+        <p class="slide-desc">
+          Private, one-on-one coaching with one focus: changing how your body looks. Every coach runs
+          the same proven method, and our software tracks every rep, so you can see your progress
+          instead of hoping for it.
+        </p>
+        <a href="about/" class="slide-link">What makes Kalos different</a>
+      </div>
+      <div class="slide-visual">
+        <img src="/assets/photos/slide01.jpg" alt="Head Coach Matt training in a dark private gym" class="slide-photo-fit">
+      </div>
     </div>
-    <div class="hero-scroll">
-      <span class="hero-scroll-text">Scroll</span>
-      <div class="hero-scroll-line"></div>
+
+    <!-- Slide 2 — Facility -->
+    <div class="slide" role="group" aria-label="2 of 6">
+      <div class="slide-copy">
+        <p class="slide-kicker">The Studio</p>
+        <h2 class="slide-title">A private floor, never a crowd.</h2>
+        <p class="slide-desc">
+          Appointment-only, capped at five clients on the floor at once. You never wait for equipment or
+          train in front of an audience. It's a space built for serious work, with a lounge worth staying in.
+        </p>
+        <a href="facility/" class="slide-link">See the facility</a>
+      </div>
+      <div class="slide-visual">
+        <div class="art-panel" style="position:absolute; inset:0;">
+          <img src="/assets/photos/facility-render.jpg" alt="Rendering of the Kalos studio floor — racks, benches, and the lounge" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:45% 60%;">
+          <span class="art-tag">Rendering — the Kalos floor</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 — Methodology + app -->
+    <div class="slide" role="group" aria-label="3 of 6">
+      <div class="slide-copy">
+        <p class="slide-kicker">The Method</p>
+        <h2 class="slide-title">A system that runs on your numbers.</h2>
+        <p class="slide-desc">
+          Every program runs on a proven training cycle anchored to your measured strength, and our own
+          app does the computing. The right weights are ready before every session, and every set gets
+          logged and charted.
+        </p>
+        <a href="method/" class="slide-link">How the method works</a>
+      </div>
+      <div class="slide-visual slide-visual--panel">
+        <div class="slide-sw">
+          <div class="browser">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-url">app.kalospt.ca</span>
+            </div>
+            <div class="browser-screen">
+              <img src="/assets/software/desktop-records.jpg" alt="Kalos client portal Personal Record page — weight-loss charts and performance trends" width="1568" height="731">
+            </div>
+          </div>
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="/assets/software/phone-food.jpg" alt="The Kalos iOS app Food screen" width="640" height="1390">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 — Services -->
+    <div class="slide" role="group" aria-label="4 of 6">
+      <div class="slide-copy">
+        <p class="slide-kicker">Packages</p>
+        <h2 class="slide-title">Commit to a block, not a membership.</h2>
+        <p class="slide-desc">
+          Training is sold in committed blocks of 12 to 48 sessions, because real transformation takes
+          a plan with an end state, not a monthly auto-renew. The bigger the commitment, the lower the
+          rate and the more support included.
+        </p>
+        <a href="packages/" class="slide-link">See packages &amp; pricing</a>
+      </div>
+      <div class="slide-visual">
+        <img src="/assets/photos/press-rack.jpg" alt="A client pressing a barbell overhead at the rack" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 30%;">
+      </div>
+    </div>
+
+    <!-- Slide 5 — Team -->
+    <div class="slide" role="group" aria-label="5 of 6">
+      <div class="slide-copy">
+        <p class="slide-kicker">The Team</p>
+        <h2 class="slide-title">Coached by professionals, held to one standard.</h2>
+        <p class="slide-desc">
+          Kalos was founded by an IFBB professional and a software engineer: one brought the art, the
+          other the science. Every coach is trained and certified on the same documented method before
+          they ever run a session solo.
+        </p>
+        <a href="team/" class="slide-link">Meet the team</a>
+      </div>
+      <div class="slide-visual">
+        <img src="/assets/photos/coach-squat.jpg" alt="A Kalos coach spotting a client's barbell squat" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:55% 35%;">
+      </div>
+    </div>
+
+    <!-- Slide 6 — Results -->
+    <div class="slide" role="group" aria-label="6 of 6">
+      <div class="slide-copy">
+        <p class="slide-kicker">Results</p>
+        <h2 class="slide-title">Transformations, on the record.</h2>
+        <p class="slide-desc">
+          What we sell is a documented transformation, not a stack of workouts. Every rep, weigh-in, and
+          progress photo is tracked in the system, so the proof is in the data.
+        </p>
+        <a href="results/" class="slide-link">See the results</a>
+      </div>
+      <div class="slide-visual">
+        <img src="/assets/photos/slide03.jpg" alt="A Kalos coach working one-on-one with a client" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:60% 20%;">
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="slider-controls">
+      <div class="slider-arrows">
+        <button class="slider-arrow" id="slidePrev" aria-label="Previous slide">←</button>
+        <button class="slider-arrow" id="slideNext" aria-label="Next slide">→</button>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+      <span class="slider-count" id="slideCount">01 / 06</span>
     </div>
   </section>
 
-  <!-- ── What it is ── -->
+  <!-- ── Overview facts ── -->
   <section class="section" id="what">
     <div class="section-inner">
       <div class="steel-rule reveal"></div>
@@ -400,7 +187,7 @@
       <p class="section-body reveal reveal-delay-2">
         Kalos isn't a gym you wander into and figure out alone. It's a private studio with a coach in your
         corner and one job: transforming how your body looks. You train one-on-one, by appointment, on a plan
-        built for your goal — ready before you walk in. Every set is tracked, so the work you put in turns into
+        built for your goal and ready before you walk in. Every set is tracked, so the work you put in turns into
         progress you can watch add up.
       </p>
       <div class="facts">
@@ -409,8 +196,8 @@
           <div class="fact-label">A coach with you<br>every session</div>
         </div>
         <div class="fact reveal reveal-delay-1">
-          <div class="fact-num">By&nbsp;appointment</div>
-          <div class="fact-label">Train on<br>your schedule</div>
+          <div class="fact-num">5</div>
+          <div class="fact-label">Clients max on the floor,<br>never a crowd</div>
         </div>
         <div class="fact reveal reveal-delay-2">
           <div class="fact-num">Tracked</div>
@@ -424,151 +211,86 @@
     </div>
   </section>
 
-  <!-- ── The method (bone) ── -->
-  <section class="section section--bone" id="method">
-    <div class="section-inner">
-      <p class="section-label reveal">02 — Method</p>
-      <h2 class="section-heading reveal reveal-delay-1">A method that's proven to work.</h2>
-      <p class="section-body reveal reveal-delay-2">
-        Most studios are only as good as the trainer you happen to get. Kalos is built the other way. Every
-        coach delivers the same proven method — created by our head coach, an IFBB pro, over decades of
-        competition and real client transformations. It's documented, taught, and sharpened on results. You
-        get a program built from it and dialed to your goal. The method does the heavy lifting; your coach
-        makes it personal.
-      </p>
-      <div class="pillars-grid">
-        <div class="pillar reveal">
-          <p class="pillar-number">01</p>
-          <h3 class="pillar-heading">Proven, not improvised</h3>
-          <p class="pillar-body">Decades of competition and client results, written into a method every coach is trained to deliver.</p>
-        </div>
-        <div class="pillar reveal reveal-delay-1">
-          <p class="pillar-number">02</p>
-          <h3 class="pillar-heading">The same standard, every coach</h3>
-          <p class="pillar-body">Your result doesn't ride on luck. Whoever you train with, you get the method as designed.</p>
-        </div>
-        <div class="pillar reveal reveal-delay-2">
-          <p class="pillar-number">03</p>
-          <h3 class="pillar-heading">Built around you</h3>
-          <p class="pillar-body">One clear, measurable goal, and a complete plan to hit it: training, nutrition, and cardio.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── The platform ── -->
-  <section class="section" id="platform">
-    <div class="section-inner">
-      <p class="section-label reveal">03 — Software</p>
-      <h2 class="section-heading reveal reveal-delay-1">Watch your progress add up.</h2>
-      <p class="section-body reveal reveal-delay-2">
-        We built our own software to run the method and make your progress impossible to miss. Your coach
-        starts every session with your plan and the right weights already loaded. Everything you lift is
-        logged. In your account, your records, strength trends, and progress photos stack up week after
-        week — proof that it's working.
-      </p>
-
-      <!-- Band 1 — client portal on the web, paired with the app -->
-      <div class="sw-band reveal reveal-delay-3">
-        <div class="sw-composite sw-composite--right">
-          <div class="browser">
-            <div class="browser-bar">
-              <span class="browser-dot"></span>
-              <span class="browser-dot"></span>
-              <span class="browser-dot"></span>
-              <span class="browser-url">app.kalospt.ca</span>
-            </div>
-            <div class="browser-screen">
-              <img src="assets/software/desktop-tracking.png" alt="Kalos client portal Progress Tracking page — a weekly grid of daily weight, cardio, steps, calories, and macros measured against targets."
-                   width="1600" height="940" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="sw-phones">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/software/phone-dashboard.png" alt="The Kalos iOS app dashboard — next session, sessions remaining, steps today, and a weekly steps chart."
-                     width="294" height="640" loading="lazy" decoding="async">
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="sw-caption">THE CLIENT PORTAL — WEB</p>
-      </div>
-
-      <div class="pillars-grid">
-        <div class="pillar reveal">
-          <p class="pillar-number">01</p>
-          <h3 class="pillar-heading">Every session, logged</h3>
-          <p class="pillar-body">Exactly what you lifted, every time. You always know your numbers and how far you've come.</p>
-        </div>
-        <div class="pillar reveal reveal-delay-1">
-          <p class="pillar-number">02</p>
-          <h3 class="pillar-heading">Progress you can see</h3>
-          <p class="pillar-body">Personal records, strength trends, and private progress photos — your transformation, in the data.</p>
-        </div>
-        <div class="pillar reveal reveal-delay-2">
-          <p class="pillar-number">03</p>
-          <h3 class="pillar-heading">A room that pushes you</h3>
-          <p class="pillar-body">Leaderboards and shared PRs put you among people chasing the same thing. Opt in, and let it pull you forward.</p>
-        </div>
-      </div>
-
-      <!-- Band 2 — the app, paired with the records page on the web -->
-      <div class="sw-band reveal reveal-delay-2">
-        <div class="sw-composite sw-composite--left">
-          <div class="browser">
-            <div class="browser-bar">
-              <span class="browser-dot"></span>
-              <span class="browser-dot"></span>
-              <span class="browser-dot"></span>
-              <span class="browser-url">app.kalospt.ca</span>
-            </div>
-            <div class="browser-screen">
-              <img src="assets/software/desktop-records.png" alt="Kalos client portal Personal Record page — all-time and current weight-loss charts, cardio and calorie trends, average macros, and 1RM personal bests."
-                   width="1600" height="929" loading="lazy" decoding="async">
-            </div>
-          </div>
-          <div class="sw-phones">
-            <div class="phone">
-              <div class="phone-screen">
-                <img src="assets/software/phone-food.png" alt="The Kalos iOS app Food screen — daily calories against target with protein, carbs, and fats rings and a meal diary."
-                     width="294" height="640" loading="lazy" decoding="async">
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="sw-caption">THE KΛLOS APP — iOS</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ── How it works (bone) ── -->
-  <section class="section section--bone" id="how">
+  <section class="section section--contrast" id="how">
     <div class="section-inner">
-      <p class="section-label reveal">04 — Start</p>
-      <h2 class="section-heading reveal reveal-delay-1">Start in four steps.</h2>
+      <p class="section-label reveal">02 — Start</p>
+      <h2 class="section-heading reveal reveal-delay-1">Start in five steps.</h2>
       <div class="steps-grid">
         <div class="step reveal">
-          <p class="step-num">STEP 01</p>
+          <p class="step-num"><svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg>STEP 01</p>
           <h3 class="step-title">Book a consultation</h3>
-          <p class="step-body">Tell us your goal. A coach reaches out to take it from there — no pressure.</p>
+          <p class="step-body">Tell us your goal and a coach reaches out to take it from there. No pressure, no obligation.</p>
         </div>
         <div class="step reveal reveal-delay-1">
-          <p class="step-num">STEP 02</p>
+          <p class="step-num"><svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="7.5" r="3"/><circle cx="16.5" cy="16.5" r="3"/><path d="m9.9 9.9 4.2 4.2"/></svg>STEP 02</p>
           <h3 class="step-title">Get matched</h3>
-          <p class="step-body">We pair you with the right coach for your goal. No guesswork, no trainer roulette.</p>
+          <p class="step-body">We pair you with the right coach for your goal, so you're not spinning the trainer roulette. Then you sit down together for a free 60-minute consultation, in person.</p>
         </div>
         <div class="step reveal reveal-delay-2">
-          <p class="step-num">STEP 03</p>
+          <p class="step-num"><svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h9l5 5v13H5V3Z"/><path d="M14 3v5h5"/><path d="M8.5 12h7M8.5 15.5h7M8.5 19h4"/></svg>STEP 03</p>
           <h3 class="step-title">Get your plan</h3>
-          <p class="step-body">A clear goal and a complete program: training, nutrition, and cardio.</p>
+          <p class="step-body">A clear goal and a complete program covering training, nutrition, and cardio, built around you.</p>
         </div>
         <div class="step reveal reveal-delay-3">
-          <p class="step-num">STEP 04</p>
+          <p class="step-num"><svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16V21H4V5.5Z"/><path d="M4 10.5h16M8.5 3v5M15.5 3v5"/><path d="m9 15.5 2.2 2.2 4-4.4"/></svg>STEP 04</p>
+          <h3 class="step-title">Book your sessions</h3>
+          <p class="step-body">Your coach sets you up on the Kalos app, where booking recurring sessions takes seconds.</p>
+        </div>
+        <div class="step reveal reveal-delay-4">
+          <p class="step-num"><svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16h16"/><path d="m7.5 15.5 3.5-4.5 3 2.5 5-7"/><path d="M15 6.5h4.5V11"/></svg>STEP 05</p>
           <h3 class="step-title">Transform</h3>
           <p class="step-body">Train, track, and watch the numbers move. We run the system; you get the result.</p>
         </div>
       </div>
+      <p style="margin-top:48px;" class="reveal"><a href="how-it-works/" class="step-link">The full journey, step by step</a></p>
+    </div>
+  </section>
+
+  <!-- ── Packages teaser ── -->
+  <section class="section" id="packages">
+    <div class="section-inner">
+      <p class="section-label reveal">03 — Packages</p>
+      <h2 class="section-heading reveal reveal-delay-1">Choose your commitment.</h2>
+      <p class="section-body reveal reveal-delay-2">
+        Kalos sells training in packages rather than memberships, because real transformation takes a
+        committed block of work. Every package includes your coach, your personalized program, and
+        full progress tracking. The bigger the commitment, the lower your per-session rate and the more
+        support included.
+      </p>
+      <div class="packages-grid">
+        <div class="package reveal">
+          <p class="package-name">Starter</p>
+          <p class="package-tag">Get started</p>
+          <p class="package-rate">$130<span> / session</span></p>
+          <p class="package-sessions">12 sessions</p>
+          <p class="package-total">$1,560 total</p>
+        </div>
+        <div class="package reveal reveal-delay-1">
+          <p class="package-name">Momentum</p>
+          <p class="package-tag">Build real momentum</p>
+          <p class="package-rate">$115<span> / session</span></p>
+          <p class="package-sessions">24 sessions</p>
+          <p class="package-total">$2,760 total</p>
+        </div>
+        <div class="package reveal reveal-delay-2">
+          <p class="package-name">Transformation</p>
+          <p class="package-tag">A full transformation</p>
+          <p class="package-rate">$105<span> / session</span></p>
+          <p class="package-sessions">36 sessions</p>
+          <p class="package-total">$3,780 total</p>
+        </div>
+        <div class="package package--feature reveal reveal-delay-3">
+          <span class="package-flag">★ Most popular</span>
+          <p class="package-name">VIP</p>
+          <p class="package-tag">All in — best rate</p>
+          <p class="package-rate">$100<span> / session</span></p>
+          <p class="package-sessions">48 sessions</p>
+          <p class="package-total">$4,800 total</p>
+        </div>
+      </div>
+      <p class="packages-note reveal">Prices in CAD, before 5% GST. Sessions valid 180 days · payment plans available on larger packages.</p>
+      <p style="margin-top:28px;" class="reveal"><a href="packages/" class="step-link">Everything that's included, tier by tier</a></p>
     </div>
   </section>
 
@@ -591,21 +313,26 @@
         <div>
           <p class="footer-wordmark" aria-label="KALOS">KΛLOS</p>
           <p class="footer-desc">
-            Private, one-on-one coaching for physique transformation in Richmond, BC. One proven method,
-            every coach. Every session tracked.
+            Private, one-on-one coaching for physique transformation in Richmond, BC. Every coach runs
+            the same proven method, and every session is tracked.
           </p>
         </div>
         <div>
           <p class="footer-col-title">Explore</p>
-          <a href="#what" class="footer-link">Overview</a>
-          <a href="#method" class="footer-link">Method</a>
-          <a href="#platform" class="footer-link">Software</a>
+          <a href="about/" class="footer-link">About</a>
+          <a href="facility/" class="footer-link">Facility</a>
+          <a href="method/" class="footer-link">Method</a>
+          <a href="packages/" class="footer-link">Packages</a>
+          <a href="team/" class="footer-link">Team</a>
+          <a href="results/" class="footer-link">Results</a>
+          <a href="how-it-works/" class="footer-link">How It Works</a>
         </div>
         <div>
           <p class="footer-col-title">Get started</p>
           <a href="https://app.kalospt.ca/consultation" class="footer-link">Book a consultation</a>
           <a href="https://app.kalospt.ca/login" class="footer-link">Member login</a>
           <p class="footer-col-title">Contact</p>
+          <a href="contact/" class="footer-link">Contact us</a>
           <a href="mailto:hello@kalospt.ca" class="footer-link">hello@kalospt.ca</a>
           <a href="https://www.instagram.com/kalos.pt/" target="_blank" rel="noopener" class="footer-link">Instagram</a>
         </div>
@@ -628,6 +355,7 @@
     </div>
   </footer>
 
+
   <script>
     // Nav background on scroll
     const nav = document.getElementById('nav');
@@ -635,7 +363,7 @@
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // Scroll reveal via IntersectionObserver
+    // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -646,6 +374,32 @@
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
+
+    // Slider
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dotsWrap = document.getElementById('sliderDots');
+    const count = document.getElementById('slideCount');
+    let cur = 0, timer = null;
+    slides.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      b.addEventListener('click', () => { go(i); restart(); });
+      dotsWrap.appendChild(b);
+    });
+    const dots = Array.from(dotsWrap.children);
+    function go(i) {
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      cur = (i + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      dots[cur].classList.add('active');
+      count.textContent = String(cur + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+    }
+    function restart() { clearInterval(timer); timer = setInterval(() => go(cur + 1), 7000); }
+    document.getElementById('slidePrev').addEventListener('click', () => { go(cur - 1); restart(); });
+    document.getElementById('slideNext').addEventListener('click', () => { go(cur + 1); restart(); });
+    restart();
   </script>
 
 </body>
