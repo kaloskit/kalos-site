@@ -369,6 +369,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 
 /* ── Packages ── */
 .packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 64px; background: none; }
+.packages-grid--3 { grid-template-columns: repeat(3, 1fr); }
 .package {
   background: var(--white); border: 1px solid var(--line); border-radius: 6px;
   padding: 36px 28px; display: flex; flex-direction: column; position: relative;
@@ -508,7 +509,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   .facts { grid-template-columns: repeat(2, 1fr); }
   .pillars-grid, .pillars-grid--2 { grid-template-columns: 1fr; gap: 32px; }
   .steps-grid, .steps-grid--4 { grid-template-columns: repeat(2, 1fr); }
-  .packages-grid { grid-template-columns: repeat(2, 1fr); }
+  .packages-grid, .packages-grid--3 { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .team-grid { grid-template-columns: 1fr; }
   .results-grid { grid-template-columns: 1fr; }
@@ -527,7 +528,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   .nav { padding: 16px 20px; }
   .facts { grid-template-columns: 1fr 1fr; }
   .steps-grid, .steps-grid--4 { grid-template-columns: 1fr; }
-  .packages-grid { grid-template-columns: 1fr; }
+  .packages-grid, .packages-grid--3 { grid-template-columns: 1fr; }
   .footer { padding: 44px 22px; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
 }
