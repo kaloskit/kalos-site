@@ -136,7 +136,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .section--contrast .section-body { color: var(--ash); }
 .section--contrast .section-body strong { color: var(--bone); }
 .section--contrast .steel-rule { background: rgba(232,230,225,.14); }
-.section--contrast .section-label { color: #D08048; } /* lighter copper on graphite for 4.5:1 contrast */
+.section--contrast .section-label { color: var(--bone); } /* small copper text fails 4.5:1 on graphite; bone passes */
+.section--contrast .section-body a { color: var(--bone); }
 
 /* ── Page hero (subpages) ── */
 .page-hero { padding: 190px 44px 80px; position: relative; }
@@ -349,7 +350,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .pillar { padding-top: 26px; border-top: 1px solid var(--line); }
 .section--contrast .pillar { border-top-color: rgba(232,230,225,.14); }
 .pillar-number { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; color: var(--copper-deep); margin-bottom: 18px; }
-.section--contrast .pillar-number { color: var(--copper); }
+.section--contrast .pillar-number { color: var(--bone); }
 .pillar-heading { font-family: var(--font-wide); font-weight: 500; font-size: 21px; margin-bottom: 12px; color: var(--graphite); }
 .section--contrast .pillar-heading { color: var(--bone); }
 .pillar-body { font-size: 14.5px; line-height: 1.8; color: #4a4f52; }
@@ -369,7 +370,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .step-num { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; color: var(--copper-deep); margin-bottom: 14px; }
 .step-num:has(.step-icon),
 .pillar-number:has(.step-icon) { display: flex; align-items: center; gap: 9px; }
-.section--contrast .step-num { color: var(--copper); }
+.section--contrast .step-num { color: var(--bone); }
+.section--contrast .step-link { color: var(--bone); }
 .step-title { font-family: var(--font-wide); font-weight: 500; font-size: 18px; margin-bottom: 10px; color: var(--graphite); }
 .section--contrast .step-title { color: var(--bone); }
 .step-body { font-size: 13.5px; line-height: 1.7; color: #4a4f52; }
@@ -400,7 +402,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
 .package-name { font-family: var(--font-wide); font-weight: 500; font-size: 22px; letter-spacing: 0; margin-bottom: 4px; color: var(--graphite); }
 .package--feature .package-name { color: var(--bone); }
 .package-tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--copper-deep); margin-bottom: 26px; }
-.package--feature .package-tag { color: #D08048; }
+.package--feature .package-tag { color: var(--bone); }
 .package--feature .package-rate span, .package--feature .package-total { color: var(--ash); }
 .package-rate { font-family: var(--font-wide); font-weight: 500; font-size: 42px; color: var(--graphite); line-height: 1; }
 .package--feature .package-rate { color: var(--bone); }

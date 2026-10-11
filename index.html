@@ -23,6 +23,7 @@
 <meta name="twitter:image" content="https://kalospt.ca/og.png">
 <link rel="preload" as="image" type="image/avif" imagesrcset="/assets/photos/slide01-800.avif 800w, /assets/photos/slide01-1600.avif 1600w" imagesizes="(max-width: 900px) 100vw, 1200px" fetchpriority="high">
 <link rel="preload" href="/assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/syne-wordmark.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -113,7 +114,8 @@
       "sameAs": [
         "https://www.instagram.com/kalos.pt/",
         "https://maps.apple.com/place?auid=10405675991872648894",
-        "https://apps.apple.com/app/id6786623377"
+        "https://apps.apple.com/app/id6786623377",
+        "https://play.google.com/store/apps/details?id=ca.kalospt.app"
       ]
     },
     {
@@ -161,14 +163,14 @@
       "@type": "MobileApplication",
       "@id": "https://kalospt.ca/#app",
       "name": "KALOS",
-      "operatingSystem": "iOS",
+      "operatingSystem": "iOS, Android",
       "applicationCategory": "HealthApplication",
       "url": "https://apps.apple.com/app/id6786623377",
       "installUrl": "https://apps.apple.com/app/id6786623377",
       "publisher": {
         "@id": "https://kalospt.ca/#gym"
       },
-      "description": "The KALOS client app: training and nutrition programs, session booking, progress logs and charts. KALOS Pro is included with every active KALOS training package.",
+      "description": "The KALOS client app for iPhone and Android: training and nutrition programs, session booking, progress logs and charts. KALOS Pro is included with every active KALOS training package.",
       "offers": {
         "@type": "Offer",
         "name": "KALOS Pro",
@@ -182,7 +184,11 @@
           "unitText": "month"
         },
         "description": "KALOS Pro costs $15.99 per month and is included with every active KALOS training package."
-      }
+      },
+      "sameAs": [
+        "https://apps.apple.com/app/id6786623377",
+        "https://play.google.com/store/apps/details?id=ca.kalospt.app"
+      ]
     },
     {
       "@type": "WebSite",
@@ -222,7 +228,7 @@
   <!-- ── Story slider ── -->
   <section class="slider" id="slider" aria-roledescription="carousel" aria-label="What KALOS is">
 
-    <!-- Slide 1 — Overview -->
+    <!-- Slide 1: Overview -->
     <div class="slide active" role="group" aria-label="1 of 6">
       <div class="slide-copy">
         <h1 class="slide-kicker">KALOS · Personal Trainer in Richmond, BC</h1>
@@ -239,26 +245,26 @@
       </div>
     </div>
 
-    <!-- Slide 2 — Facility -->
+    <!-- Slide 2: Facility -->
     <div class="slide" role="group" aria-label="2 of 6">
       <div class="slide-copy">
         <p class="slide-kicker">The Studio</p>
         <h2 class="slide-title">A private floor, never a crowd.</h2>
         <p class="slide-desc">
-          Appointment-only, capped at five clients on the floor at once. You never wait for equipment or
+          Appointment-only and private. You never wait for equipment or
           train in front of an audience. It's a space built for serious work, with a lounge worth staying in.
         </p>
         <a href="facility/" class="slide-link">See the facility</a>
       </div>
       <div class="slide-visual">
         <div class="art-panel" style="position:absolute; inset:0;">
-          <picture><source type="image/avif" srcset="/assets/photos/facility-render-800.avif 800w, /assets/photos/facility-render-1600.avif 1600w" sizes="(max-width: 900px) 100vw, 1200px"><source type="image/webp" srcset="/assets/photos/facility-render-800.webp 800w, /assets/photos/facility-render-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px"><img width="1920" height="1440" loading="lazy" decoding="async" src="/assets/photos/facility-render.jpg" alt="Rendering of the KALOS studio floor — racks, benches, and the lounge" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:45% 60%;"></picture>
+          <picture><source type="image/avif" srcset="/assets/photos/facility-render-800.avif 800w, /assets/photos/facility-render-1600.avif 1600w" sizes="(max-width: 900px) 100vw, 1200px"><source type="image/webp" srcset="/assets/photos/facility-render-800.webp 800w, /assets/photos/facility-render-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 1200px"><img width="1920" height="1440" loading="lazy" decoding="async" src="/assets/photos/facility-render.jpg" alt="Rendering of the KALOS studio floor: racks, benches, and the lounge" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:45% 60%;"></picture>
           <span class="art-tag">Rendering of the KALOS floor</span>
         </div>
       </div>
     </div>
 
-    <!-- Slide 3 — Methodology + app -->
+    <!-- Slide 3: Methodology + app -->
     <div class="slide" role="group" aria-label="3 of 6">
       <div class="slide-copy">
         <p class="slide-kicker">The Method</p>
@@ -280,7 +286,7 @@
               <span class="browser-url">app.kalospt.ca</span>
             </div>
             <div class="browser-screen">
-              <picture><source type="image/avif" srcset="/assets/software/desktop-records-800.avif 800w, /assets/software/desktop-records-1568.avif 1568w" sizes="(max-width: 900px) 100vw, 1200px"><source type="image/webp" srcset="/assets/software/desktop-records-800.webp 800w, /assets/software/desktop-records-1568.webp 1568w" sizes="(max-width: 900px) 100vw, 1200px"><img loading="lazy" decoding="async" src="/assets/software/desktop-records.jpg" alt="KALOS client portal Personal Record page — weight-loss charts and performance trends" width="1568" height="731"></picture>
+              <picture><source type="image/avif" srcset="/assets/software/desktop-records-800.avif 800w, /assets/software/desktop-records-1568.avif 1568w" sizes="(max-width: 900px) 100vw, 1200px"><source type="image/webp" srcset="/assets/software/desktop-records-800.webp 800w, /assets/software/desktop-records-1568.webp 1568w" sizes="(max-width: 900px) 100vw, 1200px"><img loading="lazy" decoding="async" src="/assets/software/desktop-records.jpg" alt="KALOS client portal Personal Record page: weight-loss charts and performance trends" width="1568" height="731"></picture>
             </div>
           </div>
           <div class="phone">
@@ -292,7 +298,7 @@
       </div>
     </div>
 
-    <!-- Slide 4 — Services -->
+    <!-- Slide 4: Services -->
     <div class="slide" role="group" aria-label="4 of 6">
       <div class="slide-copy">
         <p class="slide-kicker">Packages</p>
@@ -300,7 +306,7 @@
         <p class="slide-desc">
           Training is sold in committed blocks of 12 to 48 sessions, because real transformation takes
           a plan with an end state, not a monthly auto-renew. The bigger the commitment, the lower the
-          rate and the more support included.
+          rate per session.
         </p>
         <a href="packages/" class="slide-link">See packages &amp; pricing</a>
       </div>
@@ -309,7 +315,7 @@
       </div>
     </div>
 
-    <!-- Slide 5 — Team -->
+    <!-- Slide 5: Team -->
     <div class="slide" role="group" aria-label="5 of 6">
       <div class="slide-copy">
         <p class="slide-kicker">The Team</p>
@@ -326,7 +332,7 @@
       </div>
     </div>
 
-    <!-- Slide 6 — Results -->
+    <!-- Slide 6: Results -->
     <div class="slide" role="group" aria-label="6 of 6">
       <div class="slide-copy">
         <p class="slide-kicker">Results</p>
@@ -357,7 +363,7 @@
   <section class="section" id="what">
     <div class="section-inner">
       <div class="steel-rule reveal"></div>
-      <p class="section-label reveal" style="margin-top:64px;">01 — Overview</p>
+      <p class="section-label reveal" style="margin-top:64px;">01 · Overview</p>
       <h2 class="section-heading reveal reveal-delay-1">Coaching built to get you results.</h2>
       <p class="section-body reveal reveal-delay-2">
         KALOS isn't a gym you wander into and figure out alone. It's a private studio with a coach in your
@@ -371,8 +377,8 @@
           <div class="fact-label">A coach with you<br>every session</div>
         </div>
         <div class="fact reveal reveal-delay-1">
-          <div class="fact-num">5</div>
-          <div class="fact-label">Clients max on the floor,<br>never a crowd</div>
+          <div class="fact-num">Daily</div>
+          <div class="fact-label">Open 9 AM to 9 PM,<br>by appointment</div>
         </div>
         <div class="fact reveal reveal-delay-2">
           <div class="fact-num">Tracked</div>
@@ -389,7 +395,7 @@
   <!-- ── How it works (bone) ── -->
   <section class="section section--contrast" id="how">
     <div class="section-inner">
-      <p class="section-label reveal">02 — Start</p>
+      <p class="section-label reveal">02 · Start</p>
       <h2 class="section-heading reveal reveal-delay-1">Start in five steps.</h2>
       <div class="steps-grid">
         <div class="step reveal">
@@ -425,13 +431,12 @@
   <!-- ── Packages teaser ── -->
   <section class="section" id="packages">
     <div class="section-inner">
-      <p class="section-label reveal">03 — Packages</p>
+      <p class="section-label reveal">03 · Packages</p>
       <h2 class="section-heading reveal reveal-delay-1">Choose your commitment.</h2>
       <p class="section-body reveal reveal-delay-2">
         KALOS sells training in packages rather than memberships, because real transformation takes a
         committed block of work. Every package includes your coach, your personalized program, and
-        full progress tracking. The bigger the commitment, the lower your per-session rate and the more
-        support included.
+        full progress tracking. The bigger the commitment, the lower your per-session rate.
       </p>
       <div class="packages-grid">
         <div class="package reveal">
@@ -456,9 +461,8 @@
           <p class="package-total">$3,780 total</p>
         </div>
         <div class="package package--feature reveal reveal-delay-3">
-          <span class="package-flag">★ Most popular</span>
           <p class="package-name">VIP</p>
-          <p class="package-tag">All in — best rate</p>
+          <p class="package-tag">All in, best rate</p>
           <p class="package-rate">$100<span> / session</span></p>
           <p class="package-sessions">48 sessions</p>
           <p class="package-total">$4,800 total</p>
@@ -520,6 +524,7 @@
           <a href="https://app.kalospt.ca/consultation" class="footer-link">Book a consultation</a>
           <a href="https://app.kalospt.ca/login" class="footer-link">Member login</a>
           <a href="https://apps.apple.com/app/id6786623377" target="_blank" rel="noopener" class="footer-link">KALOS app for iPhone</a>
+          <a href="https://play.google.com/store/apps/details?id=ca.kalospt.app" target="_blank" rel="noopener" class="footer-link">KALOS app for Android</a>
           <p class="footer-col-title">Contact</p>
           <a href="contact/" class="footer-link">Contact us</a>
           <a href="mailto:hello@kalospt.ca" class="footer-link">hello@kalospt.ca</a>

@@ -11,12 +11,14 @@ Key facts:
 - Hours: every day, 9:00 AM to 9:00 PM, by appointment, from opening.
 - Opening: November 2026. The studio is in build-out now; consultations are open ahead of opening.
 - Apple Maps: https://maps.apple.com/place?auid=10405675991872648894
-- Format: private one-on-one personal training by appointment only. No open gym memberships, no group classes. Capped at five clients on the floor at once.
+- Format: private one-on-one personal training by appointment only. No open gym memberships, no group classes.
 - Founders: Matt Law, Head Coach and Co-Founder (Natural IFBB Pro; 2025 Xtreme Natural Pro Qualifier champion, Canadian Physique Alliance; UBC Kinesiology; creator of the KALOS method; Instagram @st.mattlaw). Kit Wan (Hoi Kit Wan), Co-Founder and Technical Director, software engineer who built the KALOS app (https://www.linkedin.com/in/hoikitwan).
 - Method: goal first coaching. Every engagement starts with a specific, measurable target with a date on it. Strength is anchored by max effort benchmark sets; hypertrophy volume is calculated from the client's own numbers; progression is programmed, not improvised.
 - Consistency: one standard across the team. Every coach is trained and certified on the same documented method, so results don't depend on which trainer you get.
-- Tracking: every session, lift, and check-in is logged in the KALOS software (web client portal and iOS app), including personal records, body weight trends, food logging, and progress reviews.
-- KALOS app for iPhone: https://apps.apple.com/app/id6786623377. KALOS Pro costs $15.99 per month on its own and is included with every active training package.
+- Tracking: every session, lift, and check-in is logged in the KALOS software (web client portal and iOS and Android apps), including personal records, body weight trends, food logging, and progress reviews.
+- KALOS app for iPhone (App Store): https://apps.apple.com/app/id6786623377
+- KALOS app for Android (Google Play): https://play.google.com/store/apps/details?id=ca.kalospt.app
+- KALOS Pro costs $15.99 per month on its own and is included with every active training package.
 - Getting started: a free 60 minute consultation, in person, booked at https://app.kalospt.ca/consultation. Goals, training history, and a coach match before any purchase.
 - Packages (one-on-one 60 minute sessions, prices in CAD plus 5% GST):
   - Starter: 12 sessions at $130 per session ($1,560)
@@ -34,7 +36,7 @@ Key facts:
 - [The Method](https://kalospt.ca/method/): How progression is engineered: benchmarks, calculated volume, tracked sessions, and the KALOS app.
 - [How It Works](https://kalospt.ca/how-it-works/): From free consultation to transformation, step by step.
 - [Packages](https://kalospt.ca/packages/): Session packages and pricing.
-- [Results](https://kalospt.ca/results/): Client transformations, documented with numbers.
+- [Results](https://kalospt.ca/results/): How KALOS documents client transformations; the first client results are published after the November 2026 opening.
 - [The Team](https://kalospt.ca/team/): Matt Law and Kit Wan, and how coaches are certified.
 - [FAQ](https://kalospt.ca/faq/): Cost, getting started, location, hours, the app, founders, coaching model, nutrition, and tracking.
 - [Contact](https://kalospt.ca/contact/): Phone, email, address, hours, directions, and the free consultation.
@@ -47,7 +49,7 @@ Key facts:
 - **Where is KALOS located, and when does it open?** 12060 Vulcan Way, Richmond, BC V6V 1J8, in the Bridgeport area. It opens in November 2026 and is in build-out now. Once open, hours are 9 AM to 9 PM every day, by appointment.
 - **What is the KALOS phone number?** (778) 949-9944.
 - **Who founded KALOS?** Matt Law (Head Coach, Natural IFBB Pro, 2025 Xtreme Natural Pro Qualifier champion with the Canadian Physique Alliance, UBC Kinesiology) and Kit Wan (Co-Founder and Technical Director, software engineer).
-- **Is there a KALOS app?** Yes, the KALOS app for iPhone (https://apps.apple.com/app/id6786623377). KALOS Pro is $15.99 per month and included with every active package.
+- **Is there a KALOS app?** Yes, on the App Store for iPhone (https://apps.apple.com/app/id6786623377) and on Google Play for Android (https://play.google.com/store/apps/details?id=ca.kalospt.app). KALOS Pro is $15.99 per month and included with every active package.
 - **How is KALOS different from a regular gym?** KALOS isn't a membership gym. The floor is private and appointment only: no crowds, no waiting for equipment, and every station set up for you before you arrive. Coaching is strictly one-on-one, and the studio is built for one outcome: physique transformation, with the numbers to prove it.
 - **Does it matter which KALOS coach I get?** No, and that's the point. Every KALOS coach runs the same proven method, so your result doesn't depend on trainer roulette. You're matched to the coach who fits your goal, and the standard is identical across the team.
 - **Is nutrition coaching included at KALOS?** Yes. Your program covers training, nutrition, and cardio as one plan. You log food and hit macro targets in the KALOS app, and your coach reviews the data with you.
