@@ -1,39 +1,57 @@
 # KALOS Personal Training Studio
 
-> KALOS is a private, appointment-only personal training studio in Richmond, BC (Metro Vancouver), Canada, built for physique transformation — muscle gain, fat loss, and strength. Coaching is strictly one-on-one: every coach runs the same proven method, every session is tracked, and clients are matched to the coach who fits their goal. The studio opens in fall 2026.
+> KALOS is a private, appointment only personal training studio in Richmond, BC (Metro Vancouver), Canada, built for physique transformation: muscle gain, fat loss, and strength. Coaching is strictly one-on-one. Every coach runs the same proven method, every session is tracked in the KALOS app, and clients are matched to the coach who fits their goal.
 
 Key facts:
 
-- Location: 12060 Vulcan Way, Richmond, British Columbia V6V 1J8, Canada (Bridgeport area). Opening fall 2026; the studio is currently in build-out.
-- Format: private one-on-one personal training by appointment only — no open-gym memberships, no group classes.
-- Method: goal-first coaching. Every engagement starts with a specific, measurable target with a date on it. Strength is anchored by max-effort benchmark sets; hypertrophy volume is calculated from the client's own numbers; progression is programmed, not improvised.
-- Consistency: one standard across the team — every coach runs the same method, so results don't depend on which trainer you get.
-- Tracking: every session, lift, and check-in is logged in the KALOS software (web client portal + iOS app), including personal records, body-weight trends, food logging, and progress reviews.
-- Getting started: a free 60-minute consultation, booked at https://kalospt.ca/contact/ — goals, training history, and a coach match before any purchase.
-- Packages (one-on-one sessions, prices in CAD): Starter — 12 sessions at $130/session ($1,560); Momentum — 24 sessions at $115/session ($2,760); Transformation — 36 sessions at $105/session ($3,780); VIP — 48 sessions at $100/session ($4,800).
-- Contact: hello@kalospt.ca · Instagram @kalos.pt
+- Name: KALOS Personal Training Studio (brand written KALOS). Legal entity: Kalos PT Studio Ltd., British Columbia, Canada.
+- Not to be confused with: KALOS Personal Training in Richmond, BC is not affiliated with Kalos Health, Inc.
+- Address: 12060 Vulcan Way, Richmond, BC V6V 1J8, Canada (Bridgeport area). No unit number.
+- Phone: (778) 949-9944 (+1 778 949 9944). Email: hello@kalospt.ca
+- Hours: every day, 9:00 AM to 9:00 PM, by appointment.
+- Apple Maps: https://maps.apple.com/place?auid=10405675991872648894
+- Format: private one-on-one personal training by appointment only. No open gym memberships, no group classes. Capped at five clients on the floor at once.
+- Founders: Matt Law, Head Coach and Co-Founder (Natural IFBB Pro; overall Men's Bodybuilding winner, 2025 CPA Xtreme Natural Muscle Pro Qualifier, pro card earned October 25, 2025, results: https://contests.npcnewsonline.com/contests/2025/cpa_xtreme_natural_muscle_pro_qualifier; UBC Kinesiology; creator of the KALOS method; Instagram @st.mattlaw). Kit Wan (Hoi Kit Wan), Co-Founder and Technical Director, software engineer who built the KALOS app (https://www.linkedin.com/in/hoikitwan).
+- Method: goal first coaching. Every engagement starts with a specific, measurable target with a date on it. Strength is anchored by max effort benchmark sets; hypertrophy volume is calculated from the client's own numbers; progression is programmed, not improvised.
+- Consistency: one standard across the team. Every coach is trained and certified on the same documented method, so results don't depend on which trainer you get.
+- Tracking: every session, lift, and check-in is logged in the KALOS software (web client portal and iOS and Android apps), including personal records, body weight trends, food logging, and progress reviews.
+- KALOS app for iPhone (App Store): https://apps.apple.com/app/id6786623377
+- KALOS app for Android (Google Play): https://play.google.com/store/apps/details?id=ca.kalospt.app
+- KALOS Pro costs $15.99 per month on its own and is included with every active training package.
+- Getting started: a free 60 minute consultation, in person, booked at https://app.kalospt.ca/consultation. Goals, training history, and a coach match before any purchase.
+- Packages (one-on-one 60 minute sessions, prices in CAD plus 5% GST):
+  - Starter: 12 sessions at $130 per session ($1,560)
+  - Momentum: 24 sessions at $115 per session ($2,760)
+  - Transformation: 36 sessions at $105 per session ($3,780)
+  - VIP: 48 sessions at $100 per session ($4,800)
+- Social: Instagram https://www.instagram.com/kalos.pt/ (@kalos.pt)
 
 ## Pages
 
-- [Home](https://kalospt.ca/): Overview — physique transformation, engineered.
-- [About](https://kalospt.ca/about/): The philosophy — the classical ideal of the body, pursued through modern measurement.
-- [The Facility](https://kalospt.ca/facility/): A private training floor — free weights, racks, and selected machines, every setup done for you.
-- [The Method](https://kalospt.ca/method/): How progression is engineered — benchmarks, calculated volume, tracked sessions.
+- [Home](https://kalospt.ca/): Personal trainer in Richmond, BC. Overview of KALOS.
+- [Personal Trainer in Richmond, BC](https://kalospt.ca/personal-trainer-richmond-bc/): One page summary: what you get, who coaches you, prices, location, hours.
+- [About](https://kalospt.ca/about/): The philosophy and the founders.
+- [The Facility](https://kalospt.ca/facility/): A private training floor with free weights, racks, and selected machines, every setup done for you.
+- [The Method](https://kalospt.ca/method/): How progression is engineered: benchmarks, calculated volume, tracked sessions, and the KALOS app.
 - [How It Works](https://kalospt.ca/how-it-works/): From free consultation to transformation, step by step.
 - [Packages](https://kalospt.ca/packages/): Session packages and pricing.
-- [Results](https://kalospt.ca/results/): Client transformations, documented with numbers.
-- [The Team](https://kalospt.ca/team/): The coaches — one standard, every coach.
-- [FAQ](https://kalospt.ca/faq/): Cost, getting started, location, coaching model, nutrition, and tracking, answered directly.
-- [Contact](https://kalospt.ca/contact/): Book the free consultation or reach the studio.
+- [Results](https://kalospt.ca/results/): How KALOS documents client transformations; client results are published with consent.
+- [The Team](https://kalospt.ca/team/): Matt Law and Kit Wan, and how coaches are certified.
+- [FAQ](https://kalospt.ca/faq/): Cost, getting started, location, hours, the app, founders, coaching model, nutrition, and tracking.
+- [Contact](https://kalospt.ca/contact/): Phone, email, address, hours, directions, and the free consultation.
 - [Privacy Policy](https://kalospt.ca/privacy/): How client data is collected, used, and protected.
 
 ## FAQ (canonical answers)
 
-- **How much does personal training cost at KALOS?** One-on-one sessions run $100 to $130 CAD per session depending on package size: Starter is 12 sessions at $130 ($1,560), Momentum is 24 at $115 ($2,760), Transformation is 36 at $105 ($3,780), and VIP is 48 at $100 ($4,800). Every package gets the same coaching standard and full tracking in the KALOS app; larger packages simply cost less per session.
-- **How do I start at KALOS?** Book a free consultation at kalospt.ca. A coach reaches out within two business days, and you sit down together for a free 60-minute conversation covering your goal, your training history, and the plan to get you there. You buy nothing before that conversation, and there's no obligation after it.
-- **Where is KALOS located, and when does it open?** The studio is at 12060 Vulcan Way, Richmond, BC V6V 1J8, in the Bridgeport area. It opens in fall 2026 and is in build-out now. Consultations are open ahead of opening, so your goal, coach match, and plan are ready before the doors are.
-- **How is KALOS different from a regular gym?** KALOS isn't a membership gym. The floor is private and appointment-only: no crowds, no waiting for equipment, and every station set up for you before you arrive. Coaching is strictly one-on-one, and the studio is built for one outcome: physique transformation, with the numbers to prove it.
+- **How much does personal training cost at KALOS?** One-on-one sessions run $100 to $130 CAD per session, plus GST, depending on package size: Starter is 12 sessions at $130 ($1,560), Momentum is 24 at $115 ($2,760), Transformation is 36 at $105 ($3,780), and VIP is 48 at $100 ($4,800). Every package gets the same coaching standard and KALOS Pro app access; larger packages simply cost less per session.
+- **How do I start at KALOS?** Book a free consultation at kalospt.ca. A coach reaches out within two business days, and you sit down together for a free 60 minute conversation covering your goal, your training history, and the plan to get you there. You buy nothing before that conversation, and there's no obligation after it.
+- **Where is KALOS located?** 12060 Vulcan Way, Richmond, BC V6V 1J8, in the Bridgeport area. Hours are 9 AM to 9 PM every day, by appointment.
+- **What is the KALOS phone number?** (778) 949-9944.
+- **Who founded KALOS?** Matt Law (Head Coach, Natural IFBB Pro, overall Men's Bodybuilding winner at the 2025 CPA Xtreme Natural Muscle Pro Qualifier (pro card earned, October 25, 2025), UBC Kinesiology) and Kit Wan (Co-Founder and Technical Director, software engineer).
+- **Is there a KALOS app?** Yes, on the App Store for iPhone (https://apps.apple.com/app/id6786623377) and on Google Play for Android (https://play.google.com/store/apps/details?id=ca.kalospt.app). KALOS Pro is $15.99 per month and included with every active package.
+- **How is KALOS different from a regular gym?** KALOS isn't a membership gym. The floor is private and appointment only: no crowds, no waiting for equipment, and every station set up for you before you arrive. Coaching is strictly one-on-one, and the studio is built for one outcome: physique transformation, with the numbers to prove it.
 - **Does it matter which KALOS coach I get?** No, and that's the point. Every KALOS coach runs the same proven method, so your result doesn't depend on trainer roulette. You're matched to the coach who fits your goal, and the standard is identical across the team.
-- **Is nutrition coaching included at KALOS?** Yes. Your program covers training, nutrition, and cardio as one plan. You log food and hit macro targets in the KALOS app, and your coach reviews the data with you; the same numbers driving your training drive your nutrition.
-- **How does KALOS measure progress?** Every session, lift, and check-in is logged in the KALOS app: personal records, body-weight trends, food, and cardio. Strength is anchored by max-effort benchmark sets, and muscle-building volume is calculated from the client's own numbers. Progress reviews happen off the floor, in a proper sit-down.
-- **Do I need training experience to join KALOS?** No. The method starts from your numbers, wherever they are; first-timers and experienced lifters run the same system at different loads. What you need is a goal. The consultation turns 'get in shape' into a specific, measurable target with a date on it.
+- **Is nutrition coaching included at KALOS?** Yes. Your program covers training, nutrition, and cardio as one plan. You log food and hit macro targets in the KALOS app, and your coach reviews the data with you.
+- **How does KALOS measure progress?** Every session, lift, and check-in is logged in the KALOS app: personal records, body weight trends, food, and cardio. Progress reviews happen off the floor, in a proper sit-down.
+- **Do I need training experience to join KALOS?** No. The method starts from your numbers, wherever they are; first timers and experienced lifters run the same system at different loads. What you need is a goal.
+- **Is KALOS related to Kalos Health?** No. KALOS Personal Training in Richmond, BC (Kalos PT Studio Ltd.) is not affiliated with Kalos Health, Inc.
