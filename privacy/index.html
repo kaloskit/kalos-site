@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,16 +87,19 @@
   }
   .wm-glyph::before { content: "K\039BLOS"; }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .skip-link { position: absolute; left: 16px; top: -60px; z-index: 1000; background: #232629; color: #E8E6E1; padding: 10px 16px; border-radius: 4px; font-size: 14px; text-decoration: none; }
+  .skip-link:focus { top: 12px; }
 </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="topbar">
     <a href="/" class="wm"><span class="wm-glyph" aria-hidden="true"></span><span class="sr-only">KALOS home</span></a>
     <a href="/" class="topbar-back">&larr; Back to kalospt.ca</a>
   </header>
 
-  <main class="wrap">
+  <main class="wrap" id="main">
     <p class="eyebrow">Legal</p>
     <h1>Privacy Policy</h1>
     <p class="meta">Kalos PT Studio Ltd. (KALOS Personal Training Studio) · Richmond, British Columbia, Canada · Last updated October 11, 2026</p>

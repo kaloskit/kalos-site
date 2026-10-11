@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
 <title>Page Not Found | KALOS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700..800&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
+  @font-face { font-family: 'Archivo'; font-style: normal; font-weight: 400 600; font-display: swap; src: url('/assets/fonts/archivo-latin.woff2') format('woff2'); }
+  @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 500; font-display: swap; src: url('/assets/fonts/jetbrains-mono-latin.woff2') format('woff2'); }
+  @font-face { font-family: 'Syne'; font-style: normal; font-weight: 700 800; font-display: swap; src: url('/assets/fonts/syne-wordmark.woff2') format('woff2'); unicode-range: U+4B-4C, U+4F, U+53, U+39B; }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     min-height: 100vh; display: flex; align-items: center; justify-content: center;
@@ -24,11 +24,12 @@
   p { font-size: 15px; color: #9AA0A0; margin-bottom: 28px; }
   .home { display: inline-block; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; color: #FDFCFA; text-decoration: none; border: 1px solid #C0703A; padding: 12px 26px; }
   .home:hover { background: #C0703A; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 </style>
 </head>
 <body>
   <main>
-    <a href="/" class="wordmark"><span aria-hidden="true">KΛLOS</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">KALOS home</span></a>
+    <a href="/" class="wordmark"><span aria-hidden="true">KΛLOS</span><span class="sr-only">KALOS home</span></a>
     <div class="code">404</div>
     <h1>Page Not Found</h1>
     <p>This page doesn't exist, or it moved when the site launched.</p>
