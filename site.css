@@ -201,7 +201,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   width: 40px; height: 40px; cursor: pointer; transition: all .3s ease;
 }
 .slider-arrow:hover { background: var(--bone); color: var(--graphite); border-color: var(--bone); }
-.slider-count { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: rgba(232,230,225,.5); }
+.slider-count { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: rgba(232,230,225,.5); white-space: nowrap; }
 
 @media (max-width: 900px) {
   .slider { min-height: auto; }
@@ -218,7 +218,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--copper-deep); o
   .slide-title { font-size: 26px; margin-bottom: 12px; }
   .slide-desc { font-size: 14px; line-height: 1.65; margin-bottom: 20px; }
   .slide-kicker { margin-bottom: 12px; }
-  .slider-controls { position: absolute; left: 22px; bottom: 26px; padding: 0; background: none; }
+  .slider-controls { position: absolute; left: 22px; bottom: 26px; padding: 0; background: none; gap: 14px; }
+  .slider-dots { gap: 6px; }
+  .slider-dot { width: 18px; }
 }
 
 /* ── Slide software composite ── */
