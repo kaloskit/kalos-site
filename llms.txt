@@ -1,6 +1,6 @@
 # KALOS Personal Training Studio
 
-> KALOS is a private, appointment only personal training studio in Richmond, BC (Metro Vancouver), Canada, built for physique transformation: muscle gain, fat loss, and strength. Coaching is strictly one-on-one. Every coach runs the same proven method, every session is tracked in the KALOS app, and clients are matched to the coach who fits their goal. The studio opens on November 1, 2026.
+> KALOS is a private, appointment only personal training studio in Richmond, BC (Metro Vancouver), Canada, built for physique transformation: muscle gain, fat loss, and strength. Coaching is strictly one-on-one. Every coach runs the same proven method, every session is tracked in the KALOS app, and clients are matched to the coach who fits their goal.
 
 Key facts:
 
@@ -8,8 +8,7 @@ Key facts:
 - Not to be confused with: KALOS Personal Training in Richmond, BC is not affiliated with Kalos Health, Inc.
 - Address: 12060 Vulcan Way, Richmond, BC V6V 1J8, Canada (Bridgeport area). No unit number.
 - Phone: (778) 949-9944 (+1 778 949 9944). Email: hello@kalospt.ca
-- Hours: every day, 9:00 AM to 9:00 PM, by appointment, starting on opening day, November 1, 2026.
-- Opening: November 1, 2026. The studio is in build-out now; consultations are open ahead of opening.
+- Hours: every day, 9:00 AM to 9:00 PM, by appointment.
 - Apple Maps: https://maps.apple.com/place?auid=10405675991872648894
 - Format: private one-on-one personal training by appointment only. No open gym memberships, no group classes. Capped at five clients on the floor at once.
 - Founders: Matt Law, Head Coach and Co-Founder (Natural IFBB Pro; overall Men's Bodybuilding winner, 2025 CPA Xtreme Natural Muscle Pro Qualifier, pro card earned October 25, 2025, results: https://contests.npcnewsonline.com/contests/2025/cpa_xtreme_natural_muscle_pro_qualifier; UBC Kinesiology; creator of the KALOS method; Instagram @st.mattlaw). Kit Wan (Hoi Kit Wan), Co-Founder and Technical Director, software engineer who built the KALOS app (https://www.linkedin.com/in/hoikitwan).
@@ -36,7 +35,7 @@ Key facts:
 - [The Method](https://kalospt.ca/method/): How progression is engineered: benchmarks, calculated volume, tracked sessions, and the KALOS app.
 - [How It Works](https://kalospt.ca/how-it-works/): From free consultation to transformation, step by step.
 - [Packages](https://kalospt.ca/packages/): Session packages and pricing.
-- [Results](https://kalospt.ca/results/): How KALOS documents client transformations; the first client results are published after the November 1, 2026 opening.
+- [Results](https://kalospt.ca/results/): How KALOS documents client transformations; client results are published with consent.
 - [The Team](https://kalospt.ca/team/): Matt Law and Kit Wan, and how coaches are certified.
 - [FAQ](https://kalospt.ca/faq/): Cost, getting started, location, hours, the app, founders, coaching model, nutrition, and tracking.
 - [Contact](https://kalospt.ca/contact/): Phone, email, address, hours, directions, and the free consultation.
@@ -46,7 +45,7 @@ Key facts:
 
 - **How much does personal training cost at KALOS?** One-on-one sessions run $100 to $130 CAD per session, plus GST, depending on package size: Starter is 12 sessions at $130 ($1,560), Momentum is 24 at $115 ($2,760), Transformation is 36 at $105 ($3,780), and VIP is 48 at $100 ($4,800). Every package gets the same coaching standard and KALOS Pro app access; larger packages simply cost less per session.
 - **How do I start at KALOS?** Book a free consultation at kalospt.ca. A coach reaches out within two business days, and you sit down together for a free 60 minute conversation covering your goal, your training history, and the plan to get you there. You buy nothing before that conversation, and there's no obligation after it.
-- **Where is KALOS located, and when does it open?** 12060 Vulcan Way, Richmond, BC V6V 1J8, in the Bridgeport area. It opens on November 1, 2026 and is in build-out now. Once open, hours are 9 AM to 9 PM every day, by appointment.
+- **Where is KALOS located?** 12060 Vulcan Way, Richmond, BC V6V 1J8, in the Bridgeport area. Hours are 9 AM to 9 PM every day, by appointment.
 - **What is the KALOS phone number?** (778) 949-9944.
 - **Who founded KALOS?** Matt Law (Head Coach, Natural IFBB Pro, overall Men's Bodybuilding winner at the 2025 CPA Xtreme Natural Muscle Pro Qualifier (pro card earned, October 25, 2025), UBC Kinesiology) and Kit Wan (Co-Founder and Technical Director, software engineer).
 - **Is there a KALOS app?** Yes, on the App Store for iPhone (https://apps.apple.com/app/id6786623377) and on Google Play for Android (https://play.google.com/store/apps/details?id=ca.kalospt.app). KALOS Pro is $15.99 per month and included with every active package.
