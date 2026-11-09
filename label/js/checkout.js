@@ -81,7 +81,7 @@ function paintDelivery() {
   $('ship-fields').hidden = !ship;
   const note = $('pickup-note');
   note.hidden = ship;
-  note.textContent = ship ? '' : 'Pickup instructions are on your confirmation and in your email.';
+  note.textContent = ship ? '' : 'Pickup details are emailed with your order confirmation.';
 }
 
 function renderReview() {
