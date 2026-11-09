@@ -1,0 +1,162 @@
+{
+  "currency": "CAD",
+  "products": [
+    {
+      "id": "first-zip-hoodie",
+      "name": "First Zip Hoodie",
+      "price_cents": 14000,
+      "kicker": "The first piece",
+      "lede": "Quiet from the front. Repetition down the back.",
+      "base": {
+        "brand": "AS Colour",
+        "style": "5148 Heavy Zip Hood"
+      },
+      "details": [
+        "Black full zip hoodie, two way YKK zip",
+        "Small white KALOS embroidered at the left chest",
+        "White dry brush tri apex printed on the back",
+        "Plain sleeves, no drawstrings"
+      ],
+      "fabric": "80% cotton, 20% recycled polyester, cotton faced fleece. Heavyweight 11.8 oz, about 400 GSM. Oversized fit, dropped shoulders. Garment made in Bangladesh, decorated in Canada.",
+      "care": "Machine wash cold, inside out, with like colours. No bleach, no tumble dry, no dry clean. Do not iron the print. Line dry in shade.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "size_chart": {
+        "unit": "in",
+        "columns": [
+          "Body width",
+          "Body length"
+        ],
+        "rows": {
+          "XS": [
+            22.5,
+            27
+          ],
+          "S": [
+            23.5,
+            28
+          ],
+          "M": [
+            24.75,
+            29
+          ],
+          "L": [
+            26,
+            30
+          ],
+          "XL": [
+            27.25,
+            31
+          ]
+        },
+        "note": "Manufacturer measurements, may vary within 1 inch."
+      },
+      "colours": [
+        {
+          "id": "black",
+          "name": "Black",
+          "swatch": "#000000",
+          "printeez_product_ref": "105541",
+          "images": [
+            {
+              "src": "assets/first-zip-model-back-concept.jpg",
+              "label": "Concept imagery",
+              "alt": "Model wearing the black hoodie, back view with the white tri apex"
+            },
+            {
+              "src": "assets/first-zip-front-concept.jpg",
+              "label": "Concept render",
+              "alt": "Front of the black full zip hoodie with small white KALOS at the left chest"
+            },
+            {
+              "src": "assets/first-zip-back-reference.jpg",
+              "label": "Design reference",
+              "alt": "Back of the black hoodie with the white dry brush tri apex"
+            }
+          ]
+        }
+      ],
+      "active": true
+    },
+    {
+      "id": "made-hood",
+      "name": "Made Hood",
+      "price_cents": 15000,
+      "kicker": "Pullover",
+      "lede": "One mark on the chest. One name on the back.",
+      "base": {
+        "brand": "AS Colour",
+        "style": "5151 Made Hood"
+      },
+      "details": [
+        "Pullover hood, kangaroo pocket, no drawcord",
+        "Small dry brush tri apex at the left chest in a contrasting colour",
+        "Original KALOS wordmark low on the back",
+        "Plain sleeves"
+      ],
+      "fabric": "100% cotton French terry, 14.7 oz, about 500 GSM. Relaxed fit, dropped shoulders, inset sleeves, self lined hood, 2x2 rib hem and cuffs. Preshrunk. Garment made in China.",
+      "care": "[KIT TO CONFIRM from AS Colour 5151 care label]",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "size_chart": null,
+      "colours": [
+        {
+          "id": "black",
+          "name": "Black",
+          "swatch": "#000000",
+          "printeez_product_ref": null,
+          "images": [
+            {
+              "src": "assets/made-hood-black-front-concept.jpg",
+              "label": "Concept imagery",
+              "alt": "Front of the black Made Hood with a small white tri apex at the left chest"
+            },
+            {
+              "src": "assets/made-hood-black-back-concept.jpg",
+              "label": "Concept imagery",
+              "alt": "Back of the black Made Hood with the white KALOS wordmark low on the back"
+            },
+            {
+              "src": "assets/made-hood-campaign-concept.jpg",
+              "label": "Concept imagery",
+              "alt": "Two models wearing the Made Hood in black and off white"
+            }
+          ]
+        },
+        {
+          "id": "off-white",
+          "name": "Off white",
+          "swatch": "#efece4",
+          "printeez_product_ref": null,
+          "images": [
+            {
+              "src": "assets/made-hood-offwhite-front-concept.jpg",
+              "label": "Concept imagery",
+              "alt": "Front of the off white Made Hood with a small black tri apex at the left chest"
+            },
+            {
+              "src": "assets/made-hood-offwhite-back-concept.jpg",
+              "label": "Concept imagery",
+              "alt": "Back of the off white Made Hood with the black KALOS wordmark low on the back"
+            },
+            {
+              "src": "assets/made-hood-campaign-concept.jpg",
+              "label": "Concept imagery",
+              "alt": "Two models wearing the Made Hood in black and off white"
+            }
+          ]
+        }
+      ],
+      "active": true
+    }
+  ]
+}
