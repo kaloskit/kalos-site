@@ -1,6 +1,6 @@
 // Loaded on every label page: cart count in the nav and the footer contact line.
 import { cartCount } from './cart.js';
-import { loadShopConfig } from './api.js';
+import { loadConfig } from './api.js';
 
 function paintCount() {
   document.querySelectorAll('[data-cart-count]').forEach((el) => {
@@ -14,9 +14,9 @@ addEventListener('pageshow', paintCount);
 
 const slot = document.querySelector('[data-contact]');
 if (slot) {
-  loadShopConfig()
+  loadConfig()
     .then((c) => {
-      const email = String(c.contact_email || '');
+      const email = String(c.contactEmail || '');
       if (!email) return;
       if (/^[^\s@]+@[^\s@]+$/.test(email)) {
         const a = document.createElement('a');

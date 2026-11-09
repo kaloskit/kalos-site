@@ -1,4 +1,4 @@
-import { loadCatalog, loadShopConfig, quote } from './api.js';
+import { loadCatalog, loadConfig, quote, errorCopy } from './api.js';
 import { getCart, setQty, removeItem, dropUnknown, getDelivery, setDelivery, getDest, parseVariant } from './cart.js';
 import { h, clear, money } from './dom.js';
 import './site.js';
@@ -26,7 +26,7 @@ function renderLines() {
     linesEl.append(h('div', { class: 'empty' }, h('p', {}, 'Your cart is empty.'), h('a', { class: 'btn inline', href: '/label/shop/' }, 'Shop')));
     return;
   }
-  const max = config.max_qty_per_line || 5;
+  const max = config.maxQty;
   for (const it of items) {
     const r = resolve(it.variantId);
     const img = r.c.images[0];
@@ -66,21 +66,26 @@ async function renderSummary() {
   if (!items.length) return;
   sums.append(row('Subtotal', 'Loading'));
   const dest = getDest();
+  const country = config.countries.find((c) => c.code === dest.country);
+  const region = country && (!country.regions || country.regions.some((r) => r.code === dest.region)) ? dest.region : undefined;
   try {
-    const q = await quote({ items, method, country: method === 'ship' ? dest.country : undefined, region: dest.region });
+    const q = await quote({ items, delivery: method, country: method === 'ship' && country ? country.code : undefined, region: method === 'ship' && country ? region : undefined });
     if (mine !== seq) return;
     sums.replaceChildren(
       row('Subtotal', money(q.subtotal)),
       row('Shipping', q.shipping === 0 ? 'Free' : money(q.shipping)),
-      ...(q.taxTbd || !q.taxLines.length
-        ? [row('Tax', h('span', { class: 'tbd' }, 'TBD'))]
-        : q.taxLines.map((t) => row(t.name, money(t.cents)))),
+      ...(q.taxTbd ? [row('Tax', h('span', { class: 'tbd' }, 'TBD'))] : q.taxLines.map((t) => row(t.name, money(t.cents)))),
       row('Total (CAD)', money(q.total) + (q.taxTbd ? ' + tax' : ''), 'total'),
     );
-  } catch {
+  } catch (err) {
     if (mine !== seq) return;
+    if (err.code === 'unavailable_item' && err.variantId) {
+      removeItem(err.variantId);
+      refresh();
+      return;
+    }
     sums.replaceChildren(
-      h('p', { class: 'unavail', role: 'status' }, 'Totals unavailable, try again. '),
+      h('p', { class: 'unavail', role: 'status' }, err.code === 'network' ? 'Totals unavailable, try again. ' : errorCopy(err) + ' '),
       h('button', { type: 'button', class: 'linkbtn', onclick: renderSummary }, 'Retry'),
     );
   }
@@ -88,12 +93,11 @@ async function renderSummary() {
 
 function deliveryBlock() {
   const method = getDelivery();
-  const ship = config.shipping.countries;
-  const labels = Object.values(ship).map((c) => c.label);
+  const labels = config.countries.map((c) => c.label);
   const rate = (c) => (c === 0 ? 'Free' : money(c));
-  const shipRate = Math.max(...Object.values(ship).map((c) => c.rate_cents));
+  const shipRate = Math.max(0, ...config.countries.map((c) => c.rateCents));
   const opts = [['ship', 'Ship to ' + labels.join(' or '), rate(shipRate)]];
-  if (config.pickup.enabled) opts.push(['pickup', config.pickup.label, rate(config.pickup.rate_cents)]);
+  if (config.pickup.enabled) opts.push(['pickup', config.pickup.label, rate(config.pickup.rateCents)]);
   return h('div', {},
     h('p', { class: 'label', id: 'dl-label' }, 'Delivery'),
     h('div', { role: 'radiogroup', 'aria-labelledby': 'dl-label' },
@@ -113,7 +117,7 @@ checkoutBtn.addEventListener('click', (e) => {
 });
 
 try {
-  [catalog, config] = await Promise.all([loadCatalog(), loadShopConfig()]);
+  [catalog, config] = await Promise.all([loadCatalog(), loadConfig()]);
   dropUnknown((id) => resolve(id));
   if (!config.pickup.enabled && getDelivery() === 'pickup') setDelivery('ship');
   refresh();

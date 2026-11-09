@@ -1,4 +1,4 @@
-import { loadShopConfig } from './api.js';
+import { loadConfig } from './api.js';
 import { addItem } from './cart.js';
 import './site.js';
 
@@ -13,7 +13,7 @@ const status = root.querySelector('[data-status]');
 let colour = colourChips.length === 1 ? colourChips[0].dataset.colourChip : null;
 let size = null;
 let max = 5;
-loadShopConfig().then((c) => { max = c.max_qty_per_line || 5; }).catch(() => {});
+loadConfig().then((c) => { max = c.maxQty || 5; }).catch(() => {});
 
 function paint() {
   colourChips.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.colourChip === colour)));

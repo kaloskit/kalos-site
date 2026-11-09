@@ -28,12 +28,13 @@
 <div class="field"><label for="country"><span class="label" id="country-label">Country</span></label><select id="country" name="country" autocomplete="country"></select><p class="err" role="alert"></p></div>
 <div class="field"><label for="line1"><span class="label">Street address</span></label><input id="line1" name="line1" type="text"  autocomplete="address-line1"><p class="err" role="alert"></p></div>
 <div class="field"><label for="line2"><span class="label">Apartment, suite, unit (optional)</span></label><input id="line2" name="line2" type="text"  autocomplete="address-line2"><p class="err" role="alert"></p></div>
-<div class="two"><div class="field"><label for="city"><span class="label">City</span></label><input id="city" name="city" type="text"  autocomplete="address-level2"><p class="err" role="alert"></p></div><div class="field"><label for="region"><span class="label" id="region-label">Province</span></label><select id="region" name="region" autocomplete="address-level1"></select><p class="err" role="alert"></p></div></div>
+<div class="two"><div class="field"><label for="city"><span class="label">City</span></label><input id="city" name="city" type="text"  autocomplete="address-level2"><p class="err" role="alert"></p></div><div class="field" id="region-field"></div></div>
 <div class="field"><label for="postal"><span class="label" id="postal-label">Postal code</span></label><input id="postal" name="postal" type="text"  autocomplete="postal-code"><p class="err" role="alert"></p></div></fieldset>
 <fieldset><legend>Agreement</legend>
 <div class="check"><input type="checkbox" id="terms" name="terms"><label for="terms">I agree to the <a href="/label/policies/terms/" target="_blank" rel="noopener">Terms</a> and the <a href="/label/policies/returns/" target="_blank" rel="noopener">Returns policy</a>.</label><p class="err" role="alert"></p></div></fieldset>
 <p class="errbox" id="form-error" role="alert" hidden></p>
 <button type="submit" class="btn" id="pay-btn">Pay</button>
+<p class="closed" id="closed-note" role="status" hidden>The shop is not open yet.</p>
 <p class="pay">Secure payment by Helcim</p>
 </form></div>
 <aside class="summary review" aria-label="Order review"><p class="kicker">Your order</p>

@@ -150,3 +150,6 @@ footer a:hover{text-decoration:underline;text-underline-offset:.35em}
 .sw-000000{background:#000}.sw-efece4{background:#efece4}
 .check .err{grid-column:1/-1}
 footer .wm{display:block}
+.closed{border:1px solid #fff;padding:1.15rem 1rem;text-align:center;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin:0}
+.pickup{white-space:pre-line}
+.order-lines .line{grid-template-columns:1fr auto}
