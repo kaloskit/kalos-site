@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="strict-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://secure.helcim.app; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.kalospt.ca http://localhost:* http://127.0.0.1:* https://secure.helcim.app; frame-src https://secure.helcim.app; base-uri 'none'; form-action 'self'">
+<title>KALOS · Checkout</title>
+<meta name="description" content="Checkout.">
+<link rel="icon" href="/label/favicon.ico" sizes="any">
+<link rel="icon" href="/label/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/label/apple-touch-icon.png">
+<link rel="stylesheet" href="/label/label.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><a href="/label/" class="wm" aria-label="KALOS, back to the story"><svg role="img" aria-label="KALOS" focusable="false" viewBox="0 0 4590.6 676.8"><use href="/label/assets/sprite.svg#wordmark"/></svg></a>
+<nav aria-label="Main"><ul><li><a href="/label/">Story</a></li><li><a href="/label/shop/">Shop</a></li><li><a href="/label/cart/">Cart (<span data-cart-count>0</span>)</a></li></ul></nav></header>
+<main id="main">
+<div class="wrap"><div id="empty" class="doc" hidden><h1 class="page-h1">Checkout</h1><p>Your cart is empty.</p><p><a class="btn inline" href="/label/shop/">Shop</a></p></div>
+<div class="cart-wrap" id="checkout-main">
+<div><p class="kicker">Checkout</p><h1 class="page-h1">Checkout</h1>
+<form id="checkout-form" class="form" novalidate>
+<fieldset><legend>Contact</legend>
+<div class="field"><label for="name"><span class="label">Name</span></label><input id="name" name="name" type="text" required autocomplete="name"><p class="err" role="alert"></p></div>
+<div class="field"><label for="email"><span class="label">Email</span></label><input id="email" name="email" type="email" required autocomplete="email"><p class="err" role="alert"></p></div>
+<div class="field"><label for="phone"><span class="label">Phone (optional)</span></label><input id="phone" name="phone" type="tel"  autocomplete="tel"><p class="err" role="alert"></p></div></fieldset>
+<fieldset><legend>Delivery</legend><div id="delivery-opts"></div><p class="note" id="pickup-note" hidden></p></fieldset>
+<fieldset id="ship-fields"><legend>Shipping address</legend>
+<div class="field"><label for="country"><span class="label" id="country-label">Country</span></label><select id="country" name="country" autocomplete="country"></select><p class="err" role="alert"></p></div>
+<div class="field"><label for="line1"><span class="label">Street address</span></label><input id="line1" name="line1" type="text"  autocomplete="address-line1"><p class="err" role="alert"></p></div>
+<div class="field"><label for="line2"><span class="label">Apartment, suite, unit (optional)</span></label><input id="line2" name="line2" type="text"  autocomplete="address-line2"><p class="err" role="alert"></p></div>
+<div class="two"><div class="field"><label for="city"><span class="label">City</span></label><input id="city" name="city" type="text"  autocomplete="address-level2"><p class="err" role="alert"></p></div><div class="field"><label for="region"><span class="label" id="region-label">Province</span></label><select id="region" name="region" autocomplete="address-level1"></select><p class="err" role="alert"></p></div></div>
+<div class="field"><label for="postal"><span class="label" id="postal-label">Postal code</span></label><input id="postal" name="postal" type="text"  autocomplete="postal-code"><p class="err" role="alert"></p></div></fieldset>
+<fieldset><legend>Agreement</legend>
+<div class="check"><input type="checkbox" id="terms" name="terms"><label for="terms">I agree to the <a href="/label/policies/terms/" target="_blank" rel="noopener">Terms</a> and the <a href="/label/policies/returns/" target="_blank" rel="noopener">Returns policy</a>.</label><p class="err" role="alert"></p></div></fieldset>
+<p class="errbox" id="form-error" role="alert" hidden></p>
+<button type="submit" class="btn" id="pay-btn">Pay</button>
+<p class="pay">Secure payment by Helcim</p>
+</form></div>
+<aside class="summary review" aria-label="Order review"><p class="kicker">Your order</p>
+<div id="review"></div><div class="sums" id="totals"></div>
+<a class="btn ghost" href="/label/cart/">Edit cart</a></aside></div></div>
+</main>
+<div class="wrap"><footer><a class="wm" href="/label/" aria-label="KALOS"><svg role="img" aria-label="KALOS" focusable="false" viewBox="0 0 4590.6 676.8"><use href="/label/assets/sprite.svg#wordmark"/></svg></a>
+<ul><li><a href="/label/policies/shipping/">Shipping</a></li><li><a href="/label/policies/returns/">Returns</a></li><li><a href="/label/policies/privacy/">Privacy</a></li><li><a href="/label/policies/terms/">Terms</a></li></ul>
+<div class="foot-r"><p data-contact hidden></p><p>Clothing as human expression.</p></div></footer></div>
+<script type="module" src="/label/js/checkout.js"></script>
+</body></html>
