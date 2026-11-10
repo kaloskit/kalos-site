@@ -151,3 +151,12 @@ galleries.forEach((g) => {
   }, { passive: true });
   narrow.addEventListener('change', () => show(i, true));
 });
+
+// An accordion opened near the bottom of the screen expands out of view, so it
+// looks like nothing happened. Bring the opened section into view.
+const calm = matchMedia('(prefers-reduced-motion: reduce)');
+root.querySelectorAll('details').forEach((d) => d.addEventListener('toggle', () => {
+  if (!d.open) return;
+  const r = d.getBoundingClientRect();
+  if (r.bottom > innerHeight - 96) d.scrollIntoView({ block: 'nearest', behavior: calm.matches ? 'auto' : 'smooth' });
+}));

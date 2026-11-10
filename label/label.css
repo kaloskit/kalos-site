@@ -75,7 +75,7 @@ h1,h2{font-weight:800;letter-spacing:-.045em;line-height:.9;margin:0;text-transf
 .status{font-size:.8rem;letter-spacing:.04em;margin:.6rem 0 0;min-height:1.2em}
 .status a{text-underline-offset:.3em}
 .accs{margin-top:1.75rem}
-details{padding:.7rem 0}
+details{padding:.7rem 0;scroll-margin-top:72px;scroll-margin-bottom:96px}
 summary{cursor:pointer;list-style:none;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:.6rem;justify-content:flex-start}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+"}details[open] summary::after{content:"\2212"}
@@ -102,7 +102,7 @@ th{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:40
  .nav.prev{left:.75rem}.nav.next{right:.75rem}
  .stage:hover .nav,.stage:focus-within .nav{opacity:1}
  @media (prefers-reduced-motion:no-preference){.nav{transition:opacity .2s}}
- .buy{position:sticky;top:calc(56px + 1rem);max-height:calc(100vh - 56px - 2rem);max-height:calc(100svh - 56px - 2rem);overflow-y:auto;scrollbar-width:thin;padding:2px}
+ .buy{position:sticky;top:calc(56px + 1rem);padding:2px}
 }
 /* cart */
 .cart-wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(2rem,5vw,5rem);padding:clamp(2rem,4vw,3.25rem) 0 clamp(3rem,8vw,6rem)}
