@@ -19,7 +19,7 @@ Key facts:
 - KALOS Pro costs $15.99 per month on its own and is included with every active training package.
 - Getting started: a free 60 minute consultation, in person, booked at https://app.kalospt.ca/consultation. Goals, training history, and a coach match before any purchase.
 - Packages (one-on-one 60 minute sessions, prices in CAD plus 5% GST):
-  - Starter: 12 sessions at $130 per session ($1,560)
+  - Starter: 12 sessions at $125 per session ($1,500)
   - Momentum: 24 sessions at $115 per session ($2,760)
   - Transformation: 36 sessions at $105 per session ($3,780)
   - VIP: 48 sessions at $100 per session ($4,800), adds priority scheduling
@@ -48,7 +48,7 @@ Key facts:
 
 ## FAQ (canonical answers)
 
-- **How much does personal training cost at KALOS?** One-on-one sessions run $100 to $130 CAD per session, plus GST, depending on package size: Starter is 12 sessions at $130 ($1,560), Momentum is 24 at $115 ($2,760), Transformation is 36 at $105 ($3,780), VIP is 48 at $100 ($4,800), and Contest Prep is 72 at $100 ($7,200). Every package gets the same coaching standard and KALOS Pro app access; larger packages simply cost less per session.
+- **How much does personal training cost at KALOS?** One-on-one sessions run $100 to $125 CAD per session, plus GST, depending on package size: Starter is 12 sessions at $125 ($1,500), Momentum is 24 at $115 ($2,760), Transformation is 36 at $105 ($3,780), VIP is 48 at $100 ($4,800), and Contest Prep is 72 at $100 ($7,200). Every package gets the same coaching standard and KALOS Pro app access; larger packages simply cost less per session.
 - **How do I start at KALOS?** Book a free consultation at kalospt.ca. A coach reaches out within two business days, and you sit down together for a free 60 minute conversation covering your goal, your training history, and the plan to get you there. You buy nothing before that conversation, and there's no obligation after it.
 - **Where is KALOS located?** 12060 Vulcan Way, Richmond, BC V6V 1J8, in the Bridgeport area. Hours are 9 AM to 9 PM every day, by appointment.
 - **What is the KALOS phone number?** (778) 949-9944.
