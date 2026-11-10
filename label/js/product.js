@@ -13,6 +13,9 @@ const status = root.querySelector('[data-status]');
 let colour = colourChips.length === 1 ? colourChips[0].dataset.colourChip : null;
 let size = null;
 let max = 5;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+const narrow = matchMedia('(max-width: 899px)');
+const gallery = {};
 loadConfig().then((c) => { max = c.maxQty || 5; }).catch(() => {});
 
 function paint() {
@@ -23,12 +26,18 @@ function paint() {
   colourName.textContent = chip ? chip.dataset.colourName : 'Choose a colour';
   const ready = Boolean(colour && size);
   addBtn.disabled = !ready;
-  addBtn.textContent = 'Add to cart';
+  addBtn.textContent = 'Add to Cart';
   if (!ready) {
     addBtn.setAttribute('aria-describedby', 'pick-hint');
   }
 }
-colourChips.forEach((b) => b.addEventListener('click', () => { colour = b.dataset.colourChip; status.textContent = ''; paint(); }));
+colourChips.forEach((b) => b.addEventListener('click', () => {
+  const changed = colour !== b.dataset.colourChip;
+  colour = b.dataset.colourChip;
+  status.textContent = '';
+  paint();
+  if (changed) gallery[colour]?.show(0, true);
+}));
 sizeChips.forEach((b) => b.addEventListener('click', () => { size = b.dataset.sizeChip; status.textContent = ''; paint(); }));
 addBtn.addEventListener('click', () => {
   if (!colour || !size) return;
@@ -43,3 +52,35 @@ document.querySelector('[data-open-guide]')?.addEventListener('click', () => {
   if (d) d.open = true;
 });
 paint();
+
+// Image gallery: desktop shows one slide at a time, mobile is a scroll-snap carousel.
+// The same thumb buttons are the desktop thumbnails and the mobile dots.
+galleries.forEach((g) => {
+  const track = g.querySelector('.track');
+  const slides = [...track.children];
+  const thumbs = [...g.querySelectorAll('[data-thumb]')];
+  let i = 0;
+  function paintIndex() {
+    slides.forEach((s, k) => s.classList.toggle('on', k === i));
+    thumbs.forEach((t, k) => (k === i ? t.setAttribute('aria-current', 'true') : t.removeAttribute('aria-current')));
+  }
+  function show(n, scroll) {
+    i = (n + slides.length) % slides.length;
+    paintIndex();
+    if (scroll && narrow.matches) track.scrollTo({ left: i * track.clientWidth, behavior: reduce.matches ? 'auto' : 'smooth' });
+  }
+  gallery[g.dataset.gallery] = { show };
+  thumbs.forEach((t, k) => t.addEventListener('click', () => show(k, true)));
+  g.querySelector('[data-prev]')?.addEventListener('click', () => show(i - 1, true));
+  g.querySelector('[data-next]')?.addEventListener('click', () => show(i + 1, true));
+  g.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(i - 1, true); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); show(i + 1, true); }
+  });
+  track.addEventListener('scroll', () => {
+    if (!narrow.matches || !track.clientWidth) return;
+    const n = Math.round(track.scrollLeft / track.clientWidth);
+    if (n !== i && n >= 0 && n < slides.length) { i = n; paintIndex(); }
+  }, { passive: true });
+  narrow.addEventListener('change', () => show(i, true));
+});
