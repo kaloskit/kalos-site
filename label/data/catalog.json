@@ -27,6 +27,11 @@
               "src": "assets/first-zip-up-black-back.jpg",
               "label": "Product photo",
               "alt": "First Zip Up in black, back"
+            },
+            {
+              "src": "assets/first-zip-up-black-worn.jpg",
+              "label": "Product photo",
+              "alt": "First Zip Up in black, worn, back view"
             }
           ]
         }
@@ -102,6 +107,11 @@
               "src": "assets/made-hood-black-back.jpg",
               "label": "Product photo",
               "alt": "Made Hood in black, back"
+            },
+            {
+              "src": "assets/made-hood-worn.jpg",
+              "label": "Product photo",
+              "alt": "Made Hood in black and off white, worn"
             }
           ]
         },
@@ -119,6 +129,11 @@
               "src": "assets/made-hood-off-white-back.jpg",
               "label": "Product photo",
               "alt": "Made Hood in off white, back"
+            },
+            {
+              "src": "assets/made-hood-worn.jpg",
+              "label": "Product photo",
+              "alt": "Made Hood in black and off white, worn"
             }
           ]
         }
