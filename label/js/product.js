@@ -10,7 +10,8 @@ const sizeChips = root.querySelectorAll('[data-size-chip]');
 const colourName = root.querySelector('[data-colour-name]');
 const addBtn = root.querySelector('[data-add]');
 const status = root.querySelector('[data-status]');
-let colour = colourChips[0]?.dataset.colourChip || null;
+// The page marks its default colour with aria-pressed="true"; fall back to the first chip.
+let colour = (root.querySelector('[data-colour-chip][aria-pressed="true"]') || colourChips[0])?.dataset.colourChip || null;
 let size = null;
 let max = 5;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)');
