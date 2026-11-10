@@ -29,6 +29,7 @@ function paint() {
   addBtn.disabled = !ready;
   addBtn.textContent = ready ? 'Add to Cart' : 'Select a Size';
   addBtn.setAttribute('aria-disabled', String(!ready));
+  paintBar(ready);
   if (!ready) {
     addBtn.setAttribute('aria-describedby', 'pick-hint');
   }
@@ -41,14 +42,78 @@ colourChips.forEach((b) => b.addEventListener('click', () => {
   if (changed) gallery[colour]?.show(0, true);
 }));
 sizeChips.forEach((b) => b.addEventListener('click', () => { size = b.dataset.sizeChip; status.textContent = ''; paint(); }));
-addBtn.addEventListener('click', () => {
-  if (!colour || !size) return;
+function add() {
+  if (!colour || !size) return false;
   addItem(productId, `${productId}:${colour}:${size}`, 1, max);
   const a = document.createElement('a');
   a.href = '/label/cart/';
-  a.textContent = 'View cart';
+  a.textContent = 'View Cart';
   status.replaceChildren('Added to your cart. ', a);
+  return true;
+}
+addBtn.addEventListener('click', add);
+
+// Phones: a fixed bar with the product name, price and a mirror of the main button
+// while the main button is scrolled out of view above the viewport.
+const bar = document.createElement('div');
+bar.className = 'sticky';
+const barInfo = document.createElement('div');
+barInfo.className = 'info';
+const barName = document.createElement('span');
+barName.className = 'n';
+barName.textContent = root.querySelector('.buy h1')?.textContent || '';
+const barPrice = document.createElement('span');
+barPrice.className = 'p';
+barPrice.textContent = root.querySelector('.buy .price')?.textContent || '';
+barInfo.append(barName, barPrice);
+const barBtn = document.createElement('button');
+barBtn.type = 'button';
+barBtn.className = 'btn ghost';
+bar.append(barInfo, barBtn);
+document.body.append(bar);
+let barReady = false;
+let barFlash = 0;
+function paintBar(ready) {
+  barReady = ready;
+  if (barFlash) return;
+  barBtn.textContent = ready ? 'Add to Cart' : 'Select a Size';
+  barBtn.classList.toggle('ghost', !ready);
+}
+barBtn.addEventListener('click', () => {
+  if (!barReady) {
+    root.querySelector('[data-size-chip]')?.closest('.opt')?.scrollIntoView({ block: 'center', behavior: reduce.matches ? 'auto' : 'smooth' });
+    return;
+  }
+  if (!add()) return;
+  barBtn.textContent = 'Added';
+  clearTimeout(barFlash);
+  barFlash = setTimeout(() => { barFlash = 0; paintBar(barReady); }, 1600);
 });
+let mainGone = false;
+function paintSticky() {
+  const on = narrow.matches && mainGone;
+  bar.classList.toggle('show', on);
+  document.body.classList.toggle('has-sticky', on);
+}
+// The 56px top margin is the sticky site header: a button under it counts as gone.
+// An observer only reports crossings, so a jump from below the fold to past the button
+// (restored scroll, anchor links) is caught by a throttled scroll check.
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(([e]) => {
+    mainGone = !e.isIntersecting && e.boundingClientRect.top < 0;
+    paintSticky();
+  }, { rootMargin: '-56px 0px 0px 0px' }).observe(addBtn);
+}
+let scrollTick = 0;
+addEventListener('scroll', () => {
+  if (scrollTick) return;
+  scrollTick = requestAnimationFrame(() => {
+    scrollTick = 0;
+    mainGone = addBtn.getBoundingClientRect().bottom < 56;
+    paintSticky();
+  });
+}, { passive: true });
+narrow.addEventListener('change', paintSticky);
 document.querySelector('[data-open-guide]')?.addEventListener('click', () => {
   const d = document.getElementById('size-guide');
   if (d) d.open = true;
