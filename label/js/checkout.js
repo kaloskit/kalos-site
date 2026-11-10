@@ -156,7 +156,9 @@ function validate() {
 
 function showError(msg, withContact = false) {
   errBox.replaceChildren(msg);
-  if (withContact && config.contactEmail) errBox.append(' ', h('a', { href: /^[^\s@]+@[^\s@]+$/.test(config.contactEmail) ? 'mailto:' + config.contactEmail : null }, config.contactEmail));
+  // Only a real address is shown; a placeholder or blank is left out.
+  const email = String(config.contactEmail || '');
+  if (withContact && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errBox.append(' ', h('a', { href: 'mailto:' + email }, email));
   errBox.hidden = !msg;
 }
 
