@@ -25,7 +25,6 @@ h1,h2{font-weight:800;letter-spacing:-.045em;line-height:.9;margin:0;text-transf
 .card{text-decoration:none;display:block}
 .frame{position:relative;border:1px solid #fff;background:#fff;overflow:hidden}
 .frame img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.frame .tag{position:absolute;left:0;bottom:0;background:#000;color:#fff;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;padding:.45rem .7rem;border-top:1px solid #fff;border-right:1px solid #fff}
 .card .row{display:flex;justify-content:space-between;gap:1rem;margin-top:1rem;align-items:baseline}
 .card h2{font-size:clamp(1.3rem,2.4vw,2rem);letter-spacing:-.03em}
 .price{font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
