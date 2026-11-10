@@ -16,13 +16,11 @@
   "pickup": {
     "enabled": true,
     "label": "Pickup at the KALOS studio",
-    "rate_cents": 0,
-    "instructions": "[KIT TO WRITE pickup instructions. Shown on confirmation and email only. No address in code.]"
+    "rate_cents": 0
   },
   "tax": {
     "enabled": false,
-    "prices_include_tax": false,
-    "rules": []
+    "prices_include_tax": false
   },
   "max_qty_per_line": 5,
   "contact_email": "[KIT TO SET]"
