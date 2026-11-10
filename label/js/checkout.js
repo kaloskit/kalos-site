@@ -310,7 +310,7 @@ try {
     $('empty').hidden = false;
   } else if (!config.fromApi) {
     $('checkout-main').hidden = true;
-    $('empty').querySelector('p').textContent = 'Checkout is unavailable right now, try again shortly.';
+    $('empty').querySelector('p:not(.kicker)').textContent = 'Checkout is unavailable right now, try again shortly.';
     $('empty').hidden = false;
   } else {
     setupCountry();

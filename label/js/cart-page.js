@@ -23,7 +23,7 @@ function renderLines() {
   clear(linesEl);
   const items = getCart();
   if (!items.length) {
-    linesEl.append(h('div', { class: 'empty' }, h('p', {}, 'Your cart is empty.'), h('a', { class: 'btn inline', href: '/label/shop/' }, 'Shop')));
+    linesEl.append(h('div', { class: 'empty' }, h('p', {}, 'Your cart is empty.'), h('a', { class: 'btn inline', href: '/label/shop/' }, 'Shop the Label')));
     return;
   }
   const max = config.maxQty;
@@ -36,11 +36,11 @@ function renderLines() {
         h('div', {},
           h('h3', {}, r.p.name),
           h('p', { class: 'meta' }, `${r.c.name} · ${r.size}`),
-          h('div', { class: 'qty' },
+          h('div', { class: 'ctl' }, h('div', { class: 'qty' },
             h('button', { type: 'button', 'aria-label': `Decrease quantity, ${r.p.name} ${r.c.name} ${r.size}`, onclick: () => change(it, it.qty - 1, max) }, '−'),
             h('span', { 'aria-live': 'polite' }, it.qty),
             h('button', { type: 'button', 'aria-label': `Increase quantity, ${r.p.name} ${r.c.name} ${r.size}`, disabled: it.qty >= max, onclick: () => change(it, it.qty + 1, max) }, '+')),
-          h('button', { type: 'button', class: 'linkbtn', onclick: () => { removeItem(it.variantId); refresh(); } }, 'Remove')),
+          h('button', { type: 'button', class: 'linkbtn', onclick: () => { removeItem(it.variantId); refresh(); } }, 'Remove'))),
         h('div', { class: 'amt' }, money(r.p.price_cents * it.qty))),
     );
   }
@@ -58,6 +58,7 @@ function row(label, value, cls = '') {
 async function renderSummary() {
   const items = getCart();
   const method = getDelivery();
+  document.querySelector('.summary').hidden = !items.length;
   checkoutBtn.setAttribute('aria-disabled', String(!items.length));
   checkoutBtn.tabIndex = items.length ? 0 : -1;
   const mine = ++seq;
@@ -122,5 +123,5 @@ try {
   if (!config.pickup.enabled && getDelivery() === 'pickup') setDelivery('ship');
   refresh();
 } catch {
-  linesEl.replaceChildren(h('p', { role: 'status' }, 'The cart could not load, try again.'));
+  linesEl.replaceChildren(h('p', { class: 'hint', role: 'status' }, 'The cart could not load, try again.'));
 }

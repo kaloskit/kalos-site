@@ -55,10 +55,10 @@ async function render() {
         row('Shipping', o.shipping === 0 ? 'Free' : money(o.shipping)),
         ...o.taxLines.map((t) => row(t.name, money(t.cents))),
         row('Total', money(o.total), 'total')),
-      h('h2', {}, 'What happens next'),
+      h('h2', {}, 'What Happens Next'),
       ...nextSteps(o).map((t) => h('p', {}, t)),
       ...(pickup && o.pickupInstructions ? [h('p', { class: 'label' }, 'Pickup'), h('p', { class: 'pickup' }, o.pickupInstructions)] : []),
-      h('p', {}, h('a', { class: 'btn inline', href: '/label/shop/' }, 'Keep looking')));
+      h('p', {}, h('a', { class: 'btn inline', href: '/label/shop/' }, 'Keep Looking')));
   } catch (err) {
     box.replaceChildren(h('p', { role: 'status' }, err.code === 'order_not_found' ? errorCopy(err) : 'We could not load this order right now. Your confirmation email has the details.'));
   }
