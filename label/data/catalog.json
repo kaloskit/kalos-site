@@ -19,19 +19,14 @@
           "swatch": "#000000",
           "images": [
             {
-              "src": "assets/first-zip-model-back-concept.jpg",
-              "label": "Concept imagery",
-              "alt": "Model wearing the black zip up, back view with the white tri apex"
+              "src": "assets/first-zip-up-black-front.jpg",
+              "label": "Product photo",
+              "alt": "First Zip Up in black, front"
             },
             {
-              "src": "assets/first-zip-front-concept.jpg",
-              "label": "Concept render",
-              "alt": "Front of the black full zip up with small white KALOS at the left chest"
-            },
-            {
-              "src": "assets/first-zip-back-reference.jpg",
-              "label": "Design reference",
-              "alt": "Back of the black zip up with the white dry brush tri apex"
+              "src": "assets/first-zip-up-black-back.jpg",
+              "label": "Product photo",
+              "alt": "First Zip Up in black, back"
             }
           ]
         }
@@ -99,19 +94,14 @@
           "swatch": "#000000",
           "images": [
             {
-              "src": "assets/made-hood-black-front-concept.jpg",
-              "label": "Concept imagery",
-              "alt": "Front of the black Made Hood with a small white tri apex at the left chest"
+              "src": "assets/made-hood-black-front.jpg",
+              "label": "Product photo",
+              "alt": "Made Hood in black, front"
             },
             {
-              "src": "assets/made-hood-black-back-concept.jpg",
-              "label": "Concept imagery",
-              "alt": "Back of the black Made Hood with the white KALOS wordmark low on the back"
-            },
-            {
-              "src": "assets/made-hood-campaign-concept.jpg",
-              "label": "Concept imagery",
-              "alt": "Two models wearing the Made Hood in black and off white"
+              "src": "assets/made-hood-black-back.jpg",
+              "label": "Product photo",
+              "alt": "Made Hood in black, back"
             }
           ]
         },
@@ -121,19 +111,14 @@
           "swatch": "#efece4",
           "images": [
             {
-              "src": "assets/made-hood-offwhite-front-concept.jpg",
-              "label": "Concept imagery",
-              "alt": "Front of the off white Made Hood with a small black tri apex at the left chest"
+              "src": "assets/made-hood-off-white-front.jpg",
+              "label": "Product photo",
+              "alt": "Made Hood in off white, front"
             },
             {
-              "src": "assets/made-hood-offwhite-back-concept.jpg",
-              "label": "Concept imagery",
-              "alt": "Back of the off white Made Hood with the black KALOS wordmark low on the back"
-            },
-            {
-              "src": "assets/made-hood-campaign-concept.jpg",
-              "label": "Concept imagery",
-              "alt": "Two models wearing the Made Hood in black and off white"
+              "src": "assets/made-hood-off-white-back.jpg",
+              "label": "Product photo",
+              "alt": "Made Hood in off white, back"
             }
           ]
         }
