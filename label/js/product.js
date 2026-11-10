@@ -10,7 +10,7 @@ const sizeChips = root.querySelectorAll('[data-size-chip]');
 const colourName = root.querySelector('[data-colour-name]');
 const addBtn = root.querySelector('[data-add]');
 const status = root.querySelector('[data-status]');
-let colour = colourChips.length === 1 ? colourChips[0].dataset.colourChip : null;
+let colour = colourChips[0]?.dataset.colourChip || null;
 let size = null;
 let max = 5;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)');
@@ -26,7 +26,8 @@ function paint() {
   colourName.textContent = chip ? chip.dataset.colourName : 'Choose a colour';
   const ready = Boolean(colour && size);
   addBtn.disabled = !ready;
-  addBtn.textContent = 'Add to Cart';
+  addBtn.textContent = ready ? 'Add to Cart' : 'Select a Size';
+  addBtn.setAttribute('aria-disabled', String(!ready));
   if (!ready) {
     addBtn.setAttribute('aria-describedby', 'pick-hint');
   }

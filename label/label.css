@@ -66,7 +66,7 @@ h1,h2{font-weight:800;letter-spacing:-.045em;line-height:.9;margin:0;text-transf
 .btn{display:block;width:100%;padding:0 1rem;min-height:48px;line-height:48px;border:1px solid #000;background:#000;color:#fff;font-weight:400;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;text-align:center;text-decoration:none}
 .btn:hover:not(:disabled){opacity:.85}
 .btn.ghost{background:#fff;color:#000}
-.btn:disabled,.btn[aria-disabled="true"]{opacity:.4;cursor:not-allowed}
+.btn:disabled,.btn[aria-disabled="true"]{background:#fff;color:#000;border-color:#000;cursor:not-allowed}
 .btn.inline{display:inline-block;width:auto;padding:0 2.25rem}
 .buy .btn{margin-top:1.25rem}
 .fine{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin:1.5rem 0 0}
