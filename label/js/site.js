@@ -16,16 +16,13 @@ const slot = document.querySelector('[data-contact]');
 if (slot) {
   loadConfig()
     .then((c) => {
+      // Only a real address is shown; a placeholder or blank keeps the slot hidden.
       const email = String(c.contactEmail || '');
-      if (!email) return;
-      if (/^[^\s@]+@[^\s@]+$/.test(email)) {
-        const a = document.createElement('a');
-        a.href = 'mailto:' + email;
-        a.textContent = email;
-        slot.replaceChildren(a);
-      } else {
-        slot.textContent = email;
-      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+      const a = document.createElement('a');
+      a.href = 'mailto:' + email;
+      a.textContent = email;
+      slot.replaceChildren(a);
       slot.hidden = false;
     })
     .catch(() => {});
