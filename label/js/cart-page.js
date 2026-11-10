@@ -75,7 +75,7 @@ async function renderSummary() {
       row('Subtotal', money(q.subtotal)),
       row('Shipping', q.shipping === 0 ? 'Free' : money(q.shipping)),
       ...(q.taxTbd ? [row('Tax', h('span', { class: 'tbd' }, 'TBD'))] : q.taxLines.map((t) => row(t.name, money(t.cents)))),
-      row('Total (CAD)', money(q.total) + (q.taxTbd ? ' + tax' : ''), 'total'),
+      row('Total', money(q.total) + (q.taxTbd ? ' + tax' : ''), 'total'),
     );
   } catch (err) {
     if (mine !== seq) return;

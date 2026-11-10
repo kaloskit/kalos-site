@@ -16,9 +16,9 @@ export function h(tag, attrs = {}, ...kids) {
 
 export const clear = (el) => el.replaceChildren();
 
-export function money(cents, whole = false) {
+export function money(cents) {
   const v = cents / 100;
-  return 'CA$' + (whole && Number.isInteger(v) ? String(v) : v.toFixed(2));
+  return '$' + v.toFixed(2) + ' CAD';
 }
 
 export function swatch(hex) {

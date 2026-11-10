@@ -54,7 +54,7 @@ async function render() {
         row('Subtotal', money(o.subtotal)),
         row('Shipping', o.shipping === 0 ? 'Free' : money(o.shipping)),
         ...o.taxLines.map((t) => row(t.name, money(t.cents))),
-        row('Total (CAD)', money(o.total), 'total')),
+        row('Total', money(o.total), 'total')),
       h('h2', {}, 'What happens next'),
       ...nextSteps(o).map((t) => h('p', {}, t)),
       ...(pickup && o.pickupInstructions ? [h('p', { class: 'label' }, 'Pickup'), h('p', { class: 'pickup' }, o.pickupInstructions)] : []),
