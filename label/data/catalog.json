@@ -2,8 +2,8 @@
   "currency": "CAD",
   "products": [
     {
-      "id": "first-zip-hoodie",
-      "name": "First Zip Hoodie",
+      "id": "first-zip-up",
+      "name": "First Zip Up",
       "price_cents": 14000,
       "sizes": [
         "XS",
@@ -21,17 +21,17 @@
             {
               "src": "assets/first-zip-model-back-concept.jpg",
               "label": "Concept imagery",
-              "alt": "Model wearing the black hoodie, back view with the white tri apex"
+              "alt": "Model wearing the black zip up, back view with the white tri apex"
             },
             {
               "src": "assets/first-zip-front-concept.jpg",
               "label": "Concept render",
-              "alt": "Front of the black full zip hoodie with small white KALOS at the left chest"
+              "alt": "Front of the black full zip up with small white KALOS at the left chest"
             },
             {
               "src": "assets/first-zip-back-reference.jpg",
               "label": "Design reference",
-              "alt": "Back of the black hoodie with the white dry brush tri apex"
+              "alt": "Back of the black zip up with the white dry brush tri apex"
             }
           ]
         }
@@ -44,7 +44,7 @@
         "style": "5148 Heavy Zip Hood"
       },
       "details": [
-        "Black full zip hoodie, two way YKK zip",
+        "Black full zip up, two way YKK zip",
         "Small white KALOS embroidered at the left chest",
         "White dry brush tri apex printed on the back",
         "Plain sleeves, no drawstrings"
