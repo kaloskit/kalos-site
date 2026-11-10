@@ -49,7 +49,7 @@
         "White dry brush tri apex printed on the back",
         "Plain sleeves, no drawstrings"
       ],
-      "fabric": "80% cotton, 20% recycled polyester, cotton faced fleece. Heavyweight 11.8 oz, about 400 GSM. Oversized fit, dropped shoulders. Garment made in Bangladesh, decorated in Canada.",
+      "fabric": "80% cotton, 20% recycled polyester, cotton faced fleece. Heavyweight 11.8 oz, about 400 GSM. Oversized fit, dropped shoulders. Decorated in Canada.",
       "care": "Machine wash cold, inside out, with like colours. No bleach, no tumble dry, no dry clean. Do not iron the print. Line dry in shade.",
       "size_chart": {
         "unit": "in",
@@ -151,9 +151,34 @@
         "Original KALOS wordmark low on the back",
         "Plain sleeves"
       ],
-      "fabric": "100% cotton French terry, 14.7 oz, about 500 GSM. Relaxed fit, dropped shoulders, inset sleeves, self lined hood, 2x2 rib hem and cuffs. Preshrunk. Garment made in China.",
-      "care": "[KIT TO CONFIRM from AS Colour 5151 care label]",
-      "size_chart": null
+      "fabric": "100% cotton French terry, 14.7 oz, about 500 GSM. Relaxed fit, dropped shoulders, inset sleeves, self lined hood, 2x2 rib hem and cuffs. Preshrunk.",
+      "care": "Machine wash cold with like colours. No bleach, no tumble dry, no dry clean. Do not iron the print. Line dry in shade.",
+      "size_chart": {
+        "unit": "in",
+        "columns": [
+          "Body width",
+          "Body length"
+        ],
+        "rows": {
+          "S": [
+            23,
+            27.25
+          ],
+          "M": [
+            24.5,
+            28
+          ],
+          "L": [
+            25.5,
+            29
+          ],
+          "XL": [
+            26.5,
+            30
+          ]
+        },
+        "note": "Manufacturer measurements, may vary within 1 inch."
+      }
     }
   ]
 }
